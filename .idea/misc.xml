@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable-v24/gradientbackground.xml" value="0.18518518518518517" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable-v24/ic_menu.xml" value="0.18518518518518517" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/btn_bg.xml" value="0.3728205128205128" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/drop_shadow.xml" value="0.3728205128205128" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/edtborderblue.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/gradientbackground.xml" value="0.18518518518518517" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/logoutfromapp.xml" value="0.2876923076923077" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/number.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/personwhite.xml" value="0.2876923076923077" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/rate_review.xml" value="0.2876923076923077" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/shape_status_completed.xml" value="0.3728205128205128" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/shape_status_current.xml" value="0.3728205128205128" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/spinner_border.xml" value="0.3638888888888889" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/drawable/text_bg.xml" value="0.3728205128205128" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_check_applicatio_status.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_contact_us.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_intro.xml" value="0.19722222222222222" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_introduction.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_listofscholarship.xml" value="0.19722222222222222" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_splash.xml" value="0.1425925925925926" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_track.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/activity_tracking_app_testing.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/custom_spinner_items.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/recycler_view_itemmain.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/HarChhatravratti/app/src/main/res/layout/recycler_view_itemschemedata.xml" value="0.33" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-hdpi/ic_baseline_photo_camera_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/edtbgwhiterect.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/forward_white.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/gradientbackground.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/hyperlink_underline.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/ic_baseline_arrow_forward_ios_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/ic_menu.xml" value="0.1285" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable-v24/whitecircle.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/bg_boder.xml" value="0.1855" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/bg_overlay.xml" value="0.347" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/btn_bg.xml" value="0.2375" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/checkgreen.xml" value="0.1805" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/circle.xml" value="0.1035" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/edit_text_borderdash.xml" value="0.253" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/edtborderblue.xml" value="0.1765" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/edtbordergay.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/howtoapplyshape.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_app_registration_24.xml" value="0.119" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_apps_24.xml" value="0.171" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_arrow_downward_24.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.1805" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_business_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.2445" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_category_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2755" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_check_circle_24white.xml" value="0.291" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_checklist_rtl_24.xml" value="0.291" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.194" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_contact_mail_24.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_contact_phone_24.xml" value="0.1685" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.3635" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.2955" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_fact_check_24.xml" value="0.183" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_format_list_numbered_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2375" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_how_to_reg_24.xml" value="0.2955" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.217" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_pending_actions_24.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_white_how_to_reg_24.xml" value="0.134" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_baseline_whitehow_to_reg_24.xml" value="0.2955" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_college.xml" value="0.30648148148148147" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/ic_menu.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/imageview_selector.xml" value="0.273" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/logoutfromapp.xml" value="0.2445" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/notifications.xml" value="0.1" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/number.xml" value="0.257" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/personwhite.xml" value="0.2585" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/rate_review.xml" value="0.2735" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/spinner_border.xml" value="0.347" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/spinner_bordergreen.xml" value="0.1805" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/drawable/viewallbg.xml" value="0.254" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout-v28/activity_apply_scholarship_form.xml" value="0.29109159347553326" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity__eligibility.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_apply_scholaership.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_apply_scholarship.xml" value="0.346875" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_apply_scholarship_form.xml" value="0.29379485014774165" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_check_applicatio_status.xml" value="0.33" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_college_dashboard.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_college_list.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_contact_us.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_course_list.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_department_dashboard.xml" value="0.3074074074074074" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_deptonboard.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_forget_password.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_howto_apply.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_image_picker.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_intro.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_introduction.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_latestupdates.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_listof_courses.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_listofscholarship.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_master_admin.xml" value="0.33" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_nodal_body_dheactivity.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_nodalboday_dashboard.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_open_pdf.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_open_url.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_openbooks.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_profile.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_registration.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_track.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/activity_welcome.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/custom_spinner_items.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/customdailogview.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/fragment_dept_onboard.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/layout_news_badge.xml" value="0.24074074074074073" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/lib_admindashboard_list_row.xml" value="0.33" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/lib_course_list_row.xml" value="0.37447916666666664" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/lib_department_dashboard_list_row.xml" value="0.3074074074074074" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/list_view_item_row.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_item_college_listdata.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_item_eligibility_data.xml" value="0.67" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_item_how_to_apply_data.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_item_req_doc_data.xml" value="0.37447916666666664" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_itemdata.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_itemmain.xml" value="0.31296296296296294" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_itemoption.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_itemschemedata.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_latest_updatesdata.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/recycler_view_schemeguidelineitemdata.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/rv_radiobtn.xml" value="0.346875" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/layout/toolbar_layout.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.194" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.194" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_login.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_welcome.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/logout_dialog.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3625" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/back.xml" value="0.175" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/bg_homeslider.xml" value="0.26614583333333336" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/edtbg.xml" value="0.26614583333333336" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/ic_baseline_assignment_turned_in_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/number.xml" value="0.26614583333333336" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/person.xml" value="0.26614583333333336" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/drawable/spinner_border.xml" value="0.26614583333333336" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_check_applicatio_status.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_deptonboard.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_introduction.xml" value="0.23856858846918488" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_listofscholarship.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_login.xml" value="0.14351851851851852" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_open_pdf.xml" value="0.2359375" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_open_url.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_registration.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_salientfeatures.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_schemeguideline.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_track.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/activity_welcome.xml" value="0.14351851851851852" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/custom_spinner_items.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/customdailogview.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/fragment_dept_onboard.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/fragment_introduction.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/fragment_list_of_scolarship.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/fragment_salient_features.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/fragment_scheme_guideline.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/image_slider_layout_item.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/recycler_view_itemdata.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/recycler_view_itemmain.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/recycler_view_itemschemedata.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/recycler_view_schemeguidelineitemdata.xml" value="0.25" />
+        <entry key="..\:/Govind2021/har_chhatravratti/har_chhatravratti/app/src/main/res/layout/toolbar_layout.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

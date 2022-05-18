@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hsvp.digital.allottee_corner">
+
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:name="hsvp.digital.allottee_corner.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/HarChhatravratti"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.ApplyScholarshipFormActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.ApplyScholarshipActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.NodalBodyDHEActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.MasterAdminActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.CourseListActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.EligibilityActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.HowtoApplyActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.RegistrationActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.ForgetPasswordActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.LoginActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.TrackActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.TrackingAppTestingActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.OpenPdfActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.OpenUrlActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.CheckApplicatioStatusActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppFullScreenTheme"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.MainActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.IntroActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.ListOfScholarshipActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.DeptOnBoardActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.SchemeGuideLineActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.SalientFeaturesActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.ContactUsActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.CollegeListActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.LatestUpdatesActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.DepartmentDashboardActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.CollegeDashboardActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+        <activity
+            android:name="hsvp.digital.allottee_corner.ui.NodalBodyDashboardActivity"
+            android:exported="false"
+            android:theme="@style/HarChhatravratti" />
+
+        <service
+            android:name="hsvp.digital.allottee_corner.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HarChhatravratti" /> <!-- cache directory file provider paths -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="hsvp.digital.allottee_corner"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name="hsvp.digital.allottee_corner.utility.ImagePickerActivity"
+            android:exported="false" />
+        <activity android:name="hsvp.digital.allottee_corner.ui.OpenBooksActivity"
+            android:theme="@style/AppFullScreenTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+    </application>
+
+</manifest>

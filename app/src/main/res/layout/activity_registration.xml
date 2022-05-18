@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        tools:context=".ui.RegistrationActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llmain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <!--Enter PPP (Family Id):-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.7"
+
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtStudentFamilyId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:drawablePadding="8dp"
+                                    android:hint="Enter PPP (Family Id)"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnSearch"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/edtbg"
+                                android:gravity="center"
+                                android:text="Search"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <!--Enter PPP (Family Id):-->
+                            <LinearLayout
+
+                                android:id="@+id/llacademicsession"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="0.7"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your name."
+                                    android:textColor="@color/black"
+
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnstudentName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:foregroundTint="@color/black">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnGenerateOtp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/edtbg"
+                                android:gravity="center"
+                                android:text="Generate Otp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <!--Enter PPP (Family Id):-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.7"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtOtp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="8dp"
+                                    android:hint="Enter OTP"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberSigned"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnVerifyOtp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/edtbg"
+                                android:gravity="center"
+                                android:text="Verify OTP"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llregistrationAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtFamilyId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="Family Id"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtMemberId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="8dp"
+                                    android:enabled="false"
+                                    android:hint="Member Id"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:hint="First Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:drawablePadding="8dp"
+                                    android:enabled="false"
+                                    android:hint="Last Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtFullName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:enabled="false"
+                                android:hint="Full Name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+
+
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtFatherName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:enabled="false"
+                                    android:hint="Father Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtMotherName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:drawablePadding="8dp"
+                                    android:enabled="false"
+                                    android:hint="Mother Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:enabled="false"
+                                android:hint="Gender"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+
+
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtHouseNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:enabled="false"
+                                    android:hint="House No."
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtStreetNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:drawablePadding="8dp"
+                                    android:enabled="false"
+                                    android:hint="Street No."
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:enabled="false"
+                                android:hint="Address"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+
+
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtAAdhar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="0123456789"
+                                android:enabled="false"
+                                android:hint="Aadhaar No."
+                                android:imeOptions="actionNext"
+                                android:inputType="numberSigned"
+                                android:maxLength="12"
+
+
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtDOb"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:hint="DOB."
+                                    android:inputType="numberSigned"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtMobileNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:digits="0123456789"
+                                    android:drawablePadding="8dp"
+                                    android:enabled="false"
+                                    android:hint="Mobile No."
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberSigned"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtCastCategoryName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:enabled="false"
+                                    android:hint="Caste Category name."
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtEmailId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="8dp"
+
+                                    android:enabled="true"
+                                    android:hint="Email Id."
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    android:textColor="@color/black"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtIsDenotifiedTribecategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:enabled="false"
+                                android:hint="Is Denotified Tribecategory."
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+
+
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtFamilyIncome"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:digits="0123456789"
+                                    android:enabled="false"
+                                    android:hint="Family Income"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberDecimal"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <!-- <com.google.android.material.textfield.TextInputLayout
+                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                 android:layout_width="0dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_margin="1dp"
+                                 android:layout_weight="0.5"
+                                 android:textColorHint="@color/black"
+                                 android:visibility="visible"
+                                 app:boxStrokeColor="@color/purple_700"
+                                 app:endIconMode="clear_text"
+                                 app:endIconTint="@color/colorPrimaryDark"
+                                 app:shapeAppearance="@style/Rounded">
+
+                                 <com.google.android.material.textfield.TextInputEditText
+                                     android:id="@+id/edtBPL"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:drawablePadding="8dp"
+
+                                     android:enabled="true"
+                                     android:hint="BPL"
+                                     android:imeOptions="actionNext"
+                                     android:inputType="text"
+                                     android:textColor="@color/black"
+
+                                     android:visibility="visible" />
+                             </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtDisabilityType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:drawablePadding="8dp"
+                                    android:enabled="false"
+                                    android:hint="Disability Type"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtIsDivyang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:enabled="false"
+                                    android:hint="Is Divyang."
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <LinearLayout
+
+                                android:id="@+id/llReligion"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="0.5"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your Religion."
+                                    android:textColor="@color/black"
+
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnReligion"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:foregroundTint="@color/black">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:enabled="true"
+                                    android:hint="Password"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtConfirmPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:drawablePadding="8dp"
+                                    android:enabled="true"
+                                    android:hint="Confirm Password"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/chktermcondition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="8dp"
+                            android:buttonTint="@color/blue"
+                            android:padding="2dp"
+                            android:text="I agree with Terms &amp; Conditions"
+
+                            android:textSize="16sp"
+                            android:textStyle="bold|italic" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:id="@+id/BtnRegistration"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/edtbg"
+                            android:gravity="center"
+                            android:text="Register"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </FrameLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

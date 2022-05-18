@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.cardview.widget.CardView
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_marginStart="2dp"
+                android:paddingStart="4dp"
+                android:id="@+id/txtscheme"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center|start"
+                android:layout_weight="0.22"
+                android:gravity="center|start"
+                android:text="Scheme Name"
+                android:textColor="@color/black"
+                android:textSize="9sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/Imgdept1"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.16"
+                android:gravity="center|end"
+                android:src="@drawable/right"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/Imgdept2"
+                android:layout_width="0dp"
+
+
+                android:layout_height="20dp"
+                android:layout_weight="0.16"
+                android:gravity="center|end"
+                android:src="@drawable/right" />
+
+            <ImageView
+                android:id="@+id/Imgdept3"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.16"
+
+
+                android:gravity="center|end"
+                android:src="@drawable/right" />
+
+            <ImageView
+                android:id="@+id/Imgdept4"
+                android:layout_width="0dp"
+
+
+                android:layout_height="20dp"
+                android:layout_weight="0.16"
+                android:gravity="center|end"
+                android:src="@drawable/right" />
+
+            <ImageView
+                android:id="@+id/Imgdept5"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.16"
+
+                android:gravity="center|end"
+                android:src="@drawable/right" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.cardview.widget.CardView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

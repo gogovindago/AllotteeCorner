@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.IntroductionActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.viewpager.widget.ViewPager
+
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <!--
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/fab_margin"
+                app:cardUseCompatPadding="true"
+                >
+
+                <ScrollView
+                    android:fillViewport="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    >
+
+
+                    <TextView
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+
+                        android:id="@+id/txtAppIdlabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:lineSpacingExtra="5sp"
+                        android:padding="4dp"
+                        android:text="@string/introductiontext"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        -->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

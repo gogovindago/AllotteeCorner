@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        tools:context=".ui.CheckApplicatioStatusActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolbar">
+
+
+                <LinearLayout
+                    android:id="@+id/llacademicsession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/txtstudentAcademicSession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Select your academic session."
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:visibility="visible">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/spinner_border"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spnstudentAcademicSession"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black"
+                            android:foregroundTint="@color/black">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llscheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/txtstudentScholarshipscheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Select Your  Scheme."
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:visibility="visible">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/spinner_border"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spnstudentScholarshipscheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black"
+                            android:foregroundTint="@color/black">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.7"
+
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxStrokeColor="@color/purple_700"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/colorPrimaryDark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/edtuserAdharNO"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:hint="Aadhar Number"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberSigned"
+                            android:maxLength="12"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/edtbg"
+                        android:gravity="center"
+                        android:text="Get Status"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/drop_shadow" />
+
+                <TextView
+                    android:id="@+id/txtlabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Track Application Process"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/consapptracking"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:visibility="invisible"
+                    tools:context=".ui.TrackActivity">
+
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginBottom="11dp"
+                        android:background="@drawable/drop_shadow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:id="@+id/viewAppSubmittedLavel"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shape_status_completed"
+                        app:layout_constraintBottom_toBottomOf="@+id/appSubmitted"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/appSubmitted" />
+
+                    <ImageView
+                        android:id="@+id/appSubmitted"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/right"
+                        app:layout_constraintStart_toEndOf="@+id/viewAppSubmittedLavel"
+                        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                    <View
+                        android:id="@+id/supporter_placed"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/appSubmitted"
+                        app:layout_constraintEnd_toEndOf="@+id/appSubmitted"
+                        app:layout_constraintStart_toStartOf="@+id/appSubmitted"
+                        app:layout_constraintTop_toTopOf="@+id/appSubmitted" />
+
+                    <TextView
+                        android:id="@+id/txtStudentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Application Submitted"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/supporter_placed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appSubmitted"
+                        app:layout_constraintTop_toTopOf="@+id/appSubmitted" />
+
+                    <TextView
+                        android:id="@+id/txtAppAppliedDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        app:layout_constraintEnd_toEndOf="@id/txtStudentLabel"
+                        app:layout_constraintStart_toStartOf="@+id/txtStudentLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/txtStudentLabel" />
+
+                    <View
+                        android:id="@+id/viewCollegeoRInstituteLavel"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shape_status_completed"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgCollegeoRInstituteLavel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imgCollegeoRInstituteLavel" />
+
+                    <ImageView
+                        android:id="@+id/imgCollegeoRInstituteLavel"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/pending"
+                        app:layout_constraintStart_toEndOf="@+id/viewCollegeoRInstituteLavel"
+                        app:layout_constraintTop_toBottomOf="@+id/appSubmitted" />
+
+                    <View
+                        android:id="@+id/supporter_confirmed"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgCollegeoRInstituteLavel"
+                        app:layout_constraintEnd_toEndOf="@+id/imgCollegeoRInstituteLavel"
+                        app:layout_constraintStart_toStartOf="@+id/imgCollegeoRInstituteLavel"
+                        app:layout_constraintTop_toTopOf="@+id/imgCollegeoRInstituteLavel" />
+
+                    <TextView
+                        android:id="@+id/txtCollege_InstituteLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Application Verified by College/Institute"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/supporter_confirmed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgCollegeoRInstituteLavel" />
+
+                    <TextView
+                        android:id="@+id/txtStatusCollege_InstituteLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Status :-"
+                        app:layout_constraintEnd_toEndOf="@id/txtCollege_InstituteLabel"
+                        app:layout_constraintStart_toStartOf="@+id/txtCollege_InstituteLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/txtCollege_InstituteLabel" />
+
+                    <TextView
+                        android:id="@+id/txtcollegeStatusdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Status date :-"
+                        app:layout_constraintEnd_toEndOf="@id/txtCollege_InstituteLabel"
+                        app:layout_constraintStart_toStartOf="@+id/txtCollege_InstituteLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/txtStatusCollege_InstituteLabel" />
+
+                    <TextView
+                        android:id="@+id/txtcollegeStatusRemark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Remark :-"
+                        app:layout_constraintEnd_toEndOf="@+id/txtcollegeStatusdate"
+                        app:layout_constraintStart_toStartOf="@+id/txtcollegeStatusdate"
+                        app:layout_constraintTop_toBottomOf="@+id/txtcollegeStatusdate" />
+
+
+                    <View
+                        android:id="@+id/dividerCollegeInstitute"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toTopOf="@+id/viewCollegeoRInstituteLavel"
+                        app:layout_constraintEnd_toEndOf="@+id/viewAppSubmittedLavel"
+                        app:layout_constraintStart_toStartOf="@+id/viewAppSubmittedLavel"
+                        app:layout_constraintTop_toBottomOf="@id/viewAppSubmittedLavel" />
+
+                    <View
+                        android:id="@+id/view_NodalBodyLevel"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shape_status_completed"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgNodalBodyLevel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imgNodalBodyLevel" />
+
+                    <ImageView
+                        android:id="@+id/imgNodalBodyLevel"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/pending"
+                        app:layout_constraintStart_toEndOf="@+id/view_NodalBodyLevel"
+                        app:layout_constraintTop_toBottomOf="@+id/txtcollegeStatusRemark" />
+
+                    <View
+                        android:id="@+id/supporter_processed"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgNodalBodyLevel"
+                        app:layout_constraintEnd_toEndOf="@+id/imgNodalBodyLevel"
+                        app:layout_constraintStart_toStartOf="@+id/imgNodalBodyLevel"
+                        app:layout_constraintTop_toTopOf="@+id/imgNodalBodyLevel" />
+
+                    <TextView
+
+                        android:id="@+id/txtNodalBodyLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Application Verified by Nodal Body"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/supporter_processed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgNodalBodyLevel"
+                        app:layout_constraintTop_toTopOf="@+id/supporter_processed" />
+
+                    <TextView
+                        android:id="@+id/TxtNodalBodyLabelStatus"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Status :-"
+                        app:layout_constraintEnd_toEndOf="@id/txtNodalBodyLabel"
+                        app:layout_constraintStart_toStartOf="@+id/txtNodalBodyLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/txtNodalBodyLabel" />
+
+                    <TextView
+                        android:id="@+id/TxtNodalBodyLabelStatusdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Status date :-"
+                        app:layout_constraintEnd_toEndOf="@id/txtNodalBodyLabel"
+                        app:layout_constraintStart_toStartOf="@+id/txtNodalBodyLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/TxtNodalBodyLabelStatus" />
+
+                    <TextView
+                        android:id="@+id/TxtNodalBodyLabelRemark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Remark :-"
+                        app:layout_constraintEnd_toEndOf="@+id/TxtNodalBodyLabelStatusdate"
+                        app:layout_constraintStart_toStartOf="@+id/TxtNodalBodyLabelStatusdate"
+                        app:layout_constraintTop_toBottomOf="@+id/TxtNodalBodyLabelStatusdate" />
+
+                    <View
+                        android:id="@+id/dividerNodalBody"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toTopOf="@+id/view_NodalBodyLevel"
+                        app:layout_constraintEnd_toEndOf="@+id/viewCollegeoRInstituteLavel"
+                        app:layout_constraintStart_toStartOf="@+id/viewCollegeoRInstituteLavel"
+                        app:layout_constraintTop_toBottomOf="@id/viewCollegeoRInstituteLavel" />
+
+                    <View
+                        android:id="@+id/view_DepartmentOrHeadLevel"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shape_status_completed"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgDepartmentOrHeadLevel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imgDepartmentOrHeadLevel" />
+
+                    <ImageView
+                        android:id="@+id/imgDepartmentOrHeadLevel"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/pending"
+                        app:layout_constraintStart_toEndOf="@+id/view_DepartmentOrHeadLevel"
+                        app:layout_constraintTop_toBottomOf="@+id/TxtNodalBodyLabelRemark" />
+
+                    <View
+
+                        android:id="@+id/supporter_pickup"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgDepartmentOrHeadLevel"
+                        app:layout_constraintEnd_toEndOf="@+id/imgDepartmentOrHeadLevel"
+                        app:layout_constraintStart_toStartOf="@+id/imgDepartmentOrHeadLevel"
+                        app:layout_constraintTop_toTopOf="@+id/imgDepartmentOrHeadLevel" />
+
+                    <TextView
+                        android:id="@+id/txtDeptHeadOfficeLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Application Verified by Department/Head
+Office"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/supporter_pickup"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgDepartmentOrHeadLevel"
+                        app:layout_constraintTop_toTopOf="@+id/supporter_pickup" />
+
+
+                    <TextView
+                        android:id="@+id/txtDeptHeadOfficeLabelStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+
+                        android:text="Status :-"
+
+                        app:layout_constraintEnd_toEndOf="@id/txtDeptHeadOfficeLabel"
+                        app:layout_constraintStart_toStartOf="@+id/txtDeptHeadOfficeLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDeptHeadOfficeLabel" />
+
+                    <TextView
+                        android:id="@+id/txtDeptHeadOfficeLabelStatusdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Status date :-"
+                        app:layout_constraintEnd_toEndOf="@id/txtDeptHeadOfficeLabel"
+                        app:layout_constraintStart_toStartOf="@+id/txtDeptHeadOfficeLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDeptHeadOfficeLabelStatus" />
+
+                    <TextView
+                        android:id="@+id/txtDeptHeadOfficeLabelStatusRemark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Remark :-"
+                        app:layout_constraintEnd_toEndOf="@+id/txtDeptHeadOfficeLabelStatusdate"
+                        app:layout_constraintStart_toStartOf="@+id/txtDeptHeadOfficeLabelStatusdate"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDeptHeadOfficeLabelStatusdate" />
+
+                    <View
+                        android:id="@+id/dividerDepartmentOrHeadLevel"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toTopOf="@+id/view_DepartmentOrHeadLevel"
+                        app:layout_constraintEnd_toEndOf="@+id/view_NodalBodyLevel"
+                        app:layout_constraintStart_toStartOf="@+id/view_NodalBodyLevel"
+                        app:layout_constraintTop_toBottomOf="@id/view_NodalBodyLevel" />
+
+
+                    <ImageView
+
+                        android:id="@+id/imgScholarshipDisbursedLevel"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="14dp"
+                        android:src="@drawable/pending"
+                        app:layout_constraintStart_toEndOf="@+id/view_order_Status"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDeptHeadOfficeLabelStatusRemark" />
+
+                    <View
+                        android:id="@+id/view_order_Status"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shape_status_current"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgScholarshipDisbursedLevel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imgScholarshipDisbursedLevel" />
+
+                    <View
+                        android:id="@+id/status_application"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toTopOf="@+id/view_order_Status"
+                        app:layout_constraintEnd_toEndOf="@+id/view_DepartmentOrHeadLevel"
+                        app:layout_constraintStart_toStartOf="@+id/view_DepartmentOrHeadLevel"
+                        app:layout_constraintTop_toBottomOf="@+id/view_DepartmentOrHeadLevel" />
+
+
+                    <TextView
+                        android:id="@+id/TxtScholarshipDisbursed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Scholarship Disbursed"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgScholarshipDisbursedLevel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgScholarshipDisbursedLevel"
+                        app:layout_constraintTop_toTopOf="@+id/imgScholarshipDisbursedLevel" />
+
+                    <TextView
+                        android:id="@+id/TxtScholarshipDisbursedStatus"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+
+                        android:text="Status :-"
+                        app:layout_constraintEnd_toEndOf="@id/TxtScholarshipDisbursed"
+                        app:layout_constraintStart_toStartOf="@+id/TxtScholarshipDisbursed"
+                        app:layout_constraintTop_toBottomOf="@+id/TxtScholarshipDisbursed" />
+
+                    <TextView
+                        android:id="@+id/TxtScholarshipDisbursedStatusdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Disbursement Date :-"
+                        app:layout_constraintEnd_toEndOf="@+id/TxtScholarshipDisbursedStatus"
+                        app:layout_constraintStart_toStartOf="@+id/TxtScholarshipDisbursedStatus"
+                        app:layout_constraintTop_toBottomOf="@+id/TxtScholarshipDisbursedStatus" />
+
+                    <TextView
+                        android:id="@+id/txtScholarshipTransactionNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Transaction No:-"
+                        app:layout_constraintEnd_toEndOf="@+id/TxtScholarshipDisbursedStatusdate"
+                        app:layout_constraintStart_toStartOf="@+id/TxtScholarshipDisbursedStatusdate"
+                        app:layout_constraintTop_toBottomOf="@+id/TxtScholarshipDisbursedStatusdate" />
+
+                    <TextView
+                        android:id="@+id/txtScholarshipDisbursedAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Amount Disbursed:-"
+                        app:layout_constraintEnd_toEndOf="@+id/txtScholarshipTransactionNo"
+                        app:layout_constraintStart_toStartOf="@+id/txtScholarshipTransactionNo"
+                        app:layout_constraintTop_toBottomOf="@+id/txtScholarshipTransactionNo" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/lldetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <View
+
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/drop_shadow" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Applicant Detail"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+                    <View
+
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxStrokeColor="@color/purple_700"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/colorPrimaryDark"
+                        app:shapeAppearance="@style/Rounded">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtFullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:enabled="false"
+                            android:hint="Full Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+
+                            android:visibility="visible" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtMemberId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:drawablePadding="8dp"
+                                android:enabled="false"
+                                android:hint="Member Id"
+                                android:imeOptions="actionNext"
+
+
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtFatherName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:enabled="false"
+                                android:hint="Father Name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtCastCategoryName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:enabled="false"
+                                android:hint="Caste."
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtApplicationNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:drawablePadding="8dp"
+                                android:enabled="false"
+                                android:hint="Application No"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxStrokeColor="@color/purple_700"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/colorPrimaryDark"
+                        app:shapeAppearance="@style/Rounded">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtInstituteName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:enabled="false"
+                            android:hint="Institute Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+
+                            android:visibility="visible" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxStrokeColor="@color/purple_700"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/colorPrimaryDark"
+                        app:shapeAppearance="@style/Rounded">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtCourseName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:enabled="false"
+                            android:hint="Course Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+
+                            android:visibility="visible" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtYear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:drawablePadding="8dp"
+                                android:enabled="false"
+                                android:hint="Year"
+                                android:imeOptions="actionNext"
+
+
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtSession"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:enabled="false"
+                                android:hint="Session"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtRRNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:drawablePadding="8dp"
+                                android:enabled="false"
+                                android:hint="RR No"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="0.5"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/purple_700"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/colorPrimaryDark"
+                            app:shapeAppearance="@style/Rounded">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtAttendance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:enabled="false"
+                                android:hint="Attendance"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxStrokeColor="@color/purple_700"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/colorPrimaryDark"
+                        app:shapeAppearance="@style/Rounded">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtAppliedOn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:enabled="false"
+                            android:hint="Applied On"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+
+                            android:visibility="visible" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850544743304",
+    "project_id": "allottee-corner",
+    "storage_bucket": "allottee-corner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850544743304:android:d5db57e5247524dcc5603d",
+        "android_client_info": {
+          "package_name": "hsvp.digital.allottee_corner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850544743304-hl5kf9jvlel2m5hp5mnfpsf3j24cl2g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUK8qlouicvTpAVdHUW-vRM97vHQGvnDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850544743304-hl5kf9jvlel2m5hp5mnfpsf3j24cl2g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

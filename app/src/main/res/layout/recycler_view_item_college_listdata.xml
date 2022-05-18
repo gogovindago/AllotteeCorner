@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/txtcollegeSrNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:textAllCaps="false"
+                android:id="@+id/txtcollegeName"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.22"
+                android:gravity="center|start"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <TextView
+
+                android:id="@+id/txtcollegeCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtcollegeAisheCode"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtcollegeType"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtcollegeCategory"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtcollegeAffilliatonbody1"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center|top"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="5sp"
+                android:padding="1dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtcollegeAffilliatonbody2"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="5sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtcollege20_21Status"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtcollege21_22Status"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

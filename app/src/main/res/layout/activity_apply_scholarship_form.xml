@@ -1,0 +1,2642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        tools:context=".ui.ApplyScholarshipFormActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+            android:id="@+id/simpleSwipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+
+                        android:id="@+id/llacademicsession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/txtstudentAcademicSession"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="2dp"
+                            android:text="Select your academic session."
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:visibility="visible">
+
+                        </TextView>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/spinner_border"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spnstudentAcademicSession"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/black"
+                                android:foregroundTint="@color/black"
+                                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+                            </androidx.appcompat.widget.AppCompatSpinner>
+                            <View
+                                android:background="@color/purple_200"
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent">
+
+                            </View>
+
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/btnSumit"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/edtbg"
+                                android:gravity="center"
+                                android:text="Submit"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:visibility="gone"
+                        android:id="@+id/btnDataFromPPP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/edtbg"
+                        android:gravity="center"
+                        android:text="Get latest data from PPP"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:background="@drawable/spinner_border"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.61"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtOtp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="8dp"
+                                    android:hint="Enter OTP"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberSigned"
+                                    android:singleLine="false"
+                                    android:textColor="@color/black"
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <View
+                                android:background="@color/purple_200"
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent">
+
+                            </View>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnVerifyOtp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.38"
+                                android:background="@drawable/edtbg"
+                                android:gravity="center"
+                                android:text="Verify OTP"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--radioooooo button-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/spinner_border"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="2dp"
+                                android:text="Studying Outside the Haryana State being the domicile of Haryana"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/colorPrimaryDark">
+
+                            </View>
+
+                            <RadioGroup
+                                android:id="@+id/btnRadiogroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:foregroundTint="@color/black"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.radiobutton.MaterialRadioButton
+                                    android:id="@+id/rdyes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="32dp"
+                                    android:text="YES "
+                                    android:textStyle="bold">
+
+                                </com.google.android.material.radiobutton.MaterialRadioButton>
+
+                                <com.google.android.material.radiobutton.MaterialRadioButton
+                                    android:id="@+id/rdno"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="32dp"
+                                    android:text="NO"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible">
+
+                                </com.google.android.material.radiobutton.MaterialRadioButton>
+
+
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llCourse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <TextView
+                                android:id="@+id/txtstudentCourse"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="1dp"
+                                android:text="Select your Course."
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="normal"
+                                android:visibility="visible">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/spinner_border"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spnstudentCourse"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/black"
+                                    android:foregroundTint="@color/black"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+                                </androidx.appcompat.widget.AppCompatSpinner>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lldepartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <TextView
+                                android:id="@+id/txtstudentdepartment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Select your department."
+                                android:textColor="@color/black"
+                                android:textStyle="normal"
+                                android:visibility="visible">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="1dp"
+                                android:background="@drawable/spinner_border"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spnstudentdepartment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/black"
+                                    android:foregroundTint="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                                </androidx.appcompat.widget.AppCompatSpinner>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lldistrict"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <TextView
+                                android:id="@+id/txtstudentdistrict"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="1dp"
+                                android:text="Select your district."
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="normal"
+                                android:visibility="visible">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/spinner_border"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spnstudentdistrict"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/black"
+                                    android:foregroundTint="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                                </androidx.appcompat.widget.AppCompatSpinner>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCollege_Institute"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <TextView
+                                android:id="@+id/txtstudentCollege_Institute"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="1dp"
+                                android:text="Select your College/Institute"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="normal"
+                                android:visibility="visible">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/spinner_border"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spnstudentCollegeInstitute"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/black"
+                                    android:foregroundTint="@color/black"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+                                </androidx.appcompat.widget.AppCompatSpinner>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llregistrationAll"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:id="@+id/edtFamilyId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:enabled="false"
+                                        android:focusable="false"
+                                        android:hint="Family Id"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtMemberId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="8dp"
+                                        android:enabled="false"
+                                        android:hint="Member Id"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtFirstName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:enabled="false"
+                                        android:hint="First Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtLastName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:drawablePadding="8dp"
+                                        android:enabled="false"
+                                        android:hint="Last Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtFullName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:hint="Student Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llCourseType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:id="@+id/txtstudentCourseType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your Course Type."
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnstudentCourseType"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:foregroundTint="@color/black"
+                                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtFatherName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:enabled="false"
+                                        android:hint="Father Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtMotherName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:drawablePadding="8dp"
+                                        android:enabled="false"
+                                        android:hint="Mother Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:enabled="false"
+                                    android:hint="Gender"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtHouseNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:enabled="false"
+                                        android:hint="House No."
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtStreetNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:drawablePadding="8dp"
+                                        android:enabled="false"
+                                        android:hint="Street No."
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:enabled="false"
+                                    android:hint="Address"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:textColorHint="@color/black"
+                                android:visibility="visible"
+                                app:boxStrokeColor="@color/purple_700"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/colorPrimaryDark"
+                                app:shapeAppearance="@style/Rounded">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtAAdhar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="0123456789"
+                                    android:enabled="false"
+                                    android:hint="Aadhaar No."
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberSigned"
+                                    android:maxLength="12"
+
+
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtDOb"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:enabled="false"
+                                        android:hint="DOB."
+                                        android:inputType="numberSigned"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtMobileNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:digits="0123456789"
+                                        android:drawablePadding="8dp"
+                                        android:enabled="false"
+                                        android:hint="Mobile No."
+                                        android:imeOptions="actionNext"
+                                        android:inputType="numberSigned"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtCastCategoryName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:enabled="false"
+                                        android:hint="Caste Category name."
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtEmailId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="8dp"
+
+                                        android:enabled="false"
+                                        android:hint="Email Id."
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textEmailAddress"
+                                        android:textColor="@color/black"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtFamilyIncome"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:digits="0123456789"
+                                        android:enabled="false"
+                                        android:hint="Family Income"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="numberDecimal"
+
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <!-- <com.google.android.material.textfield.TextInputLayout
+                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_margin="1dp"
+                                     android:layout_weight="0.5"
+                                     android:textColorHint="@color/black"
+                                     android:visibility="visible"
+                                     app:boxStrokeColor="@color/purple_700"
+                                     app:endIconMode="clear_text"
+                                     app:endIconTint="@color/colorPrimaryDark"
+                                     app:shapeAppearance="@style/Rounded">
+
+                                     <com.google.android.material.textfield.TextInputEditText
+                                         android:id="@+id/edtBPL"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:drawablePadding="8dp"
+
+                                         android:enabled="false"
+                                         android:hint="BPL"
+                                         android:imeOptions="actionNext"
+                                         android:inputType="text"
+                                         android:textColor="@color/black"
+
+                                         android:visibility="visible" />
+                                 </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                            <LinearLayout
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="8dp"
+                                android:id="@+id/llYear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your Year."
+                                    android:textColor="@color/black"
+
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:foregroundTint="@color/black"
+                                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtCollegeRollNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:enabled="true"
+                                        android:hint="College Roll No *"
+                                        android:imeOptions="actionNext"
+
+                                        android:inputType="numberSigned"
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_weight="0.5"
+                                    android:textColorHint="@color/black"
+                                    android:visibility="visible"
+                                    app:boxStrokeColor="@color/purple_700"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="@color/colorPrimaryDark"
+                                    app:shapeAppearance="@style/Rounded">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtUniversityRollNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="0123456789"
+                                        android:drawablePadding="8dp"
+                                        android:enabled="true"
+                                        android:hint="University Roll No *"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="numberSigned"
+                                        android:visibility="visible" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtAdmissionDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_date_range_24"
+                                    android:drawablePadding="16dp"
+                                    android:focusable="false"
+                                    android:hint=" Admission Date *"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="date"
+                                    android:outlineSpotShadowColor="@color/colorAccent"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llAreaType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your Area Type *."
+                                    android:textColor="@color/black"
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnAreaType"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:contentDescription="@string/app_name"
+                                        android:foregroundTint="@color/black"
+                                        tools:ignore="TouchTargetSizeCheck">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llBoardingType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your Boarding Type *."
+                                    android:textColor="@color/black"
+
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnBoardingType"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:foregroundTint="@color/black"
+                                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llStudentQuota"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your Student Quota *."
+                                    android:textColor="@color/black"
+
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnStudentQuota"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:foregroundTint="@color/black"
+                                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llLateralEntry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="Select your Lateral Entry *."
+                                    android:textColor="@color/black"
+
+                                    android:textStyle="normal"
+                                    android:visibility="visible">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spnLateralEntry"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/black"
+                                        android:contentDescription="@string/app_name"
+                                        android:foregroundTint="@color/black"
+                                        tools:ignore="TouchTargetSizeCheck">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cardview"
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        app:cardCornerRadius="8dp"
+                                        app:cardElevation="8dp"
+                                        app:cardPreventCornerOverlap="false">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.facebook.drawee.view.SimpleDraweeView
+                                                android:id="@+id/my_image_view"
+                                                android:layout_width="150dp"
+                                                android:layout_height="150dp"
+                                                android:layout_centerInParent="false"
+                                                android:scaleType="fitXY"
+                                                android:visibility="visible"
+                                                app:actualImageScaleType="fitXY"
+                                                app:roundAsCircle="false"
+                                                app:roundedCornerRadius="2dp"
+                                                app:roundingBorderColor="@color/red">
+
+                                            </com.facebook.drawee.view.SimpleDraweeView>
+
+
+                                            <ImageView
+                                                android:id="@+id/upload"
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_centerInParent="false"
+                                                android:padding="1dp"
+                                                android:src="@drawable/ic_baseline_photo_camera_24" />
+
+                                            <TextView
+                                                android:id="@+id/txtupload"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="1dp"
+                                                android:layout_toLeftOf="@+id/upload"
+                                                android:gravity="center|bottom"
+                                                android:padding="1dp"
+                                                android:text="Click camera to Upload Student profile photo"
+                                                android:textColor="@color/red"
+                                                android:textSize="7sp"
+                                                android:textStyle="bold" />
+
+                                        </RelativeLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cardviewStudentSignature"
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="2dp"
+                                        app:cardCornerRadius="8dp"
+                                        app:cardElevation="8dp"
+                                        app:cardPreventCornerOverlap="false">
+
+                                        <RelativeLayout
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.facebook.drawee.view.SimpleDraweeView
+                                                android:id="@+id/my_image_viewStudentSignature"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="150dp"
+                                                android:layout_centerInParent="false"
+                                                android:scaleType="fitXY"
+                                                android:visibility="visible"
+                                                app:actualImageScaleType="fitXY"
+                                                app:roundAsCircle="false"
+                                                app:roundedCornerRadius="2dp"
+                                                app:roundingBorderColor="@color/red">
+
+                                            </com.facebook.drawee.view.SimpleDraweeView>
+
+
+                                            <ImageView
+                                                android:id="@+id/uploadStudentSignature"
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_centerInParent="false"
+                                                android:padding="1dp"
+                                                android:src="@drawable/ic_baseline_photo_camera_24" />
+
+                                            <TextView
+                                                android:id="@+id/txtuploadStudentSignature"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="1dp"
+                                                android:layout_toStartOf="@+id/uploadStudentSignature"
+                                                android:gravity="center|bottom"
+                                                android:padding="1dp"
+                                                android:text="Click camera to Upload Student Signature photo"
+                                                android:textColor="@color/red"
+                                                android:textSize="7sp"
+                                                android:textStyle="bold" />
+
+                                        </RelativeLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center|top"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewParivarPehchaanPatra"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llParivarPehchaanPatra"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtParivarPehchaanPatra"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Parivar Pehchaan Patra*"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfParivarPehchaanPatra"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewDomicileCertificate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llDomicileCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtDomicileCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Domicile Certificate*"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfDomicileCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center|top"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewAadhaarCopy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llAadhaarCopy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtAadhaarCopy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="false"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Aadhaar Copy *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfAadhaarCopy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewIncomeCertificate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llIncomeCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtIncomeCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Income Certificate *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfIncomeCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center|top"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewCasteCertificate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llCasteCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtCasteCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="false"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Caste Certificate *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfCasteCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewHostelCertificate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llHostelCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtHostelCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Hostel Certificate"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfHostelCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center|top"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewMatriculationDMC"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llMatriculationDMC"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtMatriculationDMC"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="false"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Matriculation (10th) DMC *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfMatriculationDMC"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview12thDMC"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="0.5"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/ll12thDMC"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txt12thDMC"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload 12th DMC *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdf12thDMC"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center|top"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewLastExamPassedDMC"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llLastExamPassedDMC"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtLastExamPassedDMC"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="false"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Last Exam Passed DMC (For only who passed out 1st Year/Semester) *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfLastExamPassedDMC"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center|top"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewFeeReceiptCopy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llFeeReceiptCopy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtFeeReceiptCopy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="false"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Fee Receipt Copy *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfFeeReceiptCopy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewFatheDeathCertificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginRight="6dp"
+
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:id="@+id/llFatheDeathCertificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/spinner_border"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <TextView
+                                    android:id="@+id/txtFatheDeathCertificate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.85"
+                                    android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                    android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                    android:gravity="center|start"
+                                    android:padding="5dp"
+                                    android:text="Click here to Upload If Father has Died, Father Death Certificate (In case BC Category) *"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/attachedpdfFatheDeathCertificate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.15"
+                                    android:background="@drawable/spinner_border"
+                                    android:padding="5dp"
+                                    android:src="@drawable/checkgreen"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewBPLCertificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginRight="6dp"
+
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:id="@+id/llBPLCertificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/spinner_border"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <TextView
+                                    android:id="@+id/txtBPLCertificate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.85"
+                                    android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                    android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                    android:gravity="center|start"
+                                    android:padding="5dp"
+                                    android:text="Click here to Upload BPL Certificate (In case BC/BPL Category) *"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/attachedpdfBPLCertificate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.15"
+                                    android:background="@drawable/spinner_border"
+                                    android:padding="5dp"
+                                    android:src="@drawable/checkgreen"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewAadhaarSeededdocuments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="6dp"
+
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:id="@+id/llAadhaarSeededdocuments"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/spinner_border"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <TextView
+                                    android:id="@+id/txtAadhaarSeededdocuments"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.85"
+                                    android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                    android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                    android:gravity="center|start"
+                                    android:padding="5dp"
+                                    android:text="Click here to Upload Aadhaar seeded documents received from bank * *"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/attachedpdfAadhaarSeededdocuments"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.15"
+                                    android:background="@drawable/spinner_border"
+                                    android:padding="5dp"
+                                    android:src="@drawable/checkgreen"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/lloutSideHRy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewAttendanceCertificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llAttendanceCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtAttendanceCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Attendance Certificate *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfAttendanceCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewFeeStructureCopy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llFeeStructureCopy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtFeeStructureCopy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload Fee Structure Copy *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfFeeStructureCopy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewUniversityCertificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llUniversityCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtUniversityCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload University Certificate *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfUniversityCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewNSPCertificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llNSPCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtNSPCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Click here to Upload NSP Certificate *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfNSPCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewCollegeInstitutionAffiliationCertificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="6dp"
+
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:cardPreventCornerOverlap="false">
+
+                                <LinearLayout
+                                    android:id="@+id/llCollegeInstitutionAffiliationCertificate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/spinner_border"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+
+                                    <TextView
+                                        android:id="@+id/txtCollegeInstitutionAffiliationCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="0.85"
+                                        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                                        android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+                                        android:gravity="center|start"
+                                        android:padding="5dp"
+                                        android:text="Upload College/Institution Affiliation Certificate  *"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/attachedpdfCollegeInstitutionAffiliationCertificate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:background="@drawable/spinner_border"
+                                        android:padding="5dp"
+                                        android:src="@drawable/checkgreen"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <TextView
+                            android:id="@+id/txtAadhaarlinkwebsite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0.85"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="*** Check Aadhaar Bank Linking Status Here *** \n\n(https://resident.uidai.gov.in/bank-mapper)
+"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/chktermconditionApply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="false"
+                            android:layout_margin="8dp"
+                            android:buttonTint="@color/blue"
+                            android:padding="2dp"
+                            android:text="I hereby declare that my Aadhar is linked with my Bank Account Number and also it is seeded in NPCI mapper."
+                            android:textStyle="italic" />
+
+
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+
+                        android:id="@+id/BtnApply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/edtbg"
+                        android:gravity="center"
+                        android:text="@string/apply"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

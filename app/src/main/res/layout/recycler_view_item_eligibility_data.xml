@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtscheme"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="1dp"
+                android:layout_weight="0.15"
+                android:gravity="start|center"
+                android:paddingStart="1dp"
+                android:text="Scheme"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtInstituteType"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.14"
+                android:gravity="center"
+                android:text="***"
+                android:textSize="8sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtCategory"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.14"
+
+                android:gravity="center"
+                android:text="***"
+                android:textSize="8sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtFamilyIncome"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.14"
+                android:gravity="center"
+                android:text="***"
+
+                android:textSize="8sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDomicile"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.14"
+
+                android:gravity="center"
+                android:text="***"
+                android:textSize="8sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAttendance"
+
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.14"
+                android:gravity="center"
+                android:text="***"
+                android:textSize="8sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textColor="@color/white"
+                android:background="@drawable/edtbordergay"
+                android:drawablePadding="2dp"
+                android:id="@+id/btnSchemeDocument"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:drawableStart="@drawable/ic_baseline_visibility_24"
+                android:gravity="start|center"
+                android:text="***"
+                android:textSize="8sp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
