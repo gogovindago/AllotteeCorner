@@ -102,7 +102,7 @@ public class SplashActivity extends AppCompatActivity {
                     Intent i = new Intent(SplashActivity.this, WelcomeActivity.class);
                     //Intent i = new Intent(SplashActivity.this, ApplyScholarshipActivity.class);
                     //Intent i = new Intent(SplashActivity.this, RegistrationActivity.class);
-                    // Intent i = new Intent(SplashActivity.this, MasterAdminActivity.class);
+                    // Intent i = new Intent(SplashActivity.this, DashboardActivity.class);
                     startActivity(i);
                     finish();
                 }

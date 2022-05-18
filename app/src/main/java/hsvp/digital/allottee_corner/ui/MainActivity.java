@@ -34,7 +34,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -57,8 +56,6 @@ import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import hsvp.digital.allottee_corner.R;
 import hsvp.digital.allottee_corner.adapter.DrawerItemCustomAdapter;
@@ -298,97 +295,8 @@ FamilyIncome*/
         adapterUpdates = new LatestUpdatesAdapter(this, LatestUpdatesarrayList, this);
         final LinearLayoutManager managerUpdates = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
 
-        //  GridLayoutManager managerUpdates = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
-
-
-        final int time = 5000; // it's the delay time for sliding between items in recyclerview
-
-
-        //The LinearSnapHelper will snap the center of the target child view to the center of the attached RecyclerView , it's optional if you want , you can use it
-        final LinearSnapHelper linearSnapHelper = new LinearSnapHelper();
-
-        final Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-
-            @Override
-            public void run() {
-
-                if (managerUpdates.findLastCompletelyVisibleItemPosition() < (adapterUpdates.getItemCount() - 1)) {
-
-                } else if (managerUpdates.findLastCompletelyVisibleItemPosition() == (adapterUpdates.getItemCount() - 1)) {
-
-
-                }
-            }
-        }, 0, time);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*/* IntroductionFragment
-ListOfScholarshipFragment
-Dept_OnBoardFragment
-SchemeGuidelineFragment
-SalientFeaturesFragment*/
-
-
-        if (role.equalsIgnoreCase("NodalBody")) {
-            arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_dashboard_24, 1004, "#FFFFFF"));
-
-        }
-        if (role.equalsIgnoreCase("College")) {
-            arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_dashboard_24, 1003, "#FFFFFF"));
-
-        }
-        if (role.equalsIgnoreCase("NodalBodyDHE")) {
-            arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_dashboard_24, 1002, "#FFFFFF"));
-
-        }
-        if (role.equalsIgnoreCase("department")) {
-            arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_dashboard_24, 1000, "#FFFFFF"));
-
-        }
-
-        if (role.equalsIgnoreCase("masteradmin")) {
-            arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_dashboard_24, 1001, "#FFFFFF"));
-
-        }
-
-        if (role.equalsIgnoreCase("Student")) {
-
-            // binding.txturl.setVisibility(View.g);
-            arrayList.add(new OptionDataModel(R.string.applyscholarship, R.drawable.ic_baseline_app_registration_24, 1005, "#FFFFFF"));
-
-        }
 
         arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_featured_play_list_24, 2, "#FFFFFF"));
-
 
         arrayList.add(new OptionDataModel(R.string.ownerdetail, R.drawable.ic_baseline_how_to_reg_24, 222, "#FFFFFF"));
         arrayList.add(new OptionDataModel(R.string.currentoutstanding, R.drawable.ic_baseline_school_24, 333, "#FFFFFF"));
@@ -480,7 +388,7 @@ SalientFeaturesFragment*/
         });
 
 
-       // showBadge(MainActivity.this, binding.bottomNavigation, R.id.page_4, "4");
+        // showBadge(MainActivity.this, binding.bottomNavigation, R.id.page_4, "4");
        /* BadgeDrawable badge = binding.bottomNavigation.getOrCreateBadge(R.id.page_4);
         badge.setVisible(true);
 // An icon only badge will be displayed unless a number is set:
@@ -802,45 +710,9 @@ SalientFeaturesFragment*/
     @Override
     public void onItemClick(OptionDataModel item, int currposition) {
 
-        if (item.Id == 1004) {
+        if (item.Id == 2) {
 
-            Intent intent = new Intent(this, NodalBodyDashboardActivity.class);
-            startActivity(intent);
-
-
-        } else if (item.Id == 1003) {
-
-            Intent intent = new Intent(this, CollegeDashboardActivity.class);
-            startActivity(intent);
-
-
-        } else if (item.Id == 1002) {
-
-            Intent intent = new Intent(this, NodalBodyDHEActivity.class);
-            startActivity(intent);
-
-
-        } else if (item.Id == 1000) {
-
-            Intent intent = new Intent(this, DepartmentDashboardActivity.class);
-            startActivity(intent);
-
-
-        } else if (item.Id == 1001) {
-
-            Intent intent = new Intent(this, MasterAdminActivity.class);
-            startActivity(intent);
-
-
-        } else if (item.Id == 1005) {
-
-            Intent intent = new Intent(this, ApplyScholarshipActivity.class);
-            startActivity(intent);
-
-
-        } else if (item.Id == 2) {
-
-            Intent intent = new Intent(this, CheckApplicatioStatusActivity.class);
+            Intent intent = new Intent(this, DashboardActivity.class);
             startActivity(intent);
 
 
@@ -886,7 +758,7 @@ SalientFeaturesFragment*/
             Intent intent = new Intent(this, CourseListActivity.class);
             startActivity(intent);
 
-        }else if (item.Id == 8888) {
+        } else if (item.Id == 8888) {
 
 
             Intent intent = new Intent(this, CourseListActivity.class);

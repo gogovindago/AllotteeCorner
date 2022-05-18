@@ -42,7 +42,7 @@
             android:theme="@style/HarChhatravratti"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="hsvp.digital.allottee_corner.ui.MasterAdminActivity"
+            android:name="hsvp.digital.allottee_corner.ui.DashboardActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti"
             android:windowSoftInputMode="stateAlwaysHidden" />
