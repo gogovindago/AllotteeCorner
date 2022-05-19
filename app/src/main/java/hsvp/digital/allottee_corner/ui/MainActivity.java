@@ -299,8 +299,8 @@ FamilyIncome*/
         arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_featured_play_list_24, 2, "#FFFFFF"));
 
         arrayList.add(new OptionDataModel(R.string.ownerdetail, R.drawable.ic_baseline_how_to_reg_24, 222, "#FFFFFF"));
-        arrayList.add(new OptionDataModel(R.string.currentoutstanding, R.drawable.ic_baseline_school_24, 333, "#FFFFFF"));
-        arrayList.add(new OptionDataModel(R.string.futureoutstanding, R.drawable.ic_baseline_business_24, 444, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.currentoutstanding, R.drawable.ic_baseline_balance_24, 333, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.futureoutstanding, R.drawable.ic_baseline_balance_24, 444, "#FFFFFF"));
         arrayList.add(new OptionDataModel(R.string.paymentmade, R.drawable.ic_baseline_menu_book_24, 555, "#FFFFFF"));
         arrayList.add(new OptionDataModel(R.string.checkappstatus, R.drawable.ic_baseline_fact_check_24, 666, "#FFFFFF"));
 
@@ -490,7 +490,7 @@ FamilyIncome*/
         DataModelLeftNew my_profile = new DataModelLeftNew(R.drawable.personwhite, "My Profile", 1);
         dataModelLeftList.add(my_profile);
 
-        DataModelLeftNew Eligibility = new DataModelLeftNew(R.drawable.ic_baseline_checklist_rtl_24, "Eligibility", 11);
+      /*  DataModelLeftNew Eligibility = new DataModelLeftNew(R.drawable.ic_baseline_checklist_rtl_24, "Eligibility", 11);
         dataModelLeftList.add(Eligibility);
 
         DataModelLeftNew HowtoApply = new DataModelLeftNew(R.drawable.ic_baseline_whitehow_to_reg_24, " How to Apply ", 111);
@@ -499,7 +499,7 @@ FamilyIncome*/
         dataModelLeftList.add(courseList);
         DataModelLeftNew collegeList = new DataModelLeftNew(R.drawable.ic_college, " College List", 2222);
         dataModelLeftList.add(collegeList);
-
+*/
 
         DataModelLeftNew rateApp = new DataModelLeftNew(R.drawable.rate_review, "Rate App", 2);
         dataModelLeftList.add(rateApp);

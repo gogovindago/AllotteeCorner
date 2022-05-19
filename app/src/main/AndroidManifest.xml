@@ -204,6 +204,7 @@
         <activity android:name="hsvp.digital.allottee_corner.ui.OpenBooksActivity"
             android:theme="@style/AppFullScreenTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".ui.OwnerDetailActivity" />
     </application>
 
 </manifest>

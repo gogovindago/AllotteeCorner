@@ -63,6 +63,7 @@
     <string name="Dashboard">Dashboard</string>
     <string name="ownerdetail">Owner Detail</string>
     <string name="currentoutstanding">Current Outstanding</string>
+    <string name="outstanding">Outstanding</string>
     <string name="futureoutstanding">Future Outstanding</string>
     <string name="paymentmade">Payment Made</string>
     <string name="alloteeaccountstatement">Allotee Account Statement</string>

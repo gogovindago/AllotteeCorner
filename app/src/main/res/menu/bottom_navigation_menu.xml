@@ -12,8 +12,8 @@
  <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:icon="@drawable/ic_college"
-        android:title="@string/currentoutstanding"/>
+        android:icon="@drawable/ic_baseline_balance_24"
+        android:title="@string/outstanding"/>
 
 
   <!--  <item
