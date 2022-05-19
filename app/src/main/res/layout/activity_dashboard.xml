@@ -436,7 +436,7 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardsforadoptedpersondetailrural"
+                        android:id="@+id/cardsforpropertyDetial"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
@@ -495,8 +495,8 @@
                                         android:drawableStart="@drawable/person"
                                         android:drawableLeft="@drawable/person"
                                         android:drawablePadding="16dp"
-                                        android:editable="true"
-                                        android:enabled="true"
+
+                                        android:enabled="false"
                                         android:hint="Urban Estate"
                                         android:imeOptions="actionNext"
                                         android:inputType="textPersonName"
@@ -528,8 +528,8 @@
                                         android:digits="0123456789"
 
                                         android:drawablePadding="16dp"
-                                        android:editable="true"
-                                        android:enabled="true"
+
+                                        android:enabled="false"
                                         android:hint="Sector"
                                         android:imeOptions="actionNext"
                                         android:inputType="phone"
@@ -572,8 +572,8 @@
                                         android:drawableStart="@drawable/person"
                                         android:drawableLeft="@drawable/person"
                                         android:drawablePadding="16dp"
-                                        android:editable="true"
-                                        android:enabled="true"
+
+                                        android:enabled="false"
                                         android:hint="Category"
                                         android:imeOptions="actionNext"
                                         android:inputType="textPersonName"
@@ -600,8 +600,8 @@
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
                                         android:drawablePadding="16dp"
-                                        android:editable="true"
-                                        android:enabled="true"
+
+                                        android:enabled="false"
                                         android:hint="Sub-Category"
                                         android:imeOptions="actionNext"
                                         android:textColor="@color/black"
@@ -636,8 +636,8 @@
                                         android:drawableStart="@drawable/person"
                                         android:drawableLeft="@drawable/person"
                                         android:drawablePadding="16dp"
-                                        android:editable="true"
-                                        android:enabled="true"
+
+                                        android:enabled="false"
                                         android:hint="Plot No"
                                         android:imeOptions="actionNext"
                                         android:inputType="textPersonName"
@@ -662,8 +662,8 @@
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
                                         android:drawablePadding="16dp"
-                                        android:editable="true"
-                                        android:enabled="true"
+
+                                        android:enabled="false"
                                         android:hint="Area"
                                         android:imeOptions="actionNext"
                                         android:textColor="@color/black"
@@ -694,8 +694,8 @@
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
                                         android:drawablePadding="16dp"
-                                        android:editable="true"
-                                        android:enabled="true"
+
+                                        android:enabled="false"
                                         android:hint="Status"
                                         android:imeOptions="actionNext"
                                         android:inputType="text"
@@ -705,6 +705,614 @@
                                 </com.google.android.material.textfield.TextInputLayout>
 
                             </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardsforOwnerPersonalDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginRight="6dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edtbgwhite"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="---- Owner Personal Details -----"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold"
+                                android:visibility="visible"
+                                app:textAllCaps="false" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_weight="0.5">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtOwnerfullName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="false"
+                                        android:drawableStart="@drawable/person"
+                                        android:drawableLeft="@drawable/person"
+                                        android:drawablePadding="16dp"
+
+                                        android:enabled="false"
+                                        android:hint="Owner Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textPersonName"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView7"
+                                        tools:ignore="TooDeepLayout" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_weight="0.5">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edFatherHusbandName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="false"
+                                        android:drawableStart="@drawable/person"
+                                        android:drawableLeft="@drawable/person"
+                                        android:drawablePadding="16dp"
+                                        android:enabled="false"
+                                        android:hint="Father/Husband Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_weight="0.5">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtMobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="false"
+                                        android:drawableStart="@drawable/person"
+                                        android:drawableLeft="@drawable/person"
+                                        android:drawablePadding="16dp"
+                                        android:enabled="false"
+                                        android:hint="Mobile"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="phone"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        tools:ignore="TooDeepLayout" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_weight="0.5">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtEmailID"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="false"
+                                        android:drawableStart="@drawable/ic_email"
+                                        android:drawableLeft="@drawable/ic_email"
+                                        android:drawablePadding="16dp"
+                                        android:enabled="false"
+                                        android:hint="EmailID"
+                                        android:imeOptions="actionNext"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_weight="0.5">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edtPanNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="false"
+                                        android:drawableStart="@drawable/person"
+                                        android:drawablePadding="16dp"
+
+                                        android:enabled="false"
+                                        android:hint="Pan No"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textPersonName"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        tools:ignore="TooDeepLayout" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_weight="0.5">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:id="@+id/edtAadharNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="false"
+                                        android:drawablePadding="16dp"
+                                        android:enabled="false"
+                                        android:hint="Aadhar No"
+                                        android:imeOptions="actionNext"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardsforPermanentAddressDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginRight="6dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edtbgwhite"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="-- Permanent Address Details --"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold"
+                                android:visibility="visible"
+                                app:textAllCaps="false" />
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPermanentAddress1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="8dp"
+                                    android:enabled="false"
+                                    android:hint="Permanent Address 1"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPermanentAddress2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="16dp"
+                                    android:enabled="false"
+                                    android:hint="Permanent Address 2"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPermanentAddress3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="16dp"
+                                    android:enabled="false"
+                                    android:hint="Permanent Address 3"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:id="@+id/edtPermanentState"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawablePadding="16dp"
+                                    android:enabled="false"
+                                    android:hint="Permanent State"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPermanentPinCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_pin_24"
+                                    android:drawablePadding="16dp"
+
+                                    android:enabled="false"
+                                    android:hint="Permanent PinCode"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberSigned"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardsforCorrespondenceAddressDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edtbgwhite"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="-- Correspondence Address Details --"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold"
+                                android:visibility="visible"
+                                app:textAllCaps="false" />
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtCorrespondenceAddress1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="8dp"
+
+                                    android:enabled="false"
+                                    android:hint="Correspondence Address 1"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtCorrespondenceAddress2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="16dp"
+                                    android:enabled="false"
+                                    android:hint="Correspondence Address 2"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtCorrespondenceAddress3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="16dp"
+                                    android:enabled="false"
+                                    android:hint="Correspondence Address 3"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:id="@+id/edtCorrespondenceState"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawablePadding="16dp"
+                                    android:enabled="false"
+                                    android:hint="Correspondence State"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtCorrespondencePinCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/ic_baseline_pin_24"
+                                    android:drawablePadding="16dp"
+
+                                    android:enabled="false"
+                                    android:hint="Correspondence PinCode"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberSigned"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
 
                         </LinearLayout>

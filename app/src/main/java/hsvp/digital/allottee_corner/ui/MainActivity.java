@@ -347,11 +347,11 @@ FamilyIncome*/
 
                         return true;
 
-                    case R.id.page_2:
+                   /* case R.id.page_2:
 
                         Intent EligibilityActivity = new Intent(MainActivity.this, EligibilityActivity.class);
                         startActivity(EligibilityActivity);
-                        return true;
+                        return true;*/
 
                     case R.id.page_3:
                         Intent ListofCollegeIntent = new Intent(MainActivity.this, CollegeListActivity.class);
