@@ -205,6 +205,9 @@
             android:theme="@style/AppFullScreenTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
         <activity android:name=".ui.OwnerDetailActivity" />
+        <activity android:name=".ui.CurrentOutStandingActivity" />
+        <activity android:name=".ui.FutureOutStandingActivity" />
+        <activity android:name=".ui.PaymentMadeActivity" />
     </application>
 
 </manifest>

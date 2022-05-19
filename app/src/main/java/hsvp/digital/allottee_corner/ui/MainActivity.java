@@ -719,50 +719,50 @@ FamilyIncome*/
         } else if (item.Id == 222) {
 
 
-            Intent intent = new Intent(this, IntroActivity.class);
+            Intent intent = new Intent(this, OwnerDetailActivity.class);
             startActivity(intent);
 
         } else if (item.Id == 333) {
 
 
-            Intent intent = new Intent(this, ListOfScholarshipActivity.class);
+            Intent intent = new Intent(this, CurrentOutStandingActivity.class);
             startActivity(intent);
 
         } else if (item.Id == 444) {
 
 
-            Intent intent = new Intent(this, DeptOnBoardActivity.class);
+            Intent intent = new Intent(this, FutureOutStandingActivity.class);
             startActivity(intent);
 
         } else if (item.Id == 555) {
 
 
-            Intent intent = new Intent(this, SchemeGuideLineActivity.class);
+            Intent intent = new Intent(this, PaymentMadeActivity.class);
             startActivity(intent);
 
         } else if (item.Id == 666) {
 
 
-            Intent intent = new Intent(this, SalientFeaturesActivity.class);
+            Intent intent = new Intent(this, CheckApplicatioStatusActivity.class);
             startActivity(intent);
 
         } else if (item.Id == 777) {
 
 
-            Intent intent = new Intent(this, HowtoApplyActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, HowtoApplyActivity.class);
+//            startActivity(intent);
 
         } else if (item.Id == 888) {
 
 
-            Intent intent = new Intent(this, CourseListActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, CourseListActivity.class);
+//            startActivity(intent);
 
         } else if (item.Id == 8888) {
 
 
-            Intent intent = new Intent(this, CourseListActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, CourseListActivity.class);
+//            startActivity(intent);
 
         }
 
