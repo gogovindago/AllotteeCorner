@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:weightSum="1"
+    android:background="@color/colorPrimary">
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/lblListHeader"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+        android:text="Payment Date"
+        android:textColor="#f9f93d" />
+    <TextView
+        android:gravity="center"
+
+        android:text="Payment Amount"
+        android:id="@+id/lblListHeader2"
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:layout_height="wrap_content"
+        android:textColor="#f9f93d" />
+    <TextView
+        android:gravity="center"
+
+        android:text="Payment/Refund"
+        android:id="@+id/lblListHeader3"
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:layout_height="wrap_content"
+        android:textColor="#f9f93d" />
+ <TextView
+     android:gravity="center"
+
+     android:text="Payment Receipt MemoNumber"
+        android:id="@+id/lblListHeader4"
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:layout_height="wrap_content"
+        android:textColor="#f9f93d" />
+
+</LinearLayout>
