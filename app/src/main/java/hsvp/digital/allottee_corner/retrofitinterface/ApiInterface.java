@@ -6,6 +6,7 @@ import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
+import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
 import hsvp.digital.allottee_corner.model.CheckApplicationExistResponse;
@@ -18,6 +19,7 @@ import hsvp.digital.allottee_corner.model.CoursesTypeResponse;
 import hsvp.digital.allottee_corner.model.DepartmentByCourseIdForApplyResponse;
 import hsvp.digital.allottee_corner.model.DepartmentDashboardResponse;
 import hsvp.digital.allottee_corner.model.FetchAllottedetailsResponse;
+import hsvp.digital.allottee_corner.model.FetchJointHolderDetailsResponse;
 import hsvp.digital.allottee_corner.model.ForgotPasswordRequest;
 import hsvp.digital.allottee_corner.model.ForgotPasswordResponse;
 import hsvp.digital.allottee_corner.model.GetAllCoursesResponse;
@@ -170,6 +172,17 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
 
     @POST("FetchAllottedetails")
     Call<FetchAllottedetailsResponse> FetchAllottedetailsAPi(@Body PlotIdRequest request);
+
+
+
+
+    @POST("FetchJointHolderDetails")
+    Call<FetchJointHolderDetailsResponse> FetchJointHolderDetailsAPi(@Body PlotIdRequest request);
+
+
+
+    @POST("allottefutureOutStandingDetails")
+    Call<AllottefutureOutStandingDetailsResponse> allottefutureOutStandingDetailsPi(@Body PlotIdRequest request);
 
 
 

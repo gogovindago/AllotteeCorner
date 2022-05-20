@@ -45,7 +45,9 @@ import hsvp.digital.allottee_corner.allinterface.SentOtpForgotPasswordData_inter
 import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteedetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteefutureoustandingData_interface;
+import hsvp.digital.allottee_corner.allinterface.allotteefutureoustandingdetaildetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeplotedetailData_interface;
+import hsvp.digital.allottee_corner.allinterface.fetchjointdetaildetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.verifyOtpForMEMIDData_interface;
 import hsvp.digital.allottee_corner.model.AadharnoFromMemIDResponse;
 import hsvp.digital.allottee_corner.model.AcademicSessionResponse;
@@ -53,6 +55,7 @@ import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
+import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
 import hsvp.digital.allottee_corner.model.CheckApplicationExistResponse;
@@ -65,6 +68,7 @@ import hsvp.digital.allottee_corner.model.CoursesTypeResponse;
 import hsvp.digital.allottee_corner.model.DepartmentByCourseIdForApplyResponse;
 import hsvp.digital.allottee_corner.model.DepartmentDashboardResponse;
 import hsvp.digital.allottee_corner.model.FetchAllottedetailsResponse;
+import hsvp.digital.allottee_corner.model.FetchJointHolderDetailsResponse;
 import hsvp.digital.allottee_corner.model.ForgotPasswordRequest;
 import hsvp.digital.allottee_corner.model.ForgotPasswordResponse;
 import hsvp.digital.allottee_corner.model.GetAadharnoFromMemIDRequest;
@@ -969,12 +973,12 @@ public class WebAPiCall {
     }
 
     public void getCollegesListPMSDataAPiMethod(final Activity activity, final Context context, final GetCollegeListData_interface anInterface, String DistrictsId,
-                                             String DeptmntId,String userAcademicSession) {
+                                                String DeptmntId, String userAcademicSession) {
 
         loadershowwithMsg(context, "Loading...");
 
         Call<CollegeListResponse> responseCall = ApiClient.getClient().getCollegesListPMSDataAPi(DistrictsId,
-                DeptmntId,userAcademicSession);
+                DeptmntId, userAcademicSession);
         responseCall.enqueue(new Callback<CollegeListResponse>() {
             @Override
             public void onResponse(Call<CollegeListResponse> call, Response<CollegeListResponse> response) {
@@ -1055,7 +1059,6 @@ public class WebAPiCall {
     }
 
 
-
     public void allotteCurrentOutStandingMethod(final Activity activity, final Context context, final allottecurrentoutstandingData_interface loginData_interface, PlotIdRequest request) {
 
         loadershowwithMsg(context, "Loading...");
@@ -1091,8 +1094,6 @@ public class WebAPiCall {
             }
         });
     }
-
-
 
 
     public void allottefutureOutStandingAPiMethod(final Activity activity, final Context context, final allotteefutureoustandingData_interface loginData_interface, PlotIdRequest request) {
@@ -1132,10 +1133,6 @@ public class WebAPiCall {
     }
 
 
-
-
-
-
     public void allotteplotdetailsMethod(final Activity activity, final Context context, final allotteeplotedetailData_interface loginData_interface, PlotIdRequest request) {
 
         loadershowwithMsg(context, "Loading...");
@@ -1171,8 +1168,6 @@ public class WebAPiCall {
             }
         });
     }
-
-
 
 
     public void FetchAllottedetailsMethod(final Activity activity, final Context context, final allotteedetailData_interface loginData_interface, PlotIdRequest request) {
@@ -1212,10 +1207,78 @@ public class WebAPiCall {
     }
 
 
+    public void FetchJointHolderMethod(final Activity activity, final Context context, final fetchjointdetaildetailData_interface loginData_interface, PlotIdRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<FetchJointHolderDetailsResponse> userpost_responseCall = ApiClient.getClient().FetchJointHolderDetailsAPi(request);
+        userpost_responseCall.enqueue(new Callback<FetchJointHolderDetailsResponse>() {
+            @Override
+            public void onResponse(Call<FetchJointHolderDetailsResponse> call, Response<FetchJointHolderDetailsResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
 
 
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.allFetchJointHolderDetailsdata((List<FetchJointHolderDetailsResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<FetchJointHolderDetailsResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
 
 
+    public void allottefutureOutStandingDetailsMethod(final Activity activity, final Context context, final allotteefutureoustandingdetaildetailData_interface loginData_interface, PlotIdRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllottefutureOutStandingDetailsResponse> userpost_responseCall = ApiClient.getClient().allottefutureOutStandingDetailsPi(request);
+        userpost_responseCall.enqueue(new Callback<AllottefutureOutStandingDetailsResponse>() {
+            @Override
+            public void onResponse(Call<AllottefutureOutStandingDetailsResponse> call, Response<AllottefutureOutStandingDetailsResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.allottefutureOutStandingdata((List<AllottefutureOutStandingDetailsResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllottefutureOutStandingDetailsResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
 
 
     public void GetMemberbasicdetailsfromFIDUIDtDataMethod(final Activity activity, final Context context, final GetMemberBasicDetailData_interface anInterface, GetMemberbasicdetailsfromFIDUIDRequest request) {

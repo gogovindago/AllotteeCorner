@@ -5,25 +5,35 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.GridLayoutManager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
+import hsvp.digital.allottee_corner.adapter.ListOfCollegeAdapter;
+import hsvp.digital.allottee_corner.adapter.RvfetchjointholderListAdapter;
 import hsvp.digital.allottee_corner.allinterface.allotteedetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeplotedetailData_interface;
+import hsvp.digital.allottee_corner.allinterface.fetchjointdetaildetailData_interface;
 import hsvp.digital.allottee_corner.apicall.WebAPiCall;
 import hsvp.digital.allottee_corner.databinding.ActivityOwnerDetailBinding;
+import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
+import hsvp.digital.allottee_corner.model.CoursesListResponse;
 import hsvp.digital.allottee_corner.model.FetchAllottedetailsResponse;
+import hsvp.digital.allottee_corner.model.FetchJointHolderDetailsResponse;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.CSPreferences;
 import hsvp.digital.allottee_corner.utility.GlobalClass;
 
-public class OwnerDetailActivity extends BaseActivity implements allotteedetailData_interface {
+public class OwnerDetailActivity extends BaseActivity implements allotteedetailData_interface, fetchjointdetaildetailData_interface, RvfetchjointholderListAdapter.ItemListener {
     ActivityOwnerDetailBinding binding;
     private String PlotID;
 
+
+    private List<FetchJointHolderDetailsResponse.Datum> arrayList = new ArrayList<FetchJointHolderDetailsResponse.Datum>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +88,24 @@ public class OwnerDetailActivity extends BaseActivity implements allotteedetailD
     @Override
     public void allotteedetaildata(List<FetchAllottedetailsResponse.Datum> data) {
 
+
+        PlotIdRequest request = new PlotIdRequest();
+
+        request.setPlotID(PlotID);
+
+
+        if (GlobalClass.isNetworkConnected(OwnerDetailActivity.this)) {
+
+            WebAPiCall webapiCall = new WebAPiCall();
+            webapiCall.FetchJointHolderMethod(this, this, OwnerDetailActivity.this, request);
+
+
+        } else {
+
+            Toast.makeText(this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
+        }
+
+
         try {
 
 
@@ -127,6 +155,26 @@ public class OwnerDetailActivity extends BaseActivity implements allotteedetailD
             e.printStackTrace();
         }
 
+
+    }
+
+    @Override
+    public void allFetchJointHolderDetailsdata(List<FetchJointHolderDetailsResponse.Datum> data) {
+
+
+        arrayList.clear();
+        arrayList.addAll(data);
+
+        RvfetchjointholderListAdapter adaptermain = new RvfetchjointholderListAdapter(this, (ArrayList) arrayList, this);
+        binding.RVCurrentJointHoldeDetails.setAdapter(adaptermain);
+        GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
+        binding.RVCurrentJointHoldeDetails.setLayoutManager(manager);
+
+
+    }
+
+    @Override
+    public void onItemClick(FetchJointHolderDetailsResponse.Datum item, int currposition) {
 
     }
 }
