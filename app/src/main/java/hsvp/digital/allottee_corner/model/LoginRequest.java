@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginRequest {
 
-    @SerializedName("FCMToken")
+    @SerializedName("fcmToken")
     @Expose
-    private String FCMToken;
+    private String fcmToken;
 
     @SerializedName("userid")
     @Expose
@@ -16,13 +16,12 @@ public class LoginRequest {
     @Expose
     private String password;
 
-
-    public String getFCMToken() {
-        return FCMToken;
+    public String getFcmToken() {
+        return fcmToken;
     }
 
-    public void setFCMToken(String FCMToken) {
-        this.FCMToken = FCMToken;
+    public void setFcmToken(String fcmToken) {
+        this.fcmToken = fcmToken;
     }
 
     public String getUserid() {

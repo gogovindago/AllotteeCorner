@@ -44,6 +44,7 @@ public static String DeptKey = "o2etc739ut";
     public static String nointernet = "No Internet Connection";
     public static String nodatafound = "No Data Found";
     public static String dheOtherAppsLink = "https://play.google.com/store/apps/collection/cluster?clp=igNAChkKEzU4NzQ0NzU1NTI1MDY5NDE4MDEQCBgDEiEKG2RoZS5kaWdpdGFsLmxpYnJhcnkuaGFyeWFuYRABGAMYAQ%3D%3D:S:ANO1ljIHeVw&gsr=CkOKA0AKGQoTNTg3NDQ3NTU1MjUwNjk0MTgwMRAIGAMSIQobZGhlLmRpZ2l0YWwubGlicmFyeS5oYXJ5YW5hEAEYAxgB:S:ANO1ljJnuKw";
+    public static String aboutUSLink = "https://www.hsvphry.org.in/Pages/AuthorityMembers.aspx";
  public static String aadhaarLink = "https://resident.uidai.gov.in/bank-mapper";
 
 

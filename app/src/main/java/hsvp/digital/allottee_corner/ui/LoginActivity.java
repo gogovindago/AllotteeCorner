@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
                 LoginRequest loginRequest = new LoginRequest();
-                loginRequest.setFCMToken(refreshedToken);
+                loginRequest.setFcmToken(refreshedToken);
 
                 String firsttimeconvertion = md5(EdtUserPassword.getText().toString().trim());
                 String secondtimeconvertion = md5(firsttimeconvertion);

@@ -501,12 +501,12 @@ FamilyIncome*/
         dataModelLeftList.add(collegeList);
 */
 
-        DataModelLeftNew rateApp = new DataModelLeftNew(R.drawable.rate_review, "Rate App", 2);
-        dataModelLeftList.add(rateApp);
-
-
-        DataModelLeftNew share_app = new DataModelLeftNew(R.drawable.share, "Share App", 3);
-        dataModelLeftList.add(share_app);
+//        DataModelLeftNew rateApp = new DataModelLeftNew(R.drawable.rate_review, "Rate App", 2);
+//        dataModelLeftList.add(rateApp);
+//
+//
+//        DataModelLeftNew share_app = new DataModelLeftNew(R.drawable.share, "Share App", 3);
+//        dataModelLeftList.add(share_app);
 //        DataModelLeftNew OurOthersApps = new DataModelLeftNew(R.drawable.ic_baseline_apps_24, "Our Others Apps", 6);
 //        dataModelLeftList.add(OurOthersApps);
 
@@ -855,9 +855,16 @@ FamilyIncome*/
                 break;
             case 5:
                 mDrawerLayout.closeDrawers();
-                Intent aboutUs = new Intent(this, IntroActivity.class);
-                startActivity(aboutUs);
 
+
+                Intent aboutUSLink = new Intent(MainActivity.this, OpenBooksActivity.class);
+                aboutUSLink.putExtra("title", "About Us");
+                aboutUSLink.putExtra("bookurl", GlobalClass.aboutUSLink);
+                startActivity(aboutUSLink);
+
+               /* Intent aboutUs = new Intent(this, IntroActivity.class);
+                startActivity(aboutUs);
+*/
                 break;
 
 

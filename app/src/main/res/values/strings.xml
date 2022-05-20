@@ -32,7 +32,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="address"><u> ADDRESS </u>\n\n General Manager (Information Technology),\n HSVP Office Complex, C - 3, Sector 6,\n Panchkula - INDIA\n</string>
-    <string name="contact"><u> CONTACT INFO </u>\n\n <u>&amp;#9743   Phone:-\n\n</u> 1800-180-3030\n\n <u> Days &amp; Timing:- </u>\n\nMon-Fri (09:00 A.M to 05:00 P.M)\n\n\n <u>&#64; &#9993;  Email:- </u>\n\n  queryhuda@gmail.com
+    <string name="contact"><u> CONTACT INFO </u>\n\n <u>   Phone:-\n\n</u> 1800-180-3030\n\n <u> Days &amp; Timing:- </u>\n\nMon-Fri (09:00 A.M to 05:00 P.M)\n\n\n <u>&#64; &#9993;  Email:- </u>\n\n  queryhuda@gmail.com
 </string>
     <string name="login_signup"><u> Login \n/\n Signup </u></string>
     <string name="home">Home</string>
