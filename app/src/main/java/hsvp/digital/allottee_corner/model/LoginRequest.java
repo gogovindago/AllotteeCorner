@@ -5,23 +5,32 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginRequest {
 
-
-    @SerializedName("AuthID")
-    @Expose
-    private String authID;
-    @SerializedName("Password")
-    @Expose
-    private String password;
     @SerializedName("FCMToken")
     @Expose
-    private String fCMToken;
+    private String FCMToken;
 
-    public String getAuthID() {
-        return authID;
+    @SerializedName("userid")
+    @Expose
+    private String userid;
+    @SerializedName("password")
+    @Expose
+    private String password;
+
+
+    public String getFCMToken() {
+        return FCMToken;
     }
 
-    public void setAuthID(String authID) {
-        this.authID = authID;
+    public void setFCMToken(String FCMToken) {
+        this.FCMToken = FCMToken;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public String getPassword() {
@@ -31,15 +40,5 @@ public class LoginRequest {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public String getFCMToken() {
-        return fCMToken;
-    }
-
-    public void setFCMToken(String fCMToken) {
-        this.fCMToken = fCMToken;
-    }
-
-
 
 }

@@ -32,7 +32,8 @@ public static String DeptKey = "o2etc739ut";
 */
 
     //Live url higher Db
-    public static String baseurl = "https://cmapi.highereduhry.ac.in/api/commonapi/";
+  //  public static String baseurl = "https://cmapi.highereduhry.ac.in/api/commonapi/";
+    public static String baseurl = "http://59.145.147.101:86/api/Hsvp/";
 
     //test ppp
      public static String baseurl2 = "http://164.100.137.245/PPPapi/api/Account/";

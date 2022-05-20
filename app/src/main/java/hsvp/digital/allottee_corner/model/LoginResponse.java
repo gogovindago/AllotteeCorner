@@ -3,8 +3,10 @@ package hsvp.digital.allottee_corner.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class LoginResponse {
+import java.util.ArrayList;
+import java.util.List;
 
+public class LoginResponse {
 
     @SerializedName("response")
     @Expose
@@ -14,7 +16,7 @@ public class LoginResponse {
     private String sysMessage;
     @SerializedName("data")
     @Expose
-    private Data data;
+    private List<Datum> data = new ArrayList<Datum>();
 
     public int getResponse() {
         return response;
@@ -32,197 +34,203 @@ public class LoginResponse {
         this.sysMessage = sysMessage;
     }
 
-    public Data getData() {
+    public List<Datum> getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(List<Datum> data) {
         this.data = data;
     }
 
-    public class Data {
+    public class Datum {
 
-        @SerializedName("name")
+        @SerializedName("ApplicationId")
         @Expose
-        private String name;
-
-
-        @SerializedName("casteCategoryName")
+        private String applicationId;
+        @SerializedName("UserId")
         @Expose
-        private String casteCategoryName;
-
-
-        @SerializedName("familyIncome")
+        private String userId;
+        @SerializedName("UserName")
         @Expose
-        private String familyIncome;
-
-
-        @SerializedName("aadhaarNo")
+        private String userName;
+        @SerializedName("LoweredUserName")
         @Expose
-        private String aadhaarNo;
-
-
-        @SerializedName("collegeId")
+        private String loweredUserName;
+        @SerializedName("MobileAlias")
         @Expose
-        private String collegeId;
-        @SerializedName("college")
+        private Object mobileAlias;
+        @SerializedName("IsAnonymous")
         @Expose
-        private String college;
-        @SerializedName("collegeCode")
+        private boolean isAnonymous;
+        @SerializedName("LastActivityDate")
         @Expose
-        private String collegeCode;
-        @SerializedName("studentId")
+        private String lastActivityDate;
+        @SerializedName("ApplicationId1")
         @Expose
-        private String studentId;
-        @SerializedName("memberId")
+        private String applicationId1;
+        @SerializedName("UserId1")
         @Expose
-        private String memberId;
-        @SerializedName("token")
+        private String userId1;
+        @SerializedName("Password")
         @Expose
-        private String token;
-        @SerializedName("userType")
+        private String password;
+        @SerializedName("PasswordFormat")
         @Expose
-        private String userType;
-        @SerializedName("mobileNo")
+        private int passwordFormat;
+        @SerializedName("PasswordSalt")
         @Expose
-        private String mobileNo;
-        @SerializedName("email")
+        private String passwordSalt;
+        @SerializedName("MobilePIN")
+        @Expose
+        private Object mobilePIN;
+        @SerializedName("Email")
         @Expose
         private String email;
-
-        @SerializedName("file_Student_Image")
+        @SerializedName("LoweredEmail")
         @Expose
-        private String file_Student_Image;
-
-
-        @SerializedName("department_Id")
+        private String loweredEmail;
+        @SerializedName("PasswordQuestion")
         @Expose
-        private String department_Id;
-
-        /*familyID
-fatherFullName*/
-        @SerializedName("familyID")
+        private String passwordQuestion;
+        @SerializedName("PasswordAnswer")
         @Expose
-        private String familyID;
-
-        @SerializedName("fatherFullName")
+        private String passwordAnswer;
+        @SerializedName("IsApproved")
         @Expose
-        private String fatherFullName;
-
-  @SerializedName("nodalBody_Id")
+        private boolean isApproved;
+        @SerializedName("IsLockedOut")
         @Expose
-        private String nodalBody_Id;
+        private boolean isLockedOut;
+        @SerializedName("CreateDate")
+        @Expose
+        private String createDate;
+        @SerializedName("LastLoginDate")
+        @Expose
+        private String lastLoginDate;
+        @SerializedName("LastPasswordChangedDate")
+        @Expose
+        private String lastPasswordChangedDate;
+        @SerializedName("LastLockoutDate")
+        @Expose
+        private String lastLockoutDate;
+        @SerializedName("FailedPasswordAttemptCount")
+        @Expose
+        private int failedPasswordAttemptCount;
+        @SerializedName("FailedPasswordAttemptWindowStart")
+        @Expose
+        private String failedPasswordAttemptWindowStart;
+        @SerializedName("FailedPasswordAnswerAttemptCount")
+        @Expose
+        private int failedPasswordAnswerAttemptCount;
+        @SerializedName("FailedPasswordAnswerAttemptWindowStart")
+        @Expose
+        private String failedPasswordAnswerAttemptWindowStart;
+        @SerializedName("Comment")
+        @Expose
+        private Object comment;
 
-        public String getNodalBody_Id() {
-            return nodalBody_Id;
+        public String getApplicationId() {
+            return applicationId;
         }
 
-        public void setNodalBody_Id(String nodalBody_Id) {
-            this.nodalBody_Id = nodalBody_Id;
+        public void setApplicationId(String applicationId) {
+            this.applicationId = applicationId;
         }
 
-        public String getDepartment_Id() {
-            return department_Id;
+        public String getUserId() {
+            return userId;
         }
 
-        public void setDepartment_Id(String department_Id) {
-            this.department_Id = department_Id;
+        public void setUserId(String userId) {
+            this.userId = userId;
         }
 
-        public String getFamilyID() {
-            return familyID;
+        public String getUserName() {
+            return userName;
         }
 
-        public void setFamilyID(String familyID) {
-            this.familyID = familyID;
+        public void setUserName(String userName) {
+            this.userName = userName;
         }
 
-        public String getFatherFullName() {
-            return fatherFullName;
+        public String getLoweredUserName() {
+            return loweredUserName;
         }
 
-        public void setFatherFullName(String fatherFullName) {
-            this.fatherFullName = fatherFullName;
+        public void setLoweredUserName(String loweredUserName) {
+            this.loweredUserName = loweredUserName;
         }
 
-        public String getFile_Student_Image() {
-            return file_Student_Image;
+        public Object getMobileAlias() {
+            return mobileAlias;
         }
 
-        public void setFile_Student_Image(String file_Student_Image) {
-            this.file_Student_Image = file_Student_Image;
+        public void setMobileAlias(Object mobileAlias) {
+            this.mobileAlias = mobileAlias;
         }
 
-        public String getName() {
-            return name;
+        public boolean isIsAnonymous() {
+            return isAnonymous;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setIsAnonymous(boolean isAnonymous) {
+            this.isAnonymous = isAnonymous;
         }
 
-        public String getCollegeId() {
-            return collegeId;
+        public String getLastActivityDate() {
+            return lastActivityDate;
         }
 
-        public void setCollegeId(String collegeId) {
-            this.collegeId = collegeId;
+        public void setLastActivityDate(String lastActivityDate) {
+            this.lastActivityDate = lastActivityDate;
         }
 
-        public String getCollege() {
-            return college;
+        public String getApplicationId1() {
+            return applicationId1;
         }
 
-        public void setCollege(String college) {
-            this.college = college;
+        public void setApplicationId1(String applicationId1) {
+            this.applicationId1 = applicationId1;
         }
 
-        public String getCollegeCode() {
-            return collegeCode;
+        public String getUserId1() {
+            return userId1;
         }
 
-        public void setCollegeCode(String collegeCode) {
-            this.collegeCode = collegeCode;
+        public void setUserId1(String userId1) {
+            this.userId1 = userId1;
         }
 
-        public String getStudentId() {
-            return studentId;
+        public String getPassword() {
+            return password;
         }
 
-        public void setStudentId(String studentId) {
-            this.studentId = studentId;
+        public void setPassword(String password) {
+            this.password = password;
         }
 
-        public String getMemberId() {
-            return memberId;
+        public int getPasswordFormat() {
+            return passwordFormat;
         }
 
-        public void setMemberId(String memberId) {
-            this.memberId = memberId;
+        public void setPasswordFormat(int passwordFormat) {
+            this.passwordFormat = passwordFormat;
         }
 
-        public String getToken() {
-            return token;
+        public String getPasswordSalt() {
+            return passwordSalt;
         }
 
-        public void setToken(String token) {
-            this.token = token;
+        public void setPasswordSalt(String passwordSalt) {
+            this.passwordSalt = passwordSalt;
         }
 
-        public String getUserType() {
-            return userType;
+        public Object getMobilePIN() {
+            return mobilePIN;
         }
 
-        public void setUserType(String userType) {
-            this.userType = userType;
-        }
-
-        public String getMobileNo() {
-            return mobileNo;
-        }
-
-        public void setMobileNo(String mobileNo) {
-            this.mobileNo = mobileNo;
+        public void setMobilePIN(Object mobilePIN) {
+            this.mobilePIN = mobilePIN;
         }
 
         public String getEmail() {
@@ -233,31 +241,117 @@ fatherFullName*/
             this.email = email;
         }
 
-
-        public String getCasteCategoryName() {
-            return casteCategoryName;
+        public String getLoweredEmail() {
+            return loweredEmail;
         }
 
-        public void setCasteCategoryName(String casteCategoryName) {
-            this.casteCategoryName = casteCategoryName;
+        public void setLoweredEmail(String loweredEmail) {
+            this.loweredEmail = loweredEmail;
         }
 
-        public String getFamilyIncome() {
-            return familyIncome;
+        public String getPasswordQuestion() {
+            return passwordQuestion;
         }
 
-        public void setFamilyIncome(String familyIncome) {
-            this.familyIncome = familyIncome;
+        public void setPasswordQuestion(String passwordQuestion) {
+            this.passwordQuestion = passwordQuestion;
         }
 
-        public String getAadhaarNo() {
-            return aadhaarNo;
+        public String getPasswordAnswer() {
+            return passwordAnswer;
         }
 
-        public void setAadhaarNo(String aadhaarNo) {
-            this.aadhaarNo = aadhaarNo;
+        public void setPasswordAnswer(String passwordAnswer) {
+            this.passwordAnswer = passwordAnswer;
+        }
+
+        public boolean isIsApproved() {
+            return isApproved;
+        }
+
+        public void setIsApproved(boolean isApproved) {
+            this.isApproved = isApproved;
+        }
+
+        public boolean isIsLockedOut() {
+            return isLockedOut;
+        }
+
+        public void setIsLockedOut(boolean isLockedOut) {
+            this.isLockedOut = isLockedOut;
+        }
+
+        public String getCreateDate() {
+            return createDate;
+        }
+
+        public void setCreateDate(String createDate) {
+            this.createDate = createDate;
+        }
+
+        public String getLastLoginDate() {
+            return lastLoginDate;
+        }
+
+        public void setLastLoginDate(String lastLoginDate) {
+            this.lastLoginDate = lastLoginDate;
+        }
+
+        public String getLastPasswordChangedDate() {
+            return lastPasswordChangedDate;
+        }
+
+        public void setLastPasswordChangedDate(String lastPasswordChangedDate) {
+            this.lastPasswordChangedDate = lastPasswordChangedDate;
+        }
+
+        public String getLastLockoutDate() {
+            return lastLockoutDate;
+        }
+
+        public void setLastLockoutDate(String lastLockoutDate) {
+            this.lastLockoutDate = lastLockoutDate;
+        }
+
+        public int getFailedPasswordAttemptCount() {
+            return failedPasswordAttemptCount;
+        }
+
+        public void setFailedPasswordAttemptCount(int failedPasswordAttemptCount) {
+            this.failedPasswordAttemptCount = failedPasswordAttemptCount;
+        }
+
+        public String getFailedPasswordAttemptWindowStart() {
+            return failedPasswordAttemptWindowStart;
+        }
+
+        public void setFailedPasswordAttemptWindowStart(String failedPasswordAttemptWindowStart) {
+            this.failedPasswordAttemptWindowStart = failedPasswordAttemptWindowStart;
+        }
+
+        public int getFailedPasswordAnswerAttemptCount() {
+            return failedPasswordAnswerAttemptCount;
+        }
+
+        public void setFailedPasswordAnswerAttemptCount(int failedPasswordAnswerAttemptCount) {
+            this.failedPasswordAnswerAttemptCount = failedPasswordAnswerAttemptCount;
+        }
+
+        public String getFailedPasswordAnswerAttemptWindowStart() {
+            return failedPasswordAnswerAttemptWindowStart;
+        }
+
+        public void setFailedPasswordAnswerAttemptWindowStart(String failedPasswordAnswerAttemptWindowStart) {
+            this.failedPasswordAnswerAttemptWindowStart = failedPasswordAnswerAttemptWindowStart;
+        }
+
+        public Object getComment() {
+            return comment;
+        }
+
+        public void setComment(Object comment) {
+            this.comment = comment;
         }
     }
-
 
 }

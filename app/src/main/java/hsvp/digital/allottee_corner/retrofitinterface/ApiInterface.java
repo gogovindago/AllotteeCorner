@@ -146,8 +146,17 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
     }
 */
 
-    @POST("UserLogin")
+    @POST("Login")
     Call<LoginResponse> LoginUser(@Body LoginRequest request);
+
+
+
+    @POST("allotteplotdetails")
+    Call<LoginResponse> allotteplotdetailsAPi(@Body LoginRequest request);
+
+
+
+
 
 
     //https://cmapi.highereduhry.ac.in/api/commonapi/CheckStudentAlreadyExist/23456789

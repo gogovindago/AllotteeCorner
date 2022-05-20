@@ -13,6 +13,8 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import java.util.List;
+
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import hsvp.digital.allottee_corner.allinterface.AadharFromMemIdData_interface;
 import hsvp.digital.allottee_corner.allinterface.ForgotPasswordData_interface;
@@ -1014,7 +1016,7 @@ public class WebAPiCall {
 
                     if (response.body().getResponse() == 200) {
 
-                        loginData_interface.alluserdata((LoginResponse.Data) response.body().getData());
+                        loginData_interface.alluserdata((List<LoginResponse.Datum>) response.body().getData());
                         Intent intentlogin = new Intent(context, MainActivity.class);
                         intentlogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         intentlogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

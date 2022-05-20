@@ -32,32 +32,12 @@
             android:theme="@style/HarChhatravratti"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="hsvp.digital.allottee_corner.ui.ApplyScholarshipActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.NodalBodyDHEActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
             android:name="hsvp.digital.allottee_corner.ui.DashboardActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="hsvp.digital.allottee_corner.ui.CourseListActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.EligibilityActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.HowtoApplyActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti"
             android:windowSoftInputMode="stateAlwaysHidden" />
@@ -76,15 +56,6 @@
             android:theme="@style/HarChhatravratti" />
         <activity
             android:name="hsvp.digital.allottee_corner.ui.LoginActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.TrackActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.TrackingAppTestingActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti"
             android:windowSoftInputMode="stateAlwaysHidden" />
@@ -122,22 +93,6 @@
             android:exported="false"
             android:theme="@style/HarChhatravratti" />
         <activity
-            android:name="hsvp.digital.allottee_corner.ui.ListOfScholarshipActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.DeptOnBoardActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.SchemeGuideLineActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.SalientFeaturesActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
             android:name="hsvp.digital.allottee_corner.ui.ContactUsActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti" />
@@ -151,18 +106,6 @@
             android:theme="@style/HarChhatravratti" />
         <activity
             android:name="hsvp.digital.allottee_corner.ui.LatestUpdatesActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.DepartmentDashboardActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.CollegeDashboardActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.NodalBodyDashboardActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti" />
 

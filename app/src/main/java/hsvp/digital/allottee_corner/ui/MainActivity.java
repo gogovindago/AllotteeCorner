@@ -793,8 +793,8 @@ FamilyIncome*/
         switch (dataModelLeftList.get(position).id) {
             case 0:
                 mDrawerLayout.closeDrawers();
-                Intent intent2 = new Intent(this, SchemeGuideLineActivity.class);
-                startActivity(intent2);
+//                Intent intent2 = new Intent(this, SchemeGuideLineActivity.class);
+//                startActivity(intent2);
                 // fragment = new FixturesFragment();
                 // fragment = new Upload_service();
                 //  fragment = new ConnectFragment();
@@ -807,13 +807,13 @@ FamilyIncome*/
                 break;
             case 11:
                 mDrawerLayout.closeDrawers();
-                Intent intentEligibility = new Intent(this, EligibilityActivity.class);
-                startActivity(intentEligibility);
+//                Intent intentEligibility = new Intent(this, EligibilityActivity.class);
+//                startActivity(intentEligibility);
                 break;
             case 111:
                 mDrawerLayout.closeDrawers();
-                Intent HowtoApply = new Intent(this, HowtoApplyActivity.class);
-                startActivity(HowtoApply);
+//                Intent HowtoApply = new Intent(this, HowtoApplyActivity.class);
+//                startActivity(HowtoApply);
                 break;
             case 1111:
                 mDrawerLayout.closeDrawers();

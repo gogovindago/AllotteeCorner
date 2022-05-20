@@ -17,6 +17,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import hsvp.digital.allottee_corner.R;
@@ -120,22 +124,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 LoginRequest loginRequest = new LoginRequest();
                 loginRequest.setFCMToken(refreshedToken);
-                loginRequest.setPassword(EdtUserPassword.getText().toString().trim());
-                loginRequest.setAuthID(edtUserName.getText().toString().trim());
+
+                String firsttimeconvertion = md5(EdtUserPassword.getText().toString().trim());
+                String secondtimeconvertion = md5(firsttimeconvertion);
+
+
+                loginRequest.setPassword(secondtimeconvertion);
+                loginRequest.setUserid(edtUserName.getText().toString().trim());
 
 
                 if (GlobalClass.isNetworkConnected(LoginActivity.this)) {
 
                     WebAPiCall webapiCall = new WebAPiCall();
-
-                    Intent intentlogin = new Intent(LoginActivity.this, MainActivity.class);
-                    intentlogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    intentlogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intentlogin);
-                    finish();
-
-
-                    // webapiCall.loginPostDataMethod(this, this, LoginActivity.this, loginRequest);
+                    webapiCall.loginPostDataMethod(this, this, LoginActivity.this, loginRequest);
 
 
                 } else {
@@ -155,6 +156,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
     }
+
+
+    public static String md5(String string) {
+        byte[] hash;
+
+        try {
+            hash = MessageDigest.getInstance("MD5").digest(string.getBytes("UTF-8"));
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Huh, MD5 should be supported?", e);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException("Huh, UTF-8 should be supported?", e);
+        }
+
+        StringBuilder hex = new StringBuilder(hash.length * 2);
+
+        for (byte b : hash) {
+            int i = (b & 0xFF);
+            if (i < 0x10) hex.append('0');
+            hex.append(Integer.toHexString(i));
+        }
+        System.out.println(hex.toString());
+        return hex.toString();
+
+    }
+
 
     private boolean isValidMobile(String phone) {
         if (!Pattern.matches("[a-zA-Z]+", phone)) {
@@ -177,41 +203,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
-    public void alluserdata(LoginResponse.Data data) {
+    public void alluserdata(List<LoginResponse.Datum> data) {
         try {
-            /*{"response":200,"sys_message":"Login Data Returned","data":{"name":"Super Admin","collegeId":"","college":"",
-            "collegeCode":"","studentId":"","memberId":"","token":"459839a022111372c00df629305430df","userType":"SuperAdmin","mobileNo":"","email":""}}
-             */
-            CSPreferences.putString(this, "MemberId", String.valueOf(data.getMemberId()));
-            CSPreferences.putString(this, "userid", String.valueOf(data.getStudentId()));
-            CSPreferences.putString(this, "User_Name", data.getName());
-            CSPreferences.putString(this, "User_Profile_Photo", data.getFile_Student_Image());
-            CSPreferences.putString(this, "PhoneNo", data.getMobileNo());
-            CSPreferences.putString(this, "Email", data.getEmail());
-            CSPreferences.putString(this, "token", data.getToken());
-            CSPreferences.putBolean(this, "firstTimelogin", firstTimelogin);
-            CSPreferences.putString(this, "UserType", data.getUserType());
 
-            CSPreferences.putString(this, "AadhaarNo", data.getAadhaarNo());
-            CSPreferences.putString(this, "CasteCategoryName", data.getCasteCategoryName());
-            CSPreferences.putString(this, "FamilyIncome", data.getFamilyIncome());
-            CSPreferences.putString(this, "FatherFullName", data.getFatherFullName());
-            CSPreferences.putString(this, "FamilyID", data.getFamilyID());
-            CSPreferences.putString(this, "department_Id", String.valueOf(data.getDepartment_Id()));
-            CSPreferences.putString(this, "collegeId", data.getCollegeId());
-            CSPreferences.putString(this, "nodalBody_Id", data.getNodalBody_Id());
-            CSPreferences.putBolean(this, "Is_CurrentSession_Active", Is_CurrentSession_Active);
-            CSPreferences.putBolean(this, "Is_Already_Apply_In_Current_Session", Is_Already_Apply_In_Current_Session);
-            CSPreferences.putBolean(this, "Is_Already_Apply_Other_Scholarship_scheme_In_Current_Session", Is_Already_Apply_Other_Scholarship_scheme_In_Current_Session);
+            CSPreferences.putString(this, "userid", String.valueOf(data.get(0).getUserId()));
+            CSPreferences.putString(this, "User_Name", data.get(0).getUserName());
+            CSPreferences.putString(this, "Email", data.get(0).getEmail());
 
-            CSPreferences.putBolean(this, "skiplogin", false);
-
-
-//            if (data.getPic() == null) {
-//                data.setPic(imageurl);
-//            }
-//
-//            CSPreferences.putString(this, "pic", data.getPic());
             Intent intentlogin = new Intent(LoginActivity.this, MainActivity.class);
             intentlogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             intentlogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
