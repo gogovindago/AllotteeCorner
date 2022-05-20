@@ -1096,6 +1096,43 @@ public class WebAPiCall {
     }
 
 
+    public void allotteCurrentOutStandingDetailsApiMethod(final Activity activity, final Context context, final allottecurrentoutstandingData_interface loginData_interface, PlotIdRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllotteCurrentOutStandingResponse> userpost_responseCall = ApiClient.getClient().allotteCurrentOutStandingDetailsApi(request);
+        userpost_responseCall.enqueue(new Callback<AllotteCurrentOutStandingResponse>() {
+            @Override
+            public void onResponse(Call<AllotteCurrentOutStandingResponse> call, Response<AllotteCurrentOutStandingResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.allallottecurrentoutstandingdata((List<AllotteCurrentOutStandingResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllotteCurrentOutStandingResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
     public void allottefutureOutStandingAPiMethod(final Activity activity, final Context context, final allotteefutureoustandingData_interface loginData_interface, PlotIdRequest request) {
 
         loadershowwithMsg(context, "Loading...");

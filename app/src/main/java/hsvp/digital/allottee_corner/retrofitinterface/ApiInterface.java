@@ -160,6 +160,10 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
     Call<AllotteCurrentOutStandingResponse> allotteCurrentOutStandingApi(@Body PlotIdRequest request);
 
 
+    @POST("allotteCurrentOutStandingDetails")
+    Call<AllotteCurrentOutStandingResponse> allotteCurrentOutStandingDetailsApi(@Body PlotIdRequest request);
+
+
 
     @POST("allotteplotdetails")
     Call<AllotteplotdetailsResponse> allotteplotdetailsAPi(@Body PlotIdRequest request);
