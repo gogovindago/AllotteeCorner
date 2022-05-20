@@ -5,6 +5,7 @@ import hsvp.digital.allottee_corner.model.AcademicSessionResponse;
 import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
+import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.CheckApplicationExistResponse;
 import hsvp.digital.allottee_corner.model.CheckStudentAlreadyExistResponse;
 import hsvp.digital.allottee_corner.model.CollegeDashboardResponse;
@@ -23,6 +24,7 @@ import hsvp.digital.allottee_corner.model.LoginRequest;
 import hsvp.digital.allottee_corner.model.LoginResponse;
 import hsvp.digital.allottee_corner.model.NodalBodyDHEDashboardResponse;
 import hsvp.digital.allottee_corner.model.OtpForgotPasswordResponse;
+import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.model.ScholarshipSchemesResponse;
 import hsvp.digital.allottee_corner.model.StudentRegistrationResponse;
 import retrofit2.Call;
@@ -148,6 +150,9 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
 
     @POST("Login")
     Call<LoginResponse> LoginUser(@Body LoginRequest request);
+
+    @POST("allotteCurrentOutStanding")
+    Call<AllotteCurrentOutStandingResponse> allotteCurrentOutStandingApi(@Body PlotIdRequest request);
 
 
 

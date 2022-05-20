@@ -42,12 +42,14 @@ import hsvp.digital.allottee_corner.allinterface.LoginData_interface;
 import hsvp.digital.allottee_corner.allinterface.OtpForMEMIDData_interface;
 import hsvp.digital.allottee_corner.allinterface.RegistrationData_interface;
 import hsvp.digital.allottee_corner.allinterface.SentOtpForgotPasswordData_interface;
+import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
 import hsvp.digital.allottee_corner.allinterface.verifyOtpForMEMIDData_interface;
 import hsvp.digital.allottee_corner.model.AadharnoFromMemIDResponse;
 import hsvp.digital.allottee_corner.model.AcademicSessionResponse;
 import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
+import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.CheckApplicationExistResponse;
 import hsvp.digital.allottee_corner.model.CheckStudentAlreadyExistResponse;
 import hsvp.digital.allottee_corner.model.CollegeDashboardResponse;
@@ -72,6 +74,7 @@ import hsvp.digital.allottee_corner.model.NodalBodyDHEDashboardResponse;
 import hsvp.digital.allottee_corner.model.OTPRequestforMEMIDRequest;
 import hsvp.digital.allottee_corner.model.OTPRequestforMEMIDResponse;
 import hsvp.digital.allottee_corner.model.OtpForgotPasswordResponse;
+import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.model.ScholarshipSchemesResponse;
 import hsvp.digital.allottee_corner.model.StudentRegistrationResponse;
 import hsvp.digital.allottee_corner.model.VerifyOTPRequestforMEMIDRequest;
@@ -1036,6 +1039,44 @@ public class WebAPiCall {
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
+
+    public void allotteCurrentOutStandingMethod(final Activity activity, final Context context, final allottecurrentoutstandingData_interface loginData_interface, PlotIdRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllotteCurrentOutStandingResponse> userpost_responseCall = ApiClient.getClient().allotteCurrentOutStandingApi(request);
+        userpost_responseCall.enqueue(new Callback<AllotteCurrentOutStandingResponse>() {
+            @Override
+            public void onResponse(Call<AllotteCurrentOutStandingResponse> call, Response<AllotteCurrentOutStandingResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.allallottecurrentoutstandingdata((List<AllotteCurrentOutStandingResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllotteCurrentOutStandingResponse> call, Throwable t) {
 
                 dailoghide(context);
                 t.printStackTrace();

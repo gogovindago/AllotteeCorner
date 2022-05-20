@@ -104,14 +104,14 @@
 
 
                                 <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/edtage"
+                                    android:id="@+id/edtcurrentoutstandingvalue"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="8dp"
                                     android:drawablePadding="8dp"
                                     android:enabled="false"
                                     android:imeOptions="actionNext"
-                                    android:text="95851.00"
+                                    android:text="00.00"
                                     android:textColor="@color/black"
                                     android:textSize="35sp"
                                     android:textStyle="bold"
@@ -248,7 +248,7 @@
                                     android:drawablePadding="8dp"
                                     android:enabled="false"
                                     android:imeOptions="actionNext"
-                                    android:text="0.00"
+                                    android:text="00.00"
                                     android:textColor="@color/black"
                                     android:textSize="35sp"
                                     android:textStyle="bold" />
