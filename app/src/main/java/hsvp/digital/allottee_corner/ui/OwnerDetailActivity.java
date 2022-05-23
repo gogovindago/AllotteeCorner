@@ -6,21 +6,18 @@ import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
-import hsvp.digital.allottee_corner.adapter.ListOfCollegeAdapter;
+import hsvp.digital.allottee_corner.adapter.RvGpaDirectorsListAdapter;
 import hsvp.digital.allottee_corner.adapter.RvfetchjointholderListAdapter;
 import hsvp.digital.allottee_corner.allinterface.allotteedetailData_interface;
-import hsvp.digital.allottee_corner.allinterface.allotteeplotedetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.fetchjointdetaildetailData_interface;
 import hsvp.digital.allottee_corner.apicall.WebAPiCall;
 import hsvp.digital.allottee_corner.databinding.ActivityOwnerDetailBinding;
-import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
-import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
-import hsvp.digital.allottee_corner.model.CoursesListResponse;
 import hsvp.digital.allottee_corner.model.FetchAllottedetailsResponse;
 import hsvp.digital.allottee_corner.model.FetchJointHolderDetailsResponse;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
@@ -28,12 +25,13 @@ import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.CSPreferences;
 import hsvp.digital.allottee_corner.utility.GlobalClass;
 
-public class OwnerDetailActivity extends BaseActivity implements allotteedetailData_interface, fetchjointdetaildetailData_interface, RvfetchjointholderListAdapter.ItemListener {
+public class OwnerDetailActivity extends BaseActivity implements allotteedetailData_interface, fetchjointdetaildetailData_interface, RvfetchjointholderListAdapter.ItemListener, RvGpaDirectorsListAdapter.ItemListener {
     ActivityOwnerDetailBinding binding;
     private String PlotID;
 
 
-    private List<FetchJointHolderDetailsResponse.Datum> arrayList = new ArrayList<FetchJointHolderDetailsResponse.Datum>();
+    private List<FetchJointHolderDetailsResponse.JHolder> arrayList = new ArrayList<FetchJointHolderDetailsResponse.JHolder>();
+    private List<FetchJointHolderDetailsResponse.Gpa> arrayListGpa = new ArrayList<FetchJointHolderDetailsResponse.Gpa>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +54,43 @@ public class OwnerDetailActivity extends BaseActivity implements allotteedetailD
         if (GlobalClass.isNetworkConnected(OwnerDetailActivity.this)) {
 
             WebAPiCall webapiCall = new WebAPiCall();
-            webapiCall.FetchAllottedetailsMethod(this, this, OwnerDetailActivity.this, request);
+            webapiCall.FetchAllottedetailsMethod(this, this, OwnerDetailActivity.this, request, binding.llmain);
 
 
         } else {
 
             Toast.makeText(this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
         }
+
+
+        binding.mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+
+            public void onRefresh() {
+
+                binding.mSwipeRefreshLayout.setRefreshing(true);
+                binding.llmain.setVisibility(View.GONE);
+
+
+                request.setPlotID(PlotID);
+
+
+                if (GlobalClass.isNetworkConnected(OwnerDetailActivity.this)) {
+
+
+                    WebAPiCall webapiCall = new WebAPiCall();
+                    webapiCall.FetchAllottedetailsMethod(OwnerDetailActivity.this, OwnerDetailActivity.this, OwnerDetailActivity.this, request,binding.llmain);
+
+
+                } else {
+
+                    Toast.makeText(OwnerDetailActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
+                }
+
+                binding.mSwipeRefreshLayout.setRefreshing(false);
+
+            }
+        });
 
 
     }
@@ -159,22 +187,66 @@ public class OwnerDetailActivity extends BaseActivity implements allotteedetailD
     }
 
     @Override
-    public void allFetchJointHolderDetailsdata(List<FetchJointHolderDetailsResponse.Datum> data) {
+    public void allFetchJointHolderDetailsdata(List<FetchJointHolderDetailsResponse.JHolder> data) {
+
+        if (data == null || data.isEmpty()) {
+
+            binding.noJointHolder.setVisibility(View.VISIBLE);
+            binding.RVCurrentJointHoldeDetails.setVisibility(View.GONE);
+        } else {
 
 
-        arrayList.clear();
-        arrayList.addAll(data);
+            binding.noJointHolder.setVisibility(View.GONE);
 
-        RvfetchjointholderListAdapter adaptermain = new RvfetchjointholderListAdapter(this, (ArrayList) arrayList, this);
-        binding.RVCurrentJointHoldeDetails.setAdapter(adaptermain);
-        GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
-        binding.RVCurrentJointHoldeDetails.setLayoutManager(manager);
+            binding.RVCurrentJointHoldeDetails.setVisibility(View.VISIBLE);
+
+            arrayList.clear();
+            arrayList.addAll(data);
+
+            RvfetchjointholderListAdapter adaptermain = new RvfetchjointholderListAdapter(this, (ArrayList) arrayList, this);
+            binding.RVCurrentJointHoldeDetails.setAdapter(adaptermain);
+            GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
+            binding.RVCurrentJointHoldeDetails.setLayoutManager(manager);
+        }
+
+    }
+
+    @Override
+    public void allFetchdirecterdata(List<FetchJointHolderDetailsResponse.Gpa> data) {
+
+        if (data == null || data.isEmpty()) {
+
+            binding.noGpA.setVisibility(View.VISIBLE);
+            binding.CurrentGPADirectorsPartners.setVisibility(View.GONE);
+        } else {
+
+            binding.noGpA.setVisibility(View.GONE);
+
+            binding.CurrentGPADirectorsPartners.setVisibility(View.VISIBLE);
+
+
+            arrayListGpa.clear();
+            arrayListGpa.addAll(data);
+
+            RvGpaDirectorsListAdapter adaptermain = new RvGpaDirectorsListAdapter(this, (ArrayList) arrayListGpa, this);
+            binding.CurrentGPADirectorsPartners.setAdapter(adaptermain);
+            GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
+            binding.CurrentGPADirectorsPartners.setLayoutManager(manager);
+
+
+        }
 
 
     }
 
     @Override
-    public void onItemClick(FetchJointHolderDetailsResponse.Datum item, int currposition) {
+    public void onItemClick(FetchJointHolderDetailsResponse.JHolder item, int currposition) {
+
+
+    }
+
+    @Override
+    public void onItemClick(FetchJointHolderDetailsResponse.Gpa item, int currposition) {
 
     }
 }

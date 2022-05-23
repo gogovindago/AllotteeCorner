@@ -81,14 +81,26 @@ public class FutureOutStandingActivity extends BaseActivity implements allotteef
     public void allottefutureOutStandingdata(List<AllottefutureOutStandingDetailsResponse.Datum> data) {
 
 
-        arrayList.clear();
-        arrayList.addAll(data);
 
-        RvfutureoutstandingdetailListAdapter adaptermain = new RvfutureoutstandingdetailListAdapter(this, (ArrayList) arrayList, this);
-        binding.Rvfutureschedule.setAdapter(adaptermain);
-        GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
-        binding.Rvfutureschedule.setLayoutManager(manager);
+        if (data == null || data.isEmpty()) {
 
+            binding.nofutureschedule.setVisibility(View.VISIBLE);
+            binding.Rvfutureschedule.setVisibility(View.GONE);
+        } else {
+
+            binding.nofutureschedule.setVisibility(View.GONE);
+
+            binding.Rvfutureschedule.setVisibility(View.VISIBLE);
+
+
+            arrayList.clear();
+            arrayList.addAll(data);
+
+            RvfutureoutstandingdetailListAdapter adaptermain = new RvfutureoutstandingdetailListAdapter(this, (ArrayList) arrayList, this);
+            binding.Rvfutureschedule.setAdapter(adaptermain);
+            GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
+            binding.Rvfutureschedule.setLayoutManager(manager);
+        }
 
     }
 

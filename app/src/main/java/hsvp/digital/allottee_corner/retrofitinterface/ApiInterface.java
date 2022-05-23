@@ -6,6 +6,7 @@ import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
+import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
@@ -150,7 +151,14 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
     "AuthID":"superadmin",
     "Password":"12345",
     "FCMToken":"ccvcvcvcvcv"
+
     }
+
+
+
+
+8269970959
+
 */
 
     @POST("Login")
@@ -164,7 +172,6 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
     Call<AllotteCurrentOutStandingResponse> allotteCurrentOutStandingDetailsApi(@Body PlotIdRequest request);
 
 
-
     @POST("allotteplotdetails")
     Call<AllotteplotdetailsResponse> allotteplotdetailsAPi(@Body PlotIdRequest request);
 
@@ -173,24 +180,20 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
     Call<AllottefutureOutStandingResponse> allottefutureOutStandingAPi(@Body PlotIdRequest request);
 
 
-
     @POST("FetchAllottedetails")
     Call<FetchAllottedetailsResponse> FetchAllottedetailsAPi(@Body PlotIdRequest request);
-
-
 
 
     @POST("FetchJointHolderDetails")
     Call<FetchJointHolderDetailsResponse> FetchJointHolderDetailsAPi(@Body PlotIdRequest request);
 
 
+    @POST("allotteNotices")
+    Call<AllotteNoticesResponse> allotteNoticesAPi(@Body PlotIdRequest request);
+
 
     @POST("allottefutureOutStandingDetails")
     Call<AllottefutureOutStandingDetailsResponse> allottefutureOutStandingDetailsPi(@Body PlotIdRequest request);
-
-
-
-
 
 
     //https://cmapi.highereduhry.ac.in/api/commonapi/CheckStudentAlreadyExist/23456789

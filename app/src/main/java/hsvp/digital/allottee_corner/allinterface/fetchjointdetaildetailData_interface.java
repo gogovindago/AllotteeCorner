@@ -7,5 +7,6 @@ import hsvp.digital.allottee_corner.model.FetchJointHolderDetailsResponse;
 
 public interface fetchjointdetaildetailData_interface {
 
-    void allFetchJointHolderDetailsdata(List<FetchJointHolderDetailsResponse.Datum>   data);
+    void allFetchJointHolderDetailsdata(List<FetchJointHolderDetailsResponse.JHolder>   data);
+    void allFetchdirecterdata(List<FetchJointHolderDetailsResponse.Gpa>   data);
 }

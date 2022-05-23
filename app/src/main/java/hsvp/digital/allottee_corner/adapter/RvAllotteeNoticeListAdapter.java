@@ -5,7 +5,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import hsvp.digital.allottee_corner.R;
-import hsvp.digital.allottee_corner.model.FetchJointHolderDetailsResponse;
+import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
 
 
-public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<RvfetchjointholderListAdapter.ViewHolder> {
+public class RvAllotteeNoticeListAdapter extends RecyclerView.Adapter<RvAllotteeNoticeListAdapter.ViewHolder> {
 
-    ArrayList<FetchJointHolderDetailsResponse.JHolder> mValues = new ArrayList<FetchJointHolderDetailsResponse.JHolder>();
+    ArrayList<AllotteNoticesResponse.Datum> mValues = new ArrayList<AllotteNoticesResponse.Datum>();
 
 
     Context mContext;
@@ -27,7 +26,7 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
     public int currposition;
 
 
-    public RvfetchjointholderListAdapter(Context context, ArrayList values, ItemListener itemListener) {
+    public RvAllotteeNoticeListAdapter(Context context, ArrayList values, ItemListener itemListener) {
 
         mValues = values;
         mContext = context;
@@ -39,7 +38,7 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
         public TextView txtownerName, txtownertypevalue, txtFathernameValue, txtMobilevalue, txtEmailvalue,
                 txtPanvalue, txtAadharvalue, txtPermanentAddress1value, v, txtPermanentAddress2value, textPermanentAddress3value, textPermanentStatevalue, txtPermanentPINvalue,
                 textCorrespondenceAddress1Value, textCorrespondenceAddress2Value, textCorrespondenceAddress3Value, textCorrespondenceStateValue, textCorrespondencePINValue;
-        FetchJointHolderDetailsResponse.JHolder item;
+        AllotteNoticesResponse.Datum item;
 
         public ViewHolder(View v) {
 
@@ -68,32 +67,32 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
 
         }
 
-        public void setData(FetchJointHolderDetailsResponse.JHolder item, int currposition) {
+        public void setData(AllotteNoticesResponse.Datum item, int currposition) {
             this.item = item;
             this.currposition = currposition;
 
 
             try {
-                txtownerName.setText(String.valueOf(++currposition)+". "+item.getName());
-                txtownertypevalue.setText(item.getOwnerType());
+                txtownerName.setText(String.valueOf(++currposition) + ". " + item.getNoticeMemoNumber());
+                txtownertypevalue.setText(item.getActionStatus());
 
-
-                txtFathernameValue.setText(item.getFatherName() + " " + item.getFatherSurname());
-
-                txtMobilevalue.setText(item.getMobileNumber());
-                txtEmailvalue.setText(item.getEmailID());
-                txtPanvalue.setText(item.getPANNo());
-                txtAadharvalue.setText(item.getOCIAadharNumber());
-                txtPermanentAddress1value.setText(item.getPermanentAddress1());
-                txtPermanentAddress2value.setText(item.getPermanentAddress2());
-                textPermanentAddress3value.setText(item.getPermanentAddress3());
-                textPermanentStatevalue.setText(item.getPermanentState());
-                txtPermanentPINvalue.setText(item.getPermanentPIN());
-                textCorrespondenceAddress1Value.setText(item.getCorrespondenceAddress1());
-                textCorrespondenceAddress2Value.setText(item.getCorrespondenceAddress2());
-                textCorrespondenceAddress3Value.setText(item.getCorrespondenceAddress3());
-                textCorrespondenceStateValue.setText(item.getCorrespondenceState());
-                textCorrespondencePINValue.setText(item.getCorrespondencePIN());
+//
+//                txtFathernameValue.setText(item.getFatherName() + " " + item.getFatherSurname());
+//
+//                txtMobilevalue.setText(item.getMobileNumber());
+//                txtEmailvalue.setText(item.getEmailID());
+//                txtPanvalue.setText(item.getPANNo());
+//                txtAadharvalue.setText(item.getOCIAadharNumber());
+//                txtPermanentAddress1value.setText(item.getPermanentAddress1());
+//                txtPermanentAddress2value.setText(item.getPermanentAddress2());
+//                textPermanentAddress3value.setText(item.getPermanentAddress3());
+//                textPermanentStatevalue.setText(item.getPermanentState());
+//                txtPermanentPINvalue.setText(item.getPermanentPIN());
+//                textCorrespondenceAddress1Value.setText(item.getCorrespondenceAddress1());
+//                textCorrespondenceAddress2Value.setText(item.getCorrespondenceAddress2());
+//                textCorrespondenceAddress3Value.setText(item.getCorrespondenceAddress3());
+//                textCorrespondenceStateValue.setText(item.getCorrespondenceState());
+//                textCorrespondencePINValue.setText(item.getCorrespondencePIN());
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -132,6 +131,6 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
     }
 
     public interface ItemListener {
-        void onItemClick(FetchJointHolderDetailsResponse.JHolder item, int currposition);
+        void onItemClick(AllotteNoticesResponse.Datum item, int currposition);
     }
 }

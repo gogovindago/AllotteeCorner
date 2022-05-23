@@ -5,7 +5,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,9 +16,9 @@ import hsvp.digital.allottee_corner.R;
 import hsvp.digital.allottee_corner.model.FetchJointHolderDetailsResponse;
 
 
-public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<RvfetchjointholderListAdapter.ViewHolder> {
+public class RvGpaDirectorsListAdapter extends RecyclerView.Adapter<RvGpaDirectorsListAdapter.ViewHolder> {
 
-    ArrayList<FetchJointHolderDetailsResponse.JHolder> mValues = new ArrayList<FetchJointHolderDetailsResponse.JHolder>();
+    ArrayList<FetchJointHolderDetailsResponse.Gpa> mValues = new ArrayList<FetchJointHolderDetailsResponse.Gpa>();
 
 
     Context mContext;
@@ -27,7 +26,7 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
     public int currposition;
 
 
-    public RvfetchjointholderListAdapter(Context context, ArrayList values, ItemListener itemListener) {
+    public RvGpaDirectorsListAdapter(Context context, ArrayList values, ItemListener itemListener) {
 
         mValues = values;
         mContext = context;
@@ -39,7 +38,7 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
         public TextView txtownerName, txtownertypevalue, txtFathernameValue, txtMobilevalue, txtEmailvalue,
                 txtPanvalue, txtAadharvalue, txtPermanentAddress1value, v, txtPermanentAddress2value, textPermanentAddress3value, textPermanentStatevalue, txtPermanentPINvalue,
                 textCorrespondenceAddress1Value, textCorrespondenceAddress2Value, textCorrespondenceAddress3Value, textCorrespondenceStateValue, textCorrespondencePINValue;
-        FetchJointHolderDetailsResponse.JHolder item;
+        FetchJointHolderDetailsResponse.Gpa item;
 
         public ViewHolder(View v) {
 
@@ -68,7 +67,7 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
 
         }
 
-        public void setData(FetchJointHolderDetailsResponse.JHolder item, int currposition) {
+        public void setData(FetchJointHolderDetailsResponse.Gpa item, int currposition) {
             this.item = item;
             this.currposition = currposition;
 
@@ -132,6 +131,6 @@ public class RvfetchjointholderListAdapter extends RecyclerView.Adapter<Rvfetchj
     }
 
     public interface ItemListener {
-        void onItemClick(FetchJointHolderDetailsResponse.JHolder item, int currposition);
+        void onItemClick(FetchJointHolderDetailsResponse.Gpa item, int currposition);
     }
 }

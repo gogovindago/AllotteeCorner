@@ -755,8 +755,8 @@ FamilyIncome*/
         } else if (item.Id == 888) {
 
 
-//            Intent intent = new Intent(this, CourseListActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(this, AllotteeNoticeActivity.class);
+            startActivity(intent);
 
         } else if (item.Id == 8888) {
 

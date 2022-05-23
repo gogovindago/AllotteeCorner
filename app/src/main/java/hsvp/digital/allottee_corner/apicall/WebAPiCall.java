@@ -43,6 +43,7 @@ import hsvp.digital.allottee_corner.allinterface.OtpForMEMIDData_interface;
 import hsvp.digital.allottee_corner.allinterface.RegistrationData_interface;
 import hsvp.digital.allottee_corner.allinterface.SentOtpForgotPasswordData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
+import hsvp.digital.allottee_corner.allinterface.allotteeNoticesData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteedetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteefutureoustandingData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteefutureoustandingdetaildetailData_interface;
@@ -55,6 +56,7 @@ import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
+import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
@@ -1059,6 +1061,21 @@ public class WebAPiCall {
     }
 
 
+/*  if (response.isSuccessful() && response.code() == 200) {
+                    GlobalClass.showtost(context, "" + response.message());
+                    dataInterface.GetAllData((response.body().getData()));
+                } else if (response.code() == 401) {
+                    CSPreferences.clearPref(context);
+                    Intent intent = new Intent(context, LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK |
+                            Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                    GlobalClass.showtost(context, "" + response.message());
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }*/
+
     public void allotteCurrentOutStandingMethod(final Activity activity, final Context context, final allottecurrentoutstandingData_interface loginData_interface, PlotIdRequest request) {
 
         loadershowwithMsg(context, "Loading...");
@@ -1207,7 +1224,7 @@ public class WebAPiCall {
     }
 
 
-    public void FetchAllottedetailsMethod(final Activity activity, final Context context, final allotteedetailData_interface loginData_interface, PlotIdRequest request) {
+    public void FetchAllottedetailsMethod(final Activity activity, final Context context, final allotteedetailData_interface loginData_interface, PlotIdRequest request, LinearLayoutCompat llmain) {
 
         loadershowwithMsg(context, "Loading...");
         Call<FetchAllottedetailsResponse> userpost_responseCall = ApiClient.getClient().FetchAllottedetailsAPi(request);
@@ -1219,6 +1236,8 @@ public class WebAPiCall {
 
 
                     if (response.body().getResponse() == 200) {
+
+                        llmain.setVisibility(View.VISIBLE);
 
                         loginData_interface.allotteedetaildata((List<FetchAllottedetailsResponse.Datum>) response.body().getData());
 
@@ -1257,7 +1276,8 @@ public class WebAPiCall {
 
                     if (response.body().getResponse() == 200) {
 
-                        loginData_interface.allFetchJointHolderDetailsdata((List<FetchJointHolderDetailsResponse.Datum>) response.body().getData());
+                        loginData_interface.allFetchJointHolderDetailsdata((List<FetchJointHolderDetailsResponse.JHolder>) response.body().getData().getJHolder());
+                        loginData_interface.allFetchdirecterdata((List<FetchJointHolderDetailsResponse.Gpa>) response.body().getData().getGpa());
 
                     } else {
                         dailogError(context, "Server Busy!", "Please try again.");
@@ -1271,6 +1291,43 @@ public class WebAPiCall {
 
             @Override
             public void onFailure(Call<FetchJointHolderDetailsResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
+    public void allotteNoticesMethod(final Activity activity, final Context context, final allotteeNoticesData_interface loginData_interface, PlotIdRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllotteNoticesResponse> userpost_responseCall = ApiClient.getClient().allotteNoticesAPi(request);
+        userpost_responseCall.enqueue(new Callback<AllotteNoticesResponse>() {
+            @Override
+            public void onResponse(Call<AllotteNoticesResponse> call, Response<AllotteNoticesResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.AllotteNoticesdata((List<AllotteNoticesResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllotteNoticesResponse> call, Throwable t) {
 
                 dailoghide(context);
                 t.printStackTrace();
