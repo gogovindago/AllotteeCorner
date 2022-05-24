@@ -354,7 +354,7 @@ FamilyIncome*/
                         return true;*/
 
                     case R.id.page_3:
-                        Intent ListofCollegeIntent = new Intent(MainActivity.this, CollegeListActivity.class);
+                        Intent ListofCollegeIntent = new Intent(MainActivity.this, OwnerDetailActivity.class);
                         startActivity(ListofCollegeIntent);
                         return true;
 
