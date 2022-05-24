@@ -443,7 +443,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="6dp"
                         android:layout_marginRight="6dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
+
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -461,13 +461,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
-                                android:text="---- Property Details -----"
+                                android:text=" Property Details "
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
                                 android:textStyle="bold"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="4dp"
+                                android:background="@color/colorPrimary">
+
+                            </View>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -492,9 +500,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Urban Estate"
@@ -527,7 +533,6 @@
                                         android:clickable="false"
                                         android:digits="0123456789"
 
-                                        android:drawablePadding="16dp"
 
                                         android:enabled="false"
                                         android:hint="Sector"
@@ -569,9 +574,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Category"
@@ -599,7 +602,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Sub-Category"
@@ -633,9 +636,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Plot No"
@@ -661,7 +662,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Area"
@@ -694,7 +695,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Status"
@@ -722,7 +723,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="6dp"
                         android:layout_marginRight="6dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
+
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -740,13 +741,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
-                                android:text="---- Owner Personal Details -----"
+                                android:text=" Owner Personal Details "
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
                                 android:textStyle="bold"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="4dp"
+                                android:background="@color/colorPrimary">
+
+                            </View>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -771,9 +780,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Owner Name"
@@ -804,9 +811,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="16dp"
+
+
                                         android:enabled="false"
                                         android:hint="Father/Husband Name"
                                         android:imeOptions="actionNext"
@@ -841,9 +847,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="16dp"
+
+
                                         android:enabled="false"
                                         android:hint="Mobile"
                                         android:imeOptions="actionNext"
@@ -869,9 +874,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/ic_email"
-                                        android:drawableLeft="@drawable/ic_email"
-                                        android:drawablePadding="16dp"
+
+
                                         android:enabled="false"
                                         android:hint="EmailID"
                                         android:imeOptions="actionNext"
@@ -904,8 +908,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawablePadding="16dp"
+
 
                                         android:enabled="false"
                                         android:hint="Pan No"
@@ -932,7 +935,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:clickable="false"
-                                        android:drawablePadding="16dp"
+
                                         android:enabled="false"
                                         android:hint="Aadhar No"
                                         android:imeOptions="actionNext"
@@ -957,7 +960,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="6dp"
                         android:layout_marginRight="6dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
+
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -975,7 +978,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
-                                android:text="-- Permanent Address Details --"
+                                android:text=" Permanent Address Details "
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -983,6 +986,13 @@
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
 
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="4dp"
+                                android:background="@color/colorPrimary">
+
+                            </View>
 
                             <com.google.android.material.textfield.TextInputLayout
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -999,8 +1009,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+
                                     android:drawablePadding="8dp"
                                     android:enabled="false"
                                     android:hint="Permanent Address 1"
@@ -1031,9 +1041,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="16dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 2"
                                     android:imeOptions="actionNext"
@@ -1059,9 +1068,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="16dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 3"
                                     android:imeOptions="actionNext"
@@ -1083,13 +1091,13 @@
                                 android:layout_weight="0.5">
 
                                 <com.google.android.material.textfield.TextInputEditText
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+
                                     android:id="@+id/edtPermanentState"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawablePadding="16dp"
+
                                     android:enabled="false"
                                     android:hint="Permanent State"
                                     android:imeOptions="actionNext"
@@ -1114,8 +1122,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_pin_24"
-                                    android:drawablePadding="16dp"
+
 
                                     android:enabled="false"
                                     android:hint="Permanent PinCode"
@@ -1134,8 +1141,6 @@
                     </androidx.cardview.widget.CardView>
 
 
-
-
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardsforCorrespondenceAddressDetails"
                         android:layout_width="match_parent"
@@ -1143,7 +1148,7 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="6dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
+
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -1161,7 +1166,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
-                                android:text="-- Correspondence Address Details --"
+                                android:text=" Correspondence Address Details "
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -1169,6 +1174,13 @@
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
 
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="4dp"
+                                android:background="@color/colorPrimary">
+
+                            </View>
 
                             <com.google.android.material.textfield.TextInputLayout
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -1185,8 +1197,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+
                                     android:drawablePadding="8dp"
 
                                     android:enabled="false"
@@ -1218,9 +1230,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="16dp"
+
+
                                     android:enabled="false"
                                     android:hint="Correspondence Address 2"
                                     android:imeOptions="actionNext"
@@ -1246,9 +1257,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="16dp"
+
+
                                     android:enabled="false"
                                     android:hint="Correspondence Address 3"
                                     android:imeOptions="actionNext"
@@ -1271,13 +1281,12 @@
 
                                 <com.google.android.material.textfield.TextInputEditText
 
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
                                     android:id="@+id/edtCorrespondenceState"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawablePadding="16dp"
+
                                     android:enabled="false"
                                     android:hint="Correspondence State"
                                     android:imeOptions="actionNext"
@@ -1302,8 +1311,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_pin_24"
-                                    android:drawablePadding="16dp"
+
 
                                     android:enabled="false"
                                     android:hint="Correspondence PinCode"
