@@ -43,6 +43,8 @@ import hsvp.digital.allottee_corner.allinterface.OtpForMEMIDData_interface;
 import hsvp.digital.allottee_corner.allinterface.RegistrationData_interface;
 import hsvp.digital.allottee_corner.allinterface.SentOtpForgotPasswordData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
+import hsvp.digital.allottee_corner.allinterface.allotteeAppStatusData_interface;
+import hsvp.digital.allottee_corner.allinterface.allotteeHistoryData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeNoticesData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteedetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteefutureoustandingData_interface;
@@ -55,11 +57,14 @@ import hsvp.digital.allottee_corner.model.AcademicSessionResponse;
 import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
+import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
+import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
+import hsvp.digital.allottee_corner.model.AppStatusRequest;
 import hsvp.digital.allottee_corner.model.CheckApplicationExistResponse;
 import hsvp.digital.allottee_corner.model.CheckStudentAlreadyExistResponse;
 import hsvp.digital.allottee_corner.model.CollegeDashboardResponse;
@@ -1113,7 +1118,7 @@ public class WebAPiCall {
     }
 
 
-    public void allotteCurrentOutStandingDetailsApiMethod(final Activity activity, final Context context, final allottecurrentoutstandingData_interface loginData_interface, PlotIdRequest request) {
+    public void allotteCurrentOutStandingDetailsApiMethod(final Activity activity, final Context context, final allottecurrentoutstandingData_interface loginData_interface, PlotIdRequest request, LinearLayoutCompat llmain) {
 
         loadershowwithMsg(context, "Loading...");
         Call<AllotteCurrentOutStandingResponse> userpost_responseCall = ApiClient.getClient().allotteCurrentOutStandingDetailsApi(request);
@@ -1125,6 +1130,7 @@ public class WebAPiCall {
 
 
                     if (response.body().getResponse() == 200) {
+                        llmain.setVisibility(View.VISIBLE);
 
                         loginData_interface.allallottecurrentoutstandingdata((List<AllotteCurrentOutStandingResponse.Datum>) response.body().getData());
 
@@ -1301,7 +1307,7 @@ public class WebAPiCall {
     }
 
 
-    public void allotteNoticesMethod(final Activity activity, final Context context, final allotteeNoticesData_interface loginData_interface, PlotIdRequest request) {
+    public void allotteNoticesMethod(final Activity activity, final Context context, final allotteeNoticesData_interface loginData_interface, PlotIdRequest request, LinearLayoutCompat llmain) {
 
         loadershowwithMsg(context, "Loading...");
         Call<AllotteNoticesResponse> userpost_responseCall = ApiClient.getClient().allotteNoticesAPi(request);
@@ -1313,6 +1319,8 @@ public class WebAPiCall {
 
 
                     if (response.body().getResponse() == 200) {
+
+                        llmain.setVisibility(View.VISIBLE);
 
                         loginData_interface.AllotteNoticesdata((List<AllotteNoticesResponse.Datum>) response.body().getData());
 
@@ -1338,7 +1346,81 @@ public class WebAPiCall {
     }
 
 
-    public void allottefutureOutStandingDetailsMethod(final Activity activity, final Context context, final allotteefutureoustandingdetaildetailData_interface loginData_interface, PlotIdRequest request) {
+    public void allotteHistoryMethod(final Activity activity, final Context context, final allotteeHistoryData_interface loginData_interface, PlotIdRequest request, LinearLayoutCompat llmain) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AlloteeHistoryResponse> userpost_responseCall = ApiClient.getClient().allotteHistoryAPi(request);
+        userpost_responseCall.enqueue(new Callback<AlloteeHistoryResponse>() {
+            @Override
+            public void onResponse(Call<AlloteeHistoryResponse> call, Response<AlloteeHistoryResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+                        llmain.setVisibility(View.VISIBLE);
+                        loginData_interface.AllotteHistorydata((List<AlloteeHistoryResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AlloteeHistoryResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
+    public void allotteAppStatusMethod(final Activity activity, final Context context, final allotteeAppStatusData_interface loginData_interface, AppStatusRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllotteApplicationStatusResponse> userpost_responseCall = ApiClient.getClient().allotteAppStatusAPi(request);
+        userpost_responseCall.enqueue(new Callback<AllotteApplicationStatusResponse>() {
+            @Override
+            public void onResponse(Call<AllotteApplicationStatusResponse> call, Response<AllotteApplicationStatusResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.allotteeAppStatusdata((List<AllotteApplicationStatusResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllotteApplicationStatusResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
+    public void allottefutureOutStandingDetailsMethod(final Activity activity, final Context context, final allotteefutureoustandingdetaildetailData_interface loginData_interface, PlotIdRequest request, LinearLayoutCompat llmain) {
 
         loadershowwithMsg(context, "Loading...");
         Call<AllottefutureOutStandingDetailsResponse> userpost_responseCall = ApiClient.getClient().allottefutureOutStandingDetailsPi(request);
@@ -1350,6 +1432,7 @@ public class WebAPiCall {
 
 
                     if (response.body().getResponse() == 200) {
+                        llmain.setVisibility(View.VISIBLE);
 
                         loginData_interface.allottefutureOutStandingdata((List<AllottefutureOutStandingDetailsResponse.Datum>) response.body().getData());
 

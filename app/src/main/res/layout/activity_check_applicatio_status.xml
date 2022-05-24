@@ -82,9 +82,25 @@
                     android:id="@+id/RvApplicationStatusType"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:visibility="gone">
 
                 </androidx.recyclerview.widget.RecyclerView>
+
+
+                <TextView
+
+                    android:id="@+id/nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No data found"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
 
             </LinearLayout>
         </ScrollView>

@@ -5,11 +5,14 @@ import hsvp.digital.allottee_corner.model.AcademicSessionResponse;
 import hsvp.digital.allottee_corner.model.AdminDashboardResponse;
 import hsvp.digital.allottee_corner.model.AllDepartmentResponse;
 import hsvp.digital.allottee_corner.model.AllDistrictsResponse;
+import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
+import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
+import hsvp.digital.allottee_corner.model.AppStatusRequest;
 import hsvp.digital.allottee_corner.model.CheckApplicationExistResponse;
 import hsvp.digital.allottee_corner.model.CheckStudentAlreadyExistResponse;
 import hsvp.digital.allottee_corner.model.CollegeDashboardResponse;
@@ -190,6 +193,14 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
 
     @POST("allotteNotices")
     Call<AllotteNoticesResponse> allotteNoticesAPi(@Body PlotIdRequest request);
+
+
+    @POST("allotteHistory")
+    Call<AlloteeHistoryResponse> allotteHistoryAPi(@Body PlotIdRequest request);
+
+
+    @POST("allotteAppl")
+    Call<AllotteApplicationStatusResponse> allotteAppStatusAPi(@Body AppStatusRequest request);
 
 
     @POST("allottefutureOutStandingDetails")

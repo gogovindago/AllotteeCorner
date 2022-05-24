@@ -152,6 +152,7 @@
         <activity android:name=".ui.FutureOutStandingActivity" />
         <activity android:name=".ui.PaymentMadeActivity" />
         <activity android:name=".ui.AllotteeNoticeActivity" />
+        <activity android:name=".ui.AllotteeHistoryActivity" />
     </application>
 
 </manifest>

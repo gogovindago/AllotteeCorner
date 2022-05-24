@@ -6,18 +6,17 @@ import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
 import hsvp.digital.allottee_corner.adapter.RvcurrentoutstandingdetailListAdapter;
-import hsvp.digital.allottee_corner.adapter.RvfutureoutstandingdetailListAdapter;
 import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
 import hsvp.digital.allottee_corner.apicall.WebAPiCall;
 import hsvp.digital.allottee_corner.databinding.ActivityCurrentoutstandingBinding;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
-import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.CSPreferences;
@@ -41,6 +40,54 @@ public class CurrentOutStandingActivity extends BaseActivity implements Rvcurren
         }
 
 
+
+
+
+        binding.mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+
+            public void onRefresh() {
+
+                binding.mSwipeRefreshLayout.setRefreshing(true);
+                binding.llmain.setVisibility(View.GONE);
+
+                PlotIdRequest request = new PlotIdRequest();
+
+                request.setPlotID(PlotID);
+
+
+                if (GlobalClass.isNetworkConnected(CurrentOutStandingActivity.this)) {
+
+
+                    WebAPiCall webapiCall = new WebAPiCall();
+                    webapiCall.allotteCurrentOutStandingDetailsApiMethod(CurrentOutStandingActivity.this, CurrentOutStandingActivity.this, CurrentOutStandingActivity.this, request,binding.llmain);
+
+
+                } else {
+
+                    Toast.makeText(CurrentOutStandingActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
+                }
+
+                binding.mSwipeRefreshLayout.setRefreshing(false);
+
+            }
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         PlotIdRequest request = new PlotIdRequest();
 
         request.setPlotID(PlotID);
@@ -49,7 +96,7 @@ public class CurrentOutStandingActivity extends BaseActivity implements Rvcurren
         if (GlobalClass.isNetworkConnected(CurrentOutStandingActivity.this)) {
 
             WebAPiCall webapiCall = new WebAPiCall();
-            webapiCall.allotteCurrentOutStandingDetailsApiMethod(this, this, CurrentOutStandingActivity.this, request);
+            webapiCall.allotteCurrentOutStandingDetailsApiMethod(this, this, CurrentOutStandingActivity.this, request, binding.llmain);
 
 
         } else {

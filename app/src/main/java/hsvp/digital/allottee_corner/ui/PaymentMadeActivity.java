@@ -21,8 +21,12 @@ public class PaymentMadeActivity extends BaseActivity {
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
+
+
     List<String> listDataHeader;
+
     HashMap<String, List<String>> listDataChild;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

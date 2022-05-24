@@ -12,26 +12,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
-import hsvp.digital.allottee_corner.adapter.RvAllotteeNoticeListAdapter;
-import hsvp.digital.allottee_corner.allinterface.allotteeNoticesData_interface;
+import hsvp.digital.allottee_corner.adapter.RvAllotteeHistoryListAdapter;
+import hsvp.digital.allottee_corner.allinterface.allotteeHistoryData_interface;
 import hsvp.digital.allottee_corner.apicall.WebAPiCall;
-import hsvp.digital.allottee_corner.databinding.ActivityAllotteenoticeBinding;
-import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
+import hsvp.digital.allottee_corner.databinding.ActivityAllotteehistoryBinding;
+import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.CSPreferences;
 import hsvp.digital.allottee_corner.utility.GlobalClass;
 
-public class AllotteeNoticeActivity extends BaseActivity implements RvAllotteeNoticeListAdapter.ItemListener, allotteeNoticesData_interface {
-    ActivityAllotteenoticeBinding binding;
+public class AllotteeHistoryActivity extends BaseActivity implements allotteeHistoryData_interface, RvAllotteeHistoryListAdapter.ItemListener {
+    ActivityAllotteehistoryBinding binding;
     private String PlotID;
 
-    private List<AllotteNoticesResponse.Datum> arrayList = new ArrayList<AllotteNoticesResponse.Datum>();
+    private List<AlloteeHistoryResponse.Datum> arrayList = new ArrayList<AlloteeHistoryResponse.Datum>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_allotteenotice);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_allotteehistory);
 
 
         try {
@@ -43,7 +43,6 @@ public class AllotteeNoticeActivity extends BaseActivity implements RvAllotteeNo
         PlotIdRequest request = new PlotIdRequest();
 
         request.setPlotID(PlotID);
-
 
 
         binding.mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -58,16 +57,16 @@ public class AllotteeNoticeActivity extends BaseActivity implements RvAllotteeNo
                 request.setPlotID(PlotID);
 
 
-                if (GlobalClass.isNetworkConnected(AllotteeNoticeActivity.this)) {
+                if (GlobalClass.isNetworkConnected(AllotteeHistoryActivity.this)) {
 
 
                     WebAPiCall webapiCall = new WebAPiCall();
-                    webapiCall.allotteNoticesMethod(AllotteeNoticeActivity.this, AllotteeNoticeActivity.this, AllotteeNoticeActivity.this, request,binding.llmain);
+                    webapiCall.allotteHistoryMethod(AllotteeHistoryActivity.this, AllotteeHistoryActivity.this, AllotteeHistoryActivity.this, request,binding.llmain);
 
 
                 } else {
 
-                    Toast.makeText(AllotteeNoticeActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
+                    Toast.makeText(AllotteeHistoryActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
                 }
 
                 binding.mSwipeRefreshLayout.setRefreshing(false);
@@ -76,16 +75,10 @@ public class AllotteeNoticeActivity extends BaseActivity implements RvAllotteeNo
         });
 
 
-
-
-
-        
-
-
-        if (GlobalClass.isNetworkConnected(AllotteeNoticeActivity.this)) {
+        if (GlobalClass.isNetworkConnected(AllotteeHistoryActivity.this)) {
 
             WebAPiCall webapiCall = new WebAPiCall();
-            webapiCall.allotteNoticesMethod(this, this, AllotteeNoticeActivity.this, request, binding.llmain);
+            webapiCall.allotteHistoryMethod(this, this, AllotteeHistoryActivity.this, request, binding.llmain);
 
 
         } else {
@@ -97,7 +90,7 @@ public class AllotteeNoticeActivity extends BaseActivity implements RvAllotteeNo
 
     @Override
     public void initData() {
-        binding.toolbar.tvToolbarTitle.setText("Allotee Notice Detail");
+        binding.toolbar.tvToolbarTitle.setText("Allotee History");
     }
 
     @Override
@@ -114,7 +107,13 @@ public class AllotteeNoticeActivity extends BaseActivity implements RvAllotteeNo
 
 
     @Override
-    public void AllotteNoticesdata(List<AllotteNoticesResponse.Datum> data) {
+    public void onItemClick(AlloteeHistoryResponse.Datum item, int currposition) {
+
+    }
+
+    @Override
+    public void AllotteHistorydata(List<AlloteeHistoryResponse.Datum> data) {
+
 
         if (data == null || data.isEmpty()) {
 
@@ -130,16 +129,16 @@ public class AllotteeNoticeActivity extends BaseActivity implements RvAllotteeNo
             arrayList.clear();
             arrayList.addAll(data);
 
-            RvAllotteeNoticeListAdapter adaptermain = new RvAllotteeNoticeListAdapter(this, (ArrayList) arrayList, this);
+            RvAllotteeHistoryListAdapter adaptermain = new RvAllotteeHistoryListAdapter(this, (ArrayList) arrayList, this);
             binding.RvAllotteeNotice.setAdapter(adaptermain);
             GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
             binding.RvAllotteeNotice.setLayoutManager(manager);
         }
 
-    }
 
-    @Override
-    public void onItemClick(AllotteNoticesResponse.Datum item, int currposition) {
+
 
     }
+
+
 }
