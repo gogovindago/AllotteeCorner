@@ -46,9 +46,7 @@ public class WelcomeActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intentsignup = new Intent(WelcomeActivity.this, RegistrationActivity.class);
-                startActivity(intentsignup);
-                finish();
+
 
             }
         });

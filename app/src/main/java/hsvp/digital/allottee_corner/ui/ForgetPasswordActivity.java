@@ -12,16 +12,14 @@ import java.util.regex.Pattern;
 
 import hsvp.digital.allottee_corner.R;
 import hsvp.digital.allottee_corner.allinterface.ForgotPasswordData_interface;
-import hsvp.digital.allottee_corner.allinterface.SentOtpForgotPasswordData_interface;
 import hsvp.digital.allottee_corner.apicall.WebAPiCall;
 import hsvp.digital.allottee_corner.databinding.ActivityForgetPasswordBinding;
 import hsvp.digital.allottee_corner.model.ForgotPasswordRequest;
 import hsvp.digital.allottee_corner.model.ForgotPasswordResponse;
-import hsvp.digital.allottee_corner.model.OtpForgotPasswordResponse;
 import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.GlobalClass;
 
-public class ForgetPasswordActivity extends BaseActivity implements SentOtpForgotPasswordData_interface, ForgotPasswordData_interface {
+public class ForgetPasswordActivity extends BaseActivity implements ForgotPasswordData_interface {
     ActivityForgetPasswordBinding binding;
     private int otptoMatch;
 
@@ -111,15 +109,6 @@ public class ForgetPasswordActivity extends BaseActivity implements SentOtpForgo
                 if (CheckOTPSENT_Data(v)) {
 
 
-                    if (GlobalClass.isNetworkConnected(ForgetPasswordActivity.this)) {
-
-                        WebAPiCall webapiCall = new WebAPiCall();
-                        webapiCall.getSetOtpForgotPasswordMethod(ForgetPasswordActivity.this, ForgetPasswordActivity.this, ForgetPasswordActivity.this, binding.edtUserMno.getText().toString().trim(), binding.edtUserMemberId.getText().toString().trim());
-
-                    } else {
-
-                        Toast.makeText(ForgetPasswordActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
-                    }
                 }
             }
         });
@@ -149,24 +138,6 @@ public class ForgetPasswordActivity extends BaseActivity implements SentOtpForgo
     }
 
 
-    @Override
-    public void sentOtpforgotPassworddata(OtpForgotPasswordResponse data) {
-
-        if (data.getResponse() == 200) {
-            otptoMatch = data.getData();
-            GlobalClass.dailogsuccess(ForgetPasswordActivity.this, "OTP sent", "OTP sent successfully.\nPlease wait for OTP.");
-
-            binding.btnForgotPassword.setVisibility(View.VISIBLE);
-            binding.edtUserForgotPassword.setVisibility(View.VISIBLE);
-            binding.edtUserConfirmForgotPassword.setVisibility(View.VISIBLE);
-            binding.edtOtp.setVisibility(View.VISIBLE);
-
-            binding.edtUserMno.setEnabled(false);
-            binding.edtUserMemberId.setEnabled(false);
-            binding.btnSendOtp.setVisibility(View.GONE);
-        }
-
-    }
 
     @Override
     public void forgotPasswordMethod(ForgotPasswordResponse data) {

@@ -149,9 +149,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         } else if (v == TxtRegisterUser) {
 
-            Intent intentsignup = new Intent(LoginActivity.this, RegistrationActivity.class);
-            startActivity(intentsignup);
-            finish();
+
 
         }
 

@@ -33,7 +33,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -59,20 +58,18 @@ import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
 import hsvp.digital.allottee_corner.adapter.DrawerItemCustomAdapter;
-import hsvp.digital.allottee_corner.adapter.LatestUpdatesAdapter;
 import hsvp.digital.allottee_corner.adapter.OptionsAdapter;
 import hsvp.digital.allottee_corner.adapter.SliderAdapter;
 import hsvp.digital.allottee_corner.app.MyApplication;
 import hsvp.digital.allottee_corner.databinding.ActivityMainBinding;
 import hsvp.digital.allottee_corner.model.DataModelLeftNew;
 import hsvp.digital.allottee_corner.model.HomePageResponse;
-import hsvp.digital.allottee_corner.model.LatestUpdatesmodel;
 import hsvp.digital.allottee_corner.model.OptionDataModel;
 import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.CSPreferences;
 import hsvp.digital.allottee_corner.utility.GlobalClass;
 
-public class MainActivity extends BaseActivity implements OptionsAdapter.ItemListener, LatestUpdatesAdapter.ItemListener {
+public class MainActivity extends BaseActivity implements OptionsAdapter.ItemListener {
     RecyclerView recyclerView;
     ArrayList arrayList = new ArrayList();
     List<HomePageResponse.Banner> sliderItemList = new ArrayList<HomePageResponse.Banner>();
@@ -98,8 +95,6 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
     RelativeLayout uprofile;
     BottomNavigationView bottomNavigation;
     int scrollCount = 0;
-
-    LatestUpdatesAdapter adapterUpdates;
 
 
     public static void drawerCheck() {
@@ -284,16 +279,6 @@ FamilyIncome*/
         // sliderView = findViewById(R.id.imageSlider);
 
         setupToolbar();
-
-
-        LatestUpdatesarrayList.add(new LatestUpdatesmodel(1, "Portal for inviting fresh applications for various scholarships for 2021-22 academic Session is Open Now.\n शैक्षणिक सत्र 2021-22 के लिए विभिन्न छात्रवृत्ति के लिए नए आवेदन आमंत्रित करने के लिए पोर्टल अभी खुला है|"));
-        LatestUpdatesarrayList.add(new LatestUpdatesmodel(2, "Eligible Students are requested to register and apply for scholarship by 15.04.2022 positively.\n पात्र छात्रों से अनुरोध है कि 15.04.2022 तक पंजीकरण कराकर छात्रवृत्ति के लिए आवेदन अवश्य करें। ।"));
-        LatestUpdatesarrayList.add(new LatestUpdatesmodel(3, "Please Check the Eligibility and How to Apply before Registration and applying for Scholarship. \nकृपया पात्रता की जांच करें और छात्रवृत्ति के लिए पंजीकरण और आवेदन करने से पहले आवेदन कैसे करें पढ़ें।"));
-        LatestUpdatesarrayList.add(new LatestUpdatesmodel(4, "Students who already register in previous academic session, need not to register again. They can login directly and apply for the scholarship. \nजो छात्र पिछले शैक्षणिक सत्र में पहले ही पंजीकरण करा चुके हैं, उन्हें दोबारा पंजीकरण करने की आवश्यकता नहीं है। वे सीधे लॉगिन कर सकते हैं और छात्रवृत्ति के लिए आवेदन कर सकते हैं।"));
-
-
-        adapterUpdates = new LatestUpdatesAdapter(this, LatestUpdatesarrayList, this);
-        final LinearLayoutManager managerUpdates = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
 
 
         arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_featured_play_list_24, 2, "#FFFFFF"));
@@ -769,12 +754,6 @@ FamilyIncome*/
 
     }
 
-    @Override
-    public void onItemClick(LatestUpdatesmodel item, int currposition) {
-
-        Intent llnewsipdate = new Intent(this, LatestUpdatesActivity.class);
-        startActivity(llnewsipdate);
-    }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
 
@@ -817,13 +796,11 @@ FamilyIncome*/
                 break;
             case 1111:
                 mDrawerLayout.closeDrawers();
-                Intent ListofCourseIntent = new Intent(this, CourseListActivity.class);
-                startActivity(ListofCourseIntent);
+
                 break;
             case 2222:
                 mDrawerLayout.closeDrawers();
-                Intent ListofCollegeIntent = new Intent(this, CollegeListActivity.class);
-                startActivity(ListofCollegeIntent);
+
                 break;
 
 
@@ -850,8 +827,7 @@ FamilyIncome*/
             case 4:
 
                 mDrawerLayout.closeDrawers();
-                Intent LatestUpdatesIntent = new Intent(this, LatestUpdatesActivity.class);
-                startActivity(LatestUpdatesIntent);
+
                 break;
             case 5:
                 mDrawerLayout.closeDrawers();

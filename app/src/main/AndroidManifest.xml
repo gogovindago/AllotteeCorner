@@ -27,17 +27,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name="hsvp.digital.allottee_corner.ui.ApplyScholarshipFormActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
             android:name="hsvp.digital.allottee_corner.ui.DashboardActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.CourseListActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti"
             android:windowSoftInputMode="stateAlwaysHidden" />
@@ -45,11 +35,6 @@
             android:name="hsvp.digital.allottee_corner.ui.WelcomeActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.RegistrationActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti"
-            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="hsvp.digital.allottee_corner.ui.ForgetPasswordActivity"
             android:exported="false"
@@ -98,14 +83,6 @@
             android:theme="@style/HarChhatravratti" />
         <activity
             android:name="hsvp.digital.allottee_corner.ui.ProfileActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.CollegeListActivity"
-            android:exported="false"
-            android:theme="@style/HarChhatravratti" />
-        <activity
-            android:name="hsvp.digital.allottee_corner.ui.LatestUpdatesActivity"
             android:exported="false"
             android:theme="@style/HarChhatravratti" />
 
