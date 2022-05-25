@@ -63,22 +63,7 @@ public class WelcomeActivity extends BaseActivity {
         });
 
 
-        binding.btnskip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                try {
-                    CSPreferences.putString(WelcomeActivity.this, "User_Name", "Har Chhatravratti");
-                    CSPreferences.putBolean(WelcomeActivity.this, "skiplogin", true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
 
     }
 

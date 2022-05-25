@@ -23,11 +23,11 @@
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:visibility="gone"
                     android:id="@+id/llmain"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
 
                     <androidx.cardview.widget.CardView
@@ -37,7 +37,6 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="6dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -55,7 +54,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
-                                android:text="-- Original Allottee Details --"
+                                android:text="Original Allottee Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -63,6 +62,13 @@
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
 
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/colorPrimary">
+
+                            </View>
 
                             <com.google.android.material.textfield.TextInputLayout
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -70,7 +76,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -79,9 +85,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/person"
-                                    android:drawableLeft="@drawable/person"
-                                    android:drawablePadding="4dp"
+
 
                                     android:enabled="false"
                                     android:hint="Owner Name"
@@ -112,9 +116,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/person"
-                                    android:drawableLeft="@drawable/person"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Father/Husband Name"
                                     android:imeOptions="actionNext"
@@ -136,15 +139,23 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginStart="10dp"
-                                android:gravity="center|start"
-                                android:text="Permanent Address Details :-"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Permanent Address Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
                                 android:textStyle="bold"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/colorPrimary">
+
+                            </View>
 
                             <com.google.android.material.textfield.TextInputLayout
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -161,9 +172,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 1"
                                     android:imeOptions="actionNext"
@@ -189,9 +199,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 2"
                                     android:imeOptions="actionNext"
@@ -217,9 +226,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 3"
                                     android:imeOptions="actionNext"
@@ -245,9 +253,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent State"
                                     android:imeOptions="actionNext"
@@ -272,8 +279,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_pin_24"
-                                    android:drawablePadding="4dp"
+
 
                                     android:enabled="false"
                                     android:hint="Permanent PinCode"
@@ -284,14 +290,6 @@
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
 
                             <View
@@ -306,9 +304,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginStart="10dp"
-                                android:gravity="center|start"
-                                android:text="Contact Details :-"
+                                android:gravity="center"
+                                android:text="Contact Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -325,129 +322,102 @@
                             </View>
 
 
-                            <LinearLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtMobile"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:clickable="false"
 
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_weight="0.5">
 
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtMobile"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="4dp"
-                                        android:enabled="false"
-                                        android:hint="Mobile"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="phone"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                                    android:enabled="false"
+                                    android:hint="Mobile"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtEmailID"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawableStart="@drawable/ic_email"
-                                        android:drawableLeft="@drawable/ic_email"
-                                        android:drawablePadding="4dp"
-                                        android:enabled="false"
-                                        android:hint="EmailID"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp">
 
-
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtEmailID"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_marginBottom="4dp"
-                                    android:layout_weight="0.5">
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="EmailID"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtPanNo"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawablePadding="4dp"
 
-                                        android:enabled="false"
-                                        android:hint="Pan No"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="textPersonName"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPanNo"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_weight="0.5">
+                                    android:clickable="false"
 
-                                    <com.google.android.material.textfield.TextInputEditText
 
-                                        android:id="@+id/edtAadharNo"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawablePadding="4dp"
-                                        android:enabled="false"
-                                        android:hint="Aadhar No"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
+                                    android:enabled="false"
+                                    android:hint="Pan No"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtAadharNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+
+                                    android:enabled="false"
+                                    android:hint="Aadhar No"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
 
                         </LinearLayout>
@@ -463,7 +433,6 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="6dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -480,8 +449,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
                                 android:gravity="center"
-                                android:text="---- Present Allottee Detail -----"
+                                android:text=" Present Allottee Detail"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -489,6 +459,13 @@
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
 
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/colorPrimary">
+
+                            </View>
 
                             <com.google.android.material.textfield.TextInputLayout
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -496,7 +473,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -505,9 +482,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/person"
-                                    android:drawableLeft="@drawable/person"
-                                    android:drawablePadding="4dp"
+
 
                                     android:enabled="false"
                                     android:hint="Owner Name"
@@ -538,9 +513,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/person"
-                                    android:drawableLeft="@drawable/person"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Father/Husband Name"
                                     android:imeOptions="actionNext"
@@ -562,9 +536,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginStart="10dp"
-                                android:gravity="center|start"
-                                android:text="Permanent Address Details :-"
+                                android:gravity="center"
+                                android:text="Permanent Address Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -596,9 +569,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 1"
                                     android:imeOptions="actionNext"
@@ -628,9 +600,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 2"
                                     android:imeOptions="actionNext"
@@ -656,9 +627,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent Address 3"
                                     android:imeOptions="actionNext"
@@ -684,9 +654,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="4dp"
+
+
                                     android:enabled="false"
                                     android:hint="Permanent State"
                                     android:imeOptions="actionNext"
@@ -711,8 +680,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_pin_24"
-                                    android:drawablePadding="4dp"
+
 
                                     android:enabled="false"
                                     android:hint="Permanent PinCode"
@@ -737,9 +705,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginStart="10dp"
-                                android:gravity="center|start"
-                                android:text="Correspondence Address Details --"
+                                android:gravity="center"
+                                android:text="Correspondence Address Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -760,7 +727,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
-                                android:layout_marginStart="16dp"
+                                android:layout_margin="4dp"
                                 android:layout_marginTop="1dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
@@ -770,10 +737,6 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                                    android:drawablePadding="8dp"
-
                                     android:enabled="false"
                                     android:hint="Correspondence Address 1"
                                     android:imeOptions="actionNext"
@@ -793,7 +756,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
-                                android:layout_marginStart="16dp"
+                                android:layout_margin="4dp"
+
                                 android:layout_marginTop="1dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
@@ -803,8 +767,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+
                                     android:drawablePadding="16dp"
                                     android:enabled="false"
                                     android:hint="Correspondence Address 2"
@@ -820,8 +784,9 @@
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
 
-                                android:layout_marginStart="16dp"
+
                                 android:layout_marginTop="1dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
@@ -831,8 +796,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+
                                     android:drawablePadding="16dp"
                                     android:enabled="false"
                                     android:hint="Correspondence Address 3"
@@ -848,8 +813,9 @@
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
 
-                                android:layout_marginStart="16dp"
+
                                 android:layout_marginTop="1dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
@@ -860,8 +826,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+
                                     android:drawablePadding="16dp"
                                     android:enabled="false"
                                     android:hint="Correspondence State"
@@ -876,7 +842,8 @@
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
+                                android:layout_margin="4dp"
+
                                 android:layout_marginTop="1dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_marginBottom="4dp"
@@ -887,7 +854,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:drawableStart="@drawable/ic_baseline_pin_24"
+
                                     android:drawablePadding="16dp"
 
                                     android:enabled="false"
@@ -912,9 +879,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginStart="10dp"
-                                android:gravity="center|start"
-                                android:text="Contact Details :-"
+                                android:gravity="center"
+                                android:text="Contact Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
@@ -930,129 +896,105 @@
 
                             </View>
 
-                            <LinearLayout
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPresentAllotteeMobile"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:clickable="false"
 
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_weight="0.5">
 
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtPresentAllotteeMobile"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawableLeft="@drawable/person"
-                                        android:drawablePadding="4dp"
-                                        android:enabled="false"
-                                        android:hint="Mobile"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="phone"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                                    android:enabled="false"
+                                    android:hint="Mobile"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtPresentAllotteeEmailID"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawableStart="@drawable/ic_email"
-                                        android:drawableLeft="@drawable/ic_email"
-                                        android:drawablePadding="4dp"
-                                        android:enabled="false"
-                                        android:hint="EmailID"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPresentAllotteeEmailID"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_marginBottom="4dp"
-                                    android:layout_weight="0.5">
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="EmailID"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtPresentAllotteePanNo"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawableStart="@drawable/person"
-                                        android:drawablePadding="4dp"
 
-                                        android:enabled="false"
-                                        android:hint="Pan No"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="textPersonName"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPresentAllotteePanNo"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_weight="0.5">
+                                    android:clickable="false"
 
-                                    <com.google.android.material.textfield.TextInputEditText
 
-                                        android:id="@+id/edtPresentAllotteeAadharNo"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:drawablePadding="4dp"
-                                        android:enabled="false"
-                                        android:hint="Aadhar No"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
+                                    android:enabled="false"
+                                    android:hint="Pan No"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="4dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtPresentAllotteeAadharNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+
+                                    android:enabled="false"
+                                    android:hint="Aadhar No"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
 
                         </LinearLayout>
 
@@ -1089,6 +1031,7 @@
                         android:background="@color/colorPrimary">
 
                     </View>
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/noJointHolder"
                         android:layout_width="match_parent"
@@ -1103,11 +1046,11 @@
                         app:textAllCaps="false" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:visibility="gone"
                         android:id="@+id/RVCurrentJointHoldeDetails"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="4dp">
+                        android:layout_margin="4dp"
+                        android:visibility="gone">
 
                     </androidx.recyclerview.widget.RecyclerView>
 

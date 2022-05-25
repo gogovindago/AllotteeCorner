@@ -117,7 +117,7 @@ public class FutureOutStandingActivity extends BaseActivity implements allotteef
 
     @Override
     public void initData() {
-        binding.toolbar.tvToolbarTitle.setText("Allotee Future Schedule");
+        binding.toolbar.tvToolbarTitle.setText("Future OutStanding");
     }
 
     @Override

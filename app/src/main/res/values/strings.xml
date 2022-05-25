@@ -29,7 +29,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="introductiontext"> This is a commitment of the Haryana Shehri Vikas Pradhikaran to provide every allottee/purchaser of its properties:Efficient, prompt and courteous service with dedication, integrity and fairness. </string><!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="address"><u> ADDRESS </u>\n\n General Manager (Information Technology),\n HSVP Office Complex, C - 3, Sector 6,\n Panchkula - INDIA\n</string>
+    <string name="address"><u> ADDRESS </u>\n\n HSVP Office Complex, C - 3, Sector 6,\n Panchkula - INDIA\n</string>
     <string name="contact"><u> CONTACT INFO </u>\n\n <u>   Phone:-\n\n</u> 1800-180-3030\n\n <u> Days &amp; Timing:- </u>\n\nMon-Fri (09:00 A.M to 05:00 P.M)\n\n\n <u>&#64; &#9993;  Email:- </u>\n\n  queryhuda@gmail.com
 </string>
     <string name="login_signup"><u> Login \n/\n Signup </u></string>

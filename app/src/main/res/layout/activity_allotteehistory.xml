@@ -75,27 +75,6 @@
 
                                         </View>-->
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="4dp"
-                        android:gravity="center|start"
-                        android:text=" Allotee History :-"
-                        android:textAllCaps="false"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:visibility="visible"
-                        app:textAllCaps="false" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/colorPrimary">
-
-                    </View>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/RvAllotteeNotice"

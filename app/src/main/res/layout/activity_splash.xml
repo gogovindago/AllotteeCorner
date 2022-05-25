@@ -15,7 +15,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="32dp"
+        android:layout_centerVertical="true"
         android:contentDescription="TODO"
         android:src="@mipmap/ic_launcher_round"
         app:civ_border_color="@color/colorPrimaryDark"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
         android:layout_centerInParent="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Allottee Corner | अलॉटी कॉर्नर\n\nAllottee Corner Mobile App \n\n अलॉटी कॉर्नर मोबाइल एप्लिकेशन"
         android:textAllCaps="true"
@@ -57,6 +57,7 @@
         android:layout_below="@+id/textView"
         android:layout_marginBottom="8dp"
         android:contentDescription="TODO"
+        android:scaleType="fitEnd"
         app:srcCompat="@drawable/bottom" />
 
 </RelativeLayout>

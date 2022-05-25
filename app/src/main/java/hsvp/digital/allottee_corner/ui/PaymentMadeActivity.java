@@ -20,7 +20,7 @@ public class PaymentMadeActivity extends BaseActivity {
     ActivityPaymentmadeBinding binding;
 
     ExpandableListAdapter listAdapter;
-    ExpandableListView expListView;
+  //  ExpandableListView ExpdblListview;
 
 
     List<String> listDataHeader;
@@ -33,10 +33,10 @@ public class PaymentMadeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_paymentmade);
 
-        setContentView(R.layout.activity_paymentmade);
+     //   setContentView(R.layout.activity_paymentmade);
 
         // get the listview
-        expListView = (ExpandableListView) findViewById(R.id.ExpdblListview);
+     //   binding.ExpdblListview = (ExpandableListView) findViewById(R.id.ExpdblListview);
 
         // preparing list data
         prepareListData();
@@ -44,10 +44,10 @@ public class PaymentMadeActivity extends BaseActivity {
         listAdapter = new ExpandableListAdapter(PaymentMadeActivity.this, listDataHeader, listDataChild);
 
         // setting list adapter
-        expListView.setAdapter(listAdapter);
+        binding.ExpdblListview.setAdapter(listAdapter);
 
         // Listview Group click listener
-        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+        binding.ExpdblListview.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v,
@@ -60,7 +60,7 @@ public class PaymentMadeActivity extends BaseActivity {
         });
 
         // Listview Group expanded listener
-        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+        binding.ExpdblListview.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
             @Override
             public void onGroupExpand(int groupPosition) {
@@ -71,7 +71,7 @@ public class PaymentMadeActivity extends BaseActivity {
         });
 
         // Listview Group collasped listener
-        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+        binding.ExpdblListview.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
 
             @Override
             public void onGroupCollapse(int groupPosition) {
@@ -83,7 +83,7 @@ public class PaymentMadeActivity extends BaseActivity {
         });
 
         // Listview on child click listener
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+        binding.ExpdblListview.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,

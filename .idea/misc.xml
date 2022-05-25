@@ -141,11 +141,21 @@
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.194" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Har_Chhatravratti/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.194" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/bg_homeslider.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/bg_overlay.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/howtoapplyshape.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/ic_baseline_app_registration_24.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/ic_baseline_arrow_downward_24.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/ic_baseline_assignment_turned_in_24.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/ic_baseline_whitehow_to_reg_24.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/notifications_active.xml" value="0.2155" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/shape_bluebg.xml" value="0.3045" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/shape_greenbg.xml" value="0.3045" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/shape_redbg.xml" value="0.3045" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/shape_status_completed.xml" value="0.3045" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/shape_status_current.xml" value="0.3045" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/viewallbg.xml" value="0.2155" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/drawable/whitecircle.xml" value="0.2155" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity__eligibility.xml" value="0.1859375" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_allotteehistory.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_allotteenotice.xml" value="0.3625" />
@@ -157,13 +167,17 @@
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_currentoutstanding.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_futureoutstanding.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_howto_apply.xml" value="0.18541666666666667" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_intro.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_login.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_master_admin.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_nodal_body_dheactivity.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_nodalboday_dashboard.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_owner_detail.xml" value="0.34268833087149186" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_paymentmade.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_profile.xml" value="0.3625" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_registration.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/activity_welcome.xml" value="0.3625" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Live/Hsvp/Allottee Corner/Allottee Corner/app/src/main/res/layout/allotteehistory_list_row.xml" value="0.3625" />

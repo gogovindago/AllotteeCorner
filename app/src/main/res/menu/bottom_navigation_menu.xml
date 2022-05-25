@@ -13,7 +13,7 @@
         android:id="@+id/page_3"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_how_to_reg_24"
-        android:title="@string/ownerdetail"/>
+        android:title="@string/currentoutstanding"/>
 
 
   <!--  <item

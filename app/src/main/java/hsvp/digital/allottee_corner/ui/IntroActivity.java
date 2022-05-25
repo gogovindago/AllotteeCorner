@@ -25,7 +25,7 @@ public class IntroActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        binding.toolbar.tvToolbarTitle.setText("About Har Chhatravratti");
+        binding.toolbar.tvToolbarTitle.setText("About Allottee Corner");
     }
 
     @Override

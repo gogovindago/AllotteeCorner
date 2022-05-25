@@ -82,24 +82,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });
 
 
-        btnskip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                try {
-                    CSPreferences.putString(LoginActivity.this, "User_Name", "Har Chhatravratti");
-                    CSPreferences.putBolean(LoginActivity.this, "skiplogin", true);
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                CSPreferences.putBolean(LoginActivity.this, "skiplogin", true);
-                startActivity(intent);
-                finish();
-
-            }
-        });
 
 
     }

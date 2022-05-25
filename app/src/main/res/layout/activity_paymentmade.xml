@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.DashboardActivity">
+        tools:context=".ui.PaymentMadeActivity">
 
         <include
             android:id="@+id/toolbar"
@@ -17,35 +17,6 @@
 
 
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/colorPrimary">
-
-                    </View>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="4dp"
-                        android:gravity="center|start"
-                        android:text="Allotee Payment Recieved :-"
-                        android:textAllCaps="false"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:visibility="visible"
-                        app:textAllCaps="false" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/colorPrimary">
-
-                    </View>
 
                     <ExpandableListView
                         android:id="@+id/ExpdblListview"
