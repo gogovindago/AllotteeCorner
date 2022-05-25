@@ -27,7 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
 
                     <androidx.cardview.widget.CardView
@@ -76,9 +76,8 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginEnd="4dp"
-                                android:layout_weight="0.5">
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/edtOwnerfullName"
@@ -93,12 +92,7 @@
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
                                     android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="0.0"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView7"
-                                    tools:ignore="TooDeepLayout" />
+                                    android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -107,9 +101,8 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="4dp"
-                                android:layout_weight="0.5">
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/edtFatherHusbandName"
@@ -127,35 +120,23 @@
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/spinner_border"
                                 android:gravity="center"
+                                android:padding="8dp"
                                 android:text="Permanent Address Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
-                                android:textStyle="bold"
+                                android:textStyle="normal"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
                             <com.google.android.material.textfield.TextInputLayout
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -163,7 +144,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -190,7 +171,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -217,7 +198,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -244,7 +225,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -269,7 +250,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_marginBottom="4dp"
                                 android:layout_weight="0.5">
@@ -292,34 +273,21 @@
                             </com.google.android.material.textfield.TextInputLayout>
 
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
-
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/spinner_border"
                                 android:gravity="center"
+                                android:padding="8dp"
                                 android:text="Contact Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
-                                android:textStyle="bold"
+                                android:textStyle="normal"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -328,7 +296,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
@@ -353,7 +321,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
@@ -375,7 +343,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_marginBottom="4dp">
 
@@ -401,8 +369,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="4dp">
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
 
@@ -449,7 +418,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="4dp"
                                 android:gravity="center"
                                 android:text=" Present Allottee Detail"
                                 android:textAllCaps="false"
@@ -473,7 +442,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="4dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -504,7 +473,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -524,34 +493,22 @@
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/spinner_border"
                                 android:gravity="center"
+                                android:padding="8dp"
                                 android:text="Permanent Address Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
-                                android:textStyle="bold"
+                                android:textStyle="normal"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -560,7 +517,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -591,7 +548,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -618,7 +575,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -645,7 +602,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_weight="0.5">
 
@@ -670,7 +627,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_marginBottom="4dp"
                                 android:layout_weight="0.5">
@@ -693,34 +650,22 @@
                             </com.google.android.material.textfield.TextInputLayout>
 
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
-
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/spinner_border"
                                 android:gravity="center"
+                                android:padding="8dp"
                                 android:text="Correspondence Address Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
-                                android:textStyle="bold"
+                                android:textStyle="normal"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
                             <com.google.android.material.textfield.TextInputLayout
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -728,9 +673,8 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_margin="4dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_weight="0.5">
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/edtCorrespondenceAddress1"
@@ -758,7 +702,7 @@
 
                                 android:layout_margin="4dp"
 
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -787,7 +731,7 @@
                                 android:layout_margin="4dp"
 
 
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -816,7 +760,7 @@
                                 android:layout_margin="4dp"
 
 
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -844,7 +788,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="4dp"
 
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_marginBottom="4dp"
                                 android:layout_weight="0.5">
@@ -867,34 +811,22 @@
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/spinner_border"
                                 android:gravity="center"
+                                android:padding="8dp"
                                 android:text="Contact Details"
                                 android:textAllCaps="false"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
-                                android:textStyle="bold"
+                                android:textStyle="normal"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="8dp"
-                                android:background="@color/colorPrimary">
-
-                            </View>
 
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -903,7 +835,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
@@ -929,7 +861,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
@@ -951,7 +883,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:layout_marginBottom="4dp">
 
@@ -977,8 +909,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="4dp">
+
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp">
 
                                 <com.google.android.material.textfield.TextInputEditText
 
@@ -1011,11 +945,14 @@
                     </View>
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginStart="10dp"
-                        android:gravity="center|start"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/spinner_border"
+                        android:gravity="center"
+                        android:padding="8dp"
                         android:text=" Current Joint Holder Details :-"
                         android:textAllCaps="false"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -1024,13 +961,6 @@
                         android:visibility="visible"
                         app:textAllCaps="false" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/colorPrimary">
-
-                    </View>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/noJointHolder"
@@ -1063,11 +993,14 @@
                     </View>
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginStart="10dp"
-                        android:gravity="center|start"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/spinner_border"
+                        android:gravity="center"
+                        android:padding="8dp"
                         android:text="Current GPA/ Directors/ Partners Details :-"
                         android:textAllCaps="false"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -1076,13 +1009,6 @@
                         android:visibility="visible"
                         app:textAllCaps="false" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/colorPrimary">
-
-                    </View>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/noGpA"

@@ -477,201 +477,171 @@
 
                             </View>
 
-                            <LinearLayout
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtUrbanEstateName"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtUrbanEstateName"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:clickable="false"
 
 
-                                        android:enabled="false"
-                                        android:hint="Urban Estate"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="textPersonName"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toBottomOf="@+id/textView7"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                                    android:enabled="false"
+                                    android:hint="Urban Estate"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtSector"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-                                        android:digits="0123456789"
-
-
-                                        android:enabled="false"
-                                        android:hint="Sector"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="phone"
-                                        android:maxEms="10"
-                                        android:maxLength="10"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
-
-
-                            <LinearLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtSector"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtCategory"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:clickable="false"
+                                    android:digits="0123456789"
 
 
-                                        android:enabled="false"
-                                        android:hint="Category"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="textPersonName"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
-
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtSubCategory"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="Sector"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:maxEms="10"
+                                    android:maxLength="10"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
 
-                                        android:enabled="false"
-                                        android:hint="Sub-Category"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtCategory"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtPlotNo"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:clickable="false"
 
 
-                                        android:enabled="false"
-                                        android:hint="Plot No"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="textPersonName"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                                    android:enabled="false"
+                                    android:hint="Category"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtSubCategory"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtArea"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:clickable="false"
 
 
-                                        android:enabled="false"
-                                        android:hint="Area"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
+                                    android:enabled="false"
+                                    android:hint="Sub-Category"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPlotNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+
+
+                                    android:enabled="false"
+                                    android:hint="Plot No"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtArea"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+
+
+                                    android:enabled="false"
+                                    android:hint="Area"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -685,7 +655,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
+                                    android:layout_marginTop="4dp"
                                     android:layout_marginEnd="16dp"
                                     android:layout_marginBottom="8dp"
                                     android:layout_weight="1">
@@ -757,193 +727,163 @@
 
                             </View>
 
-                            <LinearLayout
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtOwnerfullName"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtOwnerfullName"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:clickable="false"
 
 
-                                        android:enabled="false"
-                                        android:hint="Owner Name"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="textPersonName"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toBottomOf="@+id/textView7"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                                    android:enabled="false"
+                                    android:hint="Owner Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtFatherHusbandName"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
-
-
-                                        android:enabled="false"
-                                        android:hint="Father/Husband Name"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="text"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
-
-
-                            <LinearLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtFatherHusbandName"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtMobile"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:clickable="false"
 
 
-                                        android:enabled="false"
-                                        android:hint="Mobile"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="phone"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
-
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtEmailID"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="Father/Husband Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
 
-                                        android:enabled="false"
-                                        android:hint="EmailID"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:baselineAligned="false"
-                                android:orientation="horizontal"
-                                android:weightSum="1">
 
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtMobile"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_marginBottom="4dp"
-                                    android:layout_weight="0.5">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edtPanNo"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:clickable="false"
 
 
-                                        android:enabled="false"
-                                        android:hint="Pan No"
-                                        android:imeOptions="actionNext"
-                                        android:inputType="textPersonName"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        tools:ignore="TooDeepLayout" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                                    android:enabled="false"
+                                    android:hint="Mobile"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                                    android:layout_width="0dp"
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtEmailID"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginTop="1dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_weight="0.5">
+                                    android:clickable="false"
 
-                                    <com.google.android.material.textfield.TextInputEditText
 
-                                        android:id="@+id/edtAadharNo"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="EmailID"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                                        android:enabled="false"
-                                        android:hint="Aadhar No"
-                                        android:imeOptions="actionNext"
-                                        android:textColor="@color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="4dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtPanNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+
+
+                                    android:enabled="false"
+                                    android:hint="Pan No"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TooDeepLayout" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="8dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtAadharNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+
+                                    android:enabled="false"
+                                    android:hint="Aadhar No"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
 
                         </LinearLayout>
@@ -1000,7 +940,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1032,7 +972,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1059,7 +999,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1086,7 +1026,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1112,9 +1052,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
-                                android:layout_marginBottom="4dp"
+                                android:layout_marginBottom="8dp"
                                 android:layout_weight="0.5">
 
                                 <com.google.android.material.textfield.TextInputEditText
@@ -1188,7 +1128,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1221,7 +1161,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1248,7 +1188,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1275,7 +1215,7 @@
                                 android:layout_height="wrap_content"
 
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_weight="0.5">
 
@@ -1301,9 +1241,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:layout_marginTop="1dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
-                                android:layout_marginBottom="4dp"
+                                android:layout_marginBottom="8dp"
                                 android:layout_weight="0.5">
 
                                 <com.google.android.material.textfield.TextInputEditText

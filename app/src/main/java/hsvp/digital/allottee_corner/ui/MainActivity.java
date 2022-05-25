@@ -281,17 +281,17 @@ FamilyIncome*/
         setupToolbar();
 
 
-        arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_featured_play_list_24, 2, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_dashboard_24, 2, "#FFFFFF"));
 
-        arrayList.add(new OptionDataModel(R.string.ownerdetail, R.drawable.ic_baseline_how_to_reg_24, 222, "#FFFFFF"));
-        arrayList.add(new OptionDataModel(R.string.currentoutstanding, R.drawable.ic_baseline_balance_24, 333, "#FFFFFF"));
-        arrayList.add(new OptionDataModel(R.string.futureoutstanding, R.drawable.ic_baseline_balance_24, 444, "#FFFFFF"));
-        arrayList.add(new OptionDataModel(R.string.paymentmade, R.drawable.ic_baseline_menu_book_24, 555, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.ownerdetail, R.drawable.ic_baseline_contacts_24, 222, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.currentoutstanding, R.drawable.ic_baseline_currency_rupee_24, 333, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.futureoutstanding, R.drawable.ic_baseline_currency_rupee_24, 444, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.paymentmade, R.drawable.ic_baseline_payment_24, 555, "#FFFFFF"));
         arrayList.add(new OptionDataModel(R.string.checkappstatus, R.drawable.ic_baseline_fact_check_24, 666, "#FFFFFF"));
 
-        arrayList.add(new OptionDataModel(R.string.alloteeaccountstatement, R.drawable.ic_baseline_how_to_reg_24, 777, "#FFFFFF"));
-        arrayList.add(new OptionDataModel(R.string.AlloteeNotice, R.drawable.ic_baseline_format_list_numbered_24, 888, "#FFFFFF"));
-        arrayList.add(new OptionDataModel(R.string.AlloteeHistory, R.drawable.ic_baseline_format_list_numbered_24, 8888, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.alloteeaccountstatement, R.drawable.ic_baseline_payments_24, 777, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.AlloteeNotice, R.drawable.ic_baseline_assignment_24, 888, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.AlloteeHistory, R.drawable.ic_baseline_description_24, 8888, "#FFFFFF"));
 
 
         OptionsAdapter adaptermain = new OptionsAdapter(this, arrayList, this);
