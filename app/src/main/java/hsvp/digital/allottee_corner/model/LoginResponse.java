@@ -58,7 +58,7 @@ public class LoginResponse {
         private String loweredUserName;
         @SerializedName("MobileAlias")
         @Expose
-        private Object mobileAlias;
+        private String mobileAlias;
         @SerializedName("IsAnonymous")
         @Expose
         private boolean isAnonymous;
@@ -82,7 +82,7 @@ public class LoginResponse {
         private String passwordSalt;
         @SerializedName("MobilePIN")
         @Expose
-        private Object mobilePIN;
+        private String mobilePIN;
         @SerializedName("Email")
         @Expose
         private String email;
@@ -127,7 +127,69 @@ public class LoginResponse {
         private String failedPasswordAnswerAttemptWindowStart;
         @SerializedName("Comment")
         @Expose
-        private Object comment;
+        private String comment;
+        
+        
+        @SerializedName("uEmail")
+        @Expose
+        private String uEmail;
+
+        @SerializedName("uMobile")
+        @Expose
+        private String uMobile;
+
+        @SerializedName("uName")
+        @Expose
+        private String uName;
+
+
+        public boolean isAnonymous() {
+            return isAnonymous;
+        }
+
+        public void setAnonymous(boolean anonymous) {
+            isAnonymous = anonymous;
+        }
+
+        public boolean isApproved() {
+            return isApproved;
+        }
+
+        public void setApproved(boolean approved) {
+            isApproved = approved;
+        }
+
+        public boolean isLockedOut() {
+            return isLockedOut;
+        }
+
+        public void setLockedOut(boolean lockedOut) {
+            isLockedOut = lockedOut;
+        }
+
+        public String getuEmail() {
+            return uEmail;
+        }
+
+        public void setuEmail(String uEmail) {
+            this.uEmail = uEmail;
+        }
+
+        public String getuMobile() {
+            return uMobile;
+        }
+
+        public void setuMobile(String uMobile) {
+            this.uMobile = uMobile;
+        }
+
+        public String getuName() {
+            return uName;
+        }
+
+        public void setuName(String uName) {
+            this.uName = uName;
+        }
 
         public String getApplicationId() {
             return applicationId;
@@ -161,11 +223,11 @@ public class LoginResponse {
             this.loweredUserName = loweredUserName;
         }
 
-        public Object getMobileAlias() {
+        public String getMobileAlias() {
             return mobileAlias;
         }
 
-        public void setMobileAlias(Object mobileAlias) {
+        public void setMobileAlias(String mobileAlias) {
             this.mobileAlias = mobileAlias;
         }
 
@@ -225,11 +287,11 @@ public class LoginResponse {
             this.passwordSalt = passwordSalt;
         }
 
-        public Object getMobilePIN() {
+        public String getMobilePIN() {
             return mobilePIN;
         }
 
-        public void setMobilePIN(Object mobilePIN) {
+        public void setMobilePIN(String mobilePIN) {
             this.mobilePIN = mobilePIN;
         }
 
@@ -345,11 +407,11 @@ public class LoginResponse {
             this.failedPasswordAnswerAttemptWindowStart = failedPasswordAnswerAttemptWindowStart;
         }
 
-        public Object getComment() {
+        public String getComment() {
             return comment;
         }
 
-        public void setComment(Object comment) {
+        public void setComment(String comment) {
             this.comment = comment;
         }
     }

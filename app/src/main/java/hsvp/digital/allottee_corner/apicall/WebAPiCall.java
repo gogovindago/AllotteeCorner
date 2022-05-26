@@ -15,6 +15,7 @@ import java.util.List;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import hsvp.digital.allottee_corner.allinterface.ForgotPasswordData_interface;
 import hsvp.digital.allottee_corner.allinterface.LoginData_interface;
+import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeAppStatusData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeHistoryData_interface;
@@ -28,6 +29,7 @@ import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
 import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
@@ -168,8 +170,6 @@ public class WebAPiCall {
         // pd.dismiss();
         pDialog.dismissWithAnimation();
     }
-
-
 
 
     public void loginPostDataMethod(final Activity activity, final Context context, final LoginData_interface loginData_interface, LoginRequest request) {
@@ -593,8 +593,41 @@ public class WebAPiCall {
     }
 
 
+    public void allottePaymentReceivedMethod(final Activity activity, final Context context, final allottePaymentReceivedData_interface loginData_interface, PlotIdRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllottePaymentReceivedResponse> userpost_responseCall = ApiClient.getClient().allottePaymentReceivedPi(request);
+        userpost_responseCall.enqueue(new Callback<AllottePaymentReceivedResponse>() {
+            @Override
+            public void onResponse(Call<AllottePaymentReceivedResponse> call, Response<AllottePaymentReceivedResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
 
 
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.allottePaymentReceiveddata((List<AllottePaymentReceivedResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllottePaymentReceivedResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
 
 
     public void forgotPostDataMethod(final Activity activity, final Context context, final ForgotPasswordData_interface anInterface, ForgotPasswordRequest request) {
@@ -634,7 +667,6 @@ public class WebAPiCall {
             }
         });
     }
-
 
 
 }

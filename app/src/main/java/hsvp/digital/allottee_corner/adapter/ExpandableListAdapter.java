@@ -12,16 +12,17 @@ import java.util.HashMap;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
-    private List<String> _listDataHeader; // header titles
+    private List<AllottePaymentReceivedResponse.Datum> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private HashMap<AllottePaymentReceivedResponse.Datum, List<String>> _listDataChild;
 
-    public ExpandableListAdapter(Context context, List<String> listDataHeader,
-                                 HashMap<String, List<String>> listChildData) {
+    public ExpandableListAdapter(Context context, List<AllottePaymentReceivedResponse.Datum> listDataHeader,
+                                 HashMap<AllottePaymentReceivedResponse.Datum, List<String>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
@@ -81,17 +82,34 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
-        String headerTitle = (String) getGroup(groupPosition);
+        // String headerTitle =  getGroup(groupPosition);
+
+        // String headerTitle = String.valueOf(_listDataHeader.get(groupPosition).getPaydate());
+
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.list_group, null);
         }
+        TextView lblListHeader, lblListHeader2, lblListHeader3, lblListHeader4;
 
-        TextView lblListHeader = (TextView) convertView
+        lblListHeader = (TextView) convertView
                 .findViewById(R.id.lblListHeader);
+
+        lblListHeader2 = (TextView) convertView
+                .findViewById(R.id.lblListHeader2);
+        lblListHeader3 = (TextView) convertView
+                .findViewById(R.id.lblListHeader3);
+        lblListHeader4 = (TextView) convertView
+                .findViewById(R.id.lblListHeader4);
+
+
         lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setText(headerTitle);
+        lblListHeader.setText(_listDataHeader.get(groupPosition).getPaydate());
+
+        lblListHeader2.setText(String.valueOf(_listDataHeader.get(groupPosition).getPaymentAmount()));
+        lblListHeader3.setText(String.valueOf(_listDataHeader.get(groupPosition).getPaymentFlag()));
+        lblListHeader4.setText(_listDataHeader.get(groupPosition).getPaymentReceiptMemoNumber());
 
         return convertView;
     }

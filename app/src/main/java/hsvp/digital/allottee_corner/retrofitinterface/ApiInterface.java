@@ -4,6 +4,7 @@ import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
 import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
@@ -80,6 +81,11 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
 
     @POST("allottefutureOutStandingDetails")
     Call<AllottefutureOutStandingDetailsResponse> allottefutureOutStandingDetailsPi(@Body PlotIdRequest request);
+
+
+
+    @POST("allottePaymentReceived")
+    Call<AllottePaymentReceivedResponse>allottePaymentReceivedPi(@Body PlotIdRequest request);
 
 
 

@@ -188,7 +188,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             CSPreferences.putString(this, "userid", String.valueOf(data.get(0).getUserId()));
             CSPreferences.putString(this, "User_Name", data.get(0).getUserName());
-            CSPreferences.putString(this, "Email", data.get(0).getEmail());
+            CSPreferences.putString(this, "Email", data.get(0).getuEmail());
+            CSPreferences.putString(this, "PhoneNo", data.get(0).getuMobile());
 
             Intent intentlogin = new Intent(LoginActivity.this, MainActivity.class);
             intentlogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
