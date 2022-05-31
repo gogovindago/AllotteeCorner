@@ -44,19 +44,19 @@ public class AllotteCurrentOutStandingResponse {
 
     public class Datum {
 
-        @SerializedName("Paricular")
+        @SerializedName("Particular")
         @Expose
-        private String paricular;
+        private String Particular;
         @SerializedName("amount")
         @Expose
         private float amount;
 
-        public String getParicular() {
-            return paricular;
+        public String getParticular() {
+            return Particular;
         }
 
-        public void setParicular(String paricular) {
-            this.paricular = paricular;
+        public void setParticular(String Particular) {
+            this.Particular = Particular;
         }
 
         public float getAmount() {

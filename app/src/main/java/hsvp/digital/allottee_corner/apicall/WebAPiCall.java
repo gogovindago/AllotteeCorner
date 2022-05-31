@@ -16,10 +16,12 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import hsvp.digital.allottee_corner.allinterface.ForgotPasswordData_interface;
 import hsvp.digital.allottee_corner.allinterface.LoginData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedData_interface;
+import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedDetailsData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeAppStatusData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeHistoryData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteeNoticesData_interface;
+import hsvp.digital.allottee_corner.allinterface.allotteePlotInfoData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteedetailData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteefutureoustandingData_interface;
 import hsvp.digital.allottee_corner.allinterface.allotteefutureoustandingdetaildetailData_interface;
@@ -29,7 +31,9 @@ import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
 import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
+import hsvp.digital.allottee_corner.model.AllottePlotInfoResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
@@ -40,6 +44,7 @@ import hsvp.digital.allottee_corner.model.ForgotPasswordRequest;
 import hsvp.digital.allottee_corner.model.ForgotPasswordResponse;
 import hsvp.digital.allottee_corner.model.LoginRequest;
 import hsvp.digital.allottee_corner.model.LoginResponse;
+import hsvp.digital.allottee_corner.model.PaymentReceivedDetailsRequest;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.retrofitinterface.ApiClient;
 import hsvp.digital.allottee_corner.ui.MainActivity;
@@ -518,6 +523,43 @@ public class WebAPiCall {
     }
 
 
+    public void allottePlotInfoMethod(final Activity activity, final Context context, final allotteePlotInfoData_interface loginData_interface, PlotIdRequest request, LinearLayoutCompat llmain) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllottePlotInfoResponse> userpost_responseCall = ApiClient.getClient().allottePlotInfoAPi(request);
+        userpost_responseCall.enqueue(new Callback<AllottePlotInfoResponse>() {
+            @Override
+            public void onResponse(Call<AllottePlotInfoResponse> call, Response<AllottePlotInfoResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+                        llmain.setVisibility(View.VISIBLE);
+                        loginData_interface.AllottePlotInfodata((List<AllottePlotInfoResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllottePlotInfoResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
     public void allotteAppStatusMethod(final Activity activity, final Context context, final allotteeAppStatusData_interface loginData_interface, AppStatusRequest request) {
 
         loadershowwithMsg(context, "Loading...");
@@ -620,6 +662,43 @@ public class WebAPiCall {
 
             @Override
             public void onFailure(Call<AllottePaymentReceivedResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
+    public void allottePaymentReceivedDetailsMethod(final Activity activity, final Context context, final allottePaymentReceivedDetailsData_interface loginData_interface, PaymentReceivedDetailsRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllottePaymentReceivedDetailsResponse> userpost_responseCall = ApiClient.getClient().allottePaymentReceivedDetailsPi(request);
+        userpost_responseCall.enqueue(new Callback<AllottePaymentReceivedDetailsResponse>() {
+            @Override
+            public void onResponse(Call<AllottePaymentReceivedDetailsResponse> call, Response<AllottePaymentReceivedDetailsResponse> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+
+                        loginData_interface.allottePaymentReceivedDetailsdata((List<AllottePaymentReceivedDetailsResponse.Datum>) response.body().getData());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllottePaymentReceivedDetailsResponse> call, Throwable t) {
 
                 dailoghide(context);
                 t.printStackTrace();

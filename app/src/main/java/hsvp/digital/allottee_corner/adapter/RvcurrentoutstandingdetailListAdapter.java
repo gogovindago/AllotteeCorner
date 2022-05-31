@@ -35,7 +35,7 @@ public class RvcurrentoutstandingdetailListAdapter extends RecyclerView.Adapter<
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public int currposition;
-        public TextView txtsrlno, txtParicularvalue, txtDueDateValue, txtAmountValue, txtTotalAmountvalue;
+        public TextView txtsrlno, txtParticularvalue, txtDueDateValue, txtAmountValue, txtTotalAmountvalue;
         AllotteCurrentOutStandingResponse.Datum item;
 
         public ViewHolder(View v) {
@@ -45,7 +45,7 @@ public class RvcurrentoutstandingdetailListAdapter extends RecyclerView.Adapter<
             v.setOnClickListener(this);
 
 
-            txtParicularvalue = v.findViewById(R.id.txtParicularvalue);
+            txtParticularvalue = v.findViewById(R.id.txtParticularvalue);
             txtsrlno = v.findViewById(R.id.txtsrlno);
             txtDueDateValue = v.findViewById(R.id.txtDueDateValue);
             txtAmountValue = v.findViewById(R.id.txtAmountValue);
@@ -61,7 +61,7 @@ public class RvcurrentoutstandingdetailListAdapter extends RecyclerView.Adapter<
 
             try {
                 txtsrlno.setText(String.valueOf(++currposition) + ". ");
-                txtParicularvalue.setText(String.valueOf(item.getParicular()));
+                txtParticularvalue.setText(String.valueOf(item.getParticular()));
                 txtAmountValue.setText(String.valueOf(item.getAmount()));
                 txtTotalAmountvalue.setText(String.valueOf(item.getAmount()));
 

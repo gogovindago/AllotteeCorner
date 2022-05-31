@@ -8,10 +8,12 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
@@ -19,10 +21,10 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Context _context;
     private List<AllottePaymentReceivedResponse.Datum> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<AllottePaymentReceivedResponse.Datum, List<String>> _listDataChild;
+    private HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>> _listDataChild;
 
     public ExpandableListAdapter(Context context, List<AllottePaymentReceivedResponse.Datum> listDataHeader,
-                                 HashMap<AllottePaymentReceivedResponse.Datum, List<String>> listChildData) {
+                                 HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
@@ -43,7 +45,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        final String childText = (String) getChild(groupPosition, childPosition);
+      final AllottePaymentReceivedDetailsResponse.Datum childText = (AllottePaymentReceivedDetailsResponse.Datum) getChild(groupPosition, childPosition);
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
@@ -54,13 +56,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         TextView txtListChild = (TextView) convertView
                 .findViewById(R.id.lblListItem);
 
-        txtListChild.setText(childText);
+        txtListChild.setText(_listDataChild.get(groupPosition).get(childPosition).getPlotId());
         return convertView;
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this._listDataChild.get(groupPosition)
                 .size();
     }
 
@@ -82,9 +84,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
-        // String headerTitle =  getGroup(groupPosition);
+        // AllottePaymentReceivedDetailsResponse.Datum headerTitle =  getGroup(groupPosition);
 
-        // String headerTitle = String.valueOf(_listDataHeader.get(groupPosition).getPaydate());
+        // AllottePaymentReceivedDetailsResponse.Datum headerTitle = AllottePaymentReceivedDetailsResponse.Datum.valueOf(_listDataHeader.get(groupPosition).getPaydate());
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
@@ -105,6 +107,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 
         lblListHeader.setTypeface(null, Typeface.BOLD);
+
+
         lblListHeader.setText(_listDataHeader.get(groupPosition).getPaydate());
 
         lblListHeader2.setText(String.valueOf(_listDataHeader.get(groupPosition).getPaymentAmount()));

@@ -130,6 +130,9 @@
         <activity android:name=".ui.PaymentMadeActivity" />
         <activity android:name=".ui.AllotteeNoticeActivity" />
         <activity android:name=".ui.AllotteeHistoryActivity" />
+        <activity android:name=".ui.AllotteePlotInfoActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
     </application>
 
 </manifest>

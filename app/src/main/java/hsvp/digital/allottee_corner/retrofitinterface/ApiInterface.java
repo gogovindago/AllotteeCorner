@@ -4,7 +4,9 @@ import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
 import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
+import hsvp.digital.allottee_corner.model.AllottePlotInfoResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottefutureOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteplotdetailsResponse;
@@ -15,6 +17,7 @@ import hsvp.digital.allottee_corner.model.ForgotPasswordRequest;
 import hsvp.digital.allottee_corner.model.ForgotPasswordResponse;
 import hsvp.digital.allottee_corner.model.LoginRequest;
 import hsvp.digital.allottee_corner.model.LoginResponse;
+import hsvp.digital.allottee_corner.model.PaymentReceivedDetailsRequest;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -74,6 +77,9 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
     @POST("allotteHistory")
     Call<AlloteeHistoryResponse> allotteHistoryAPi(@Body PlotIdRequest request);
 
+    @POST("allottePlotInfo")
+    Call<AllottePlotInfoResponse> allottePlotInfoAPi(@Body PlotIdRequest request);
+
 
     @POST("allotteAppl")
     Call<AllotteApplicationStatusResponse> allotteAppStatusAPi(@Body AppStatusRequest request);
@@ -83,10 +89,12 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
     Call<AllottefutureOutStandingDetailsResponse> allottefutureOutStandingDetailsPi(@Body PlotIdRequest request);
 
 
-
     @POST("allottePaymentReceived")
-    Call<AllottePaymentReceivedResponse>allottePaymentReceivedPi(@Body PlotIdRequest request);
+    Call<AllottePaymentReceivedResponse> allottePaymentReceivedPi(@Body PlotIdRequest request);
 
+
+    @POST("allottePaymentReceivedDetails")
+    Call<AllottePaymentReceivedDetailsResponse> allottePaymentReceivedDetailsPi(@Body PaymentReceivedDetailsRequest request);
 
 
     //https://cmapi.highereduhry.ac.in/api/commonapi/UpdatePassword

@@ -149,16 +149,16 @@ FamilyIncome*/
             textView.setText(CSPreferences.readString(this, "Email"));
             txtrole.setText(CSPreferences.readString(this, "UserType"));
 
-            toolbartxt.setText(CSPreferences.readString(this, "User_Name"));
+            toolbartxt.setText(CSPreferences.readString(this, "U_Name"));
 
 
             role = CSPreferences.readString(this, "UserType");
 
-            txtwelcome.setText(CSPreferences.readString(this, "User_Name"));
+            txtwelcome.setText(CSPreferences.readString(this, "U_Name"));
 
             if (role.equalsIgnoreCase("NodalBodyDHE")) {
 
-                String username = CSPreferences.readString(this, "User_Name");
+                String username = CSPreferences.readString(this, "U_Name");
 
 
                 toolbartxt.setText(firstLetterWord(username.replaceAll("[^a-zA-Z0-9]", " ")));
@@ -166,8 +166,8 @@ FamilyIncome*/
 
             } else {
 
-                txtwelcome.setText(CSPreferences.readString(this, "User_Name"));
-                toolbartxt.setText(CSPreferences.readString(this, "User_Name"));
+                txtwelcome.setText(CSPreferences.readString(this, "U_Name"));
+                toolbartxt.setText(CSPreferences.readString(this, "U_Name"));
             }
 
 
@@ -284,6 +284,7 @@ FamilyIncome*/
         arrayList.add(new OptionDataModel(R.string.Dashboard, R.drawable.ic_baseline_dashboard_24, 2, "#FFFFFF"));
 
         arrayList.add(new OptionDataModel(R.string.ownerdetail, R.drawable.ic_baseline_contacts_24, 222, "#FFFFFF"));
+        arrayList.add(new OptionDataModel(R.string.ownerplotdetail, R.drawable.ic_baseline_details_24, 2222, "#FFFFFF"));
         arrayList.add(new OptionDataModel(R.string.currentoutstanding, R.drawable.ic_baseline_currency_rupee_24, 333, "#FFFFFF"));
         arrayList.add(new OptionDataModel(R.string.futureoutstanding, R.drawable.ic_baseline_currency_rupee_24, 444, "#FFFFFF"));
         arrayList.add(new OptionDataModel(R.string.paymentmade, R.drawable.ic_baseline_payment_24, 555, "#FFFFFF"));
@@ -705,6 +706,12 @@ FamilyIncome*/
 
 
             Intent intent = new Intent(this, OwnerDetailActivity.class);
+            startActivity(intent);
+
+        } else if (item.Id == 2222) {
+
+
+            Intent intent = new Intent(this, AllotteePlotInfoActivity.class);
             startActivity(intent);
 
         } else if (item.Id == 333) {

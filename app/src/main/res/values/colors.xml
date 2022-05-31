@@ -15,6 +15,7 @@
     &ndash;&gt;
     <color name="colorAccent">#79FF8F00</color>-->
 
+    <color name="colorPrimarylight">#08034F84</color>
     <color name="colorPrimary">#034F84</color>
     <color name="colorPrimaryDark">#034F84</color>
     <color name="colorAccent">#034F84</color>

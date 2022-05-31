@@ -30,13 +30,15 @@
                     android:visibility="visible">
 
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
+
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:cardBackgroundColor="@color/white"
                         android:id="@+id/cardsforOriginalAllottee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="6dp"
+
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -44,9 +46,9 @@
                         app:cardUseCompatPadding="true">
 
                         <LinearLayout
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/edtbgwhite"
                             android:orientation="vertical">
 
                             <androidx.appcompat.widget.AppCompatTextView
@@ -64,14 +66,14 @@
 
                             <View
                                 android:layout_width="match_parent"
-                                android:layout_height="2dp"
+                                android:layout_height="1dp"
                                 android:layout_marginTop="8dp"
                                 android:background="@color/colorPrimary">
 
                             </View>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -91,12 +93,12 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -116,7 +118,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -131,7 +133,6 @@
                                 android:padding="8dp"
                                 android:text="Permanent Address Details"
                                 android:textAllCaps="false"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
                                 android:textStyle="normal"
                                 android:visibility="visible"
@@ -139,7 +140,7 @@
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -160,13 +161,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -187,13 +188,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -214,13 +215,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -240,13 +241,13 @@
                                     android:hint="Permanent State"
                                     android:imeOptions="actionNext"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -267,7 +268,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="numberSigned"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
@@ -283,15 +284,14 @@
                                 android:padding="8dp"
                                 android:text="Contact Details"
                                 android:textAllCaps="false"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                android:textColor="@color/colorPrimary"
+                               android:textColor="@color/colorPrimary"
                                 android:textStyle="normal"
                                 android:visibility="visible"
                                 app:textAllCaps="false" />
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -311,13 +311,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="phone"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -333,13 +333,13 @@
                                     android:hint="EmailID"
                                     android:imeOptions="actionNext"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -359,13 +359,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -384,7 +384,7 @@
                                     android:hint="Aadhar No"
                                     android:imeOptions="actionNext"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -392,16 +392,17 @@
                         </LinearLayout>
 
 
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:cardBackgroundColor="@color/white"
                         android:id="@+id/cardsforPresentAllottee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="6dp"
+
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp"
                         app:cardMaxElevation="8dp"
@@ -409,9 +410,9 @@
                         app:cardUseCompatPadding="true">
 
                         <LinearLayout
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/edtbgwhite"
                             android:orientation="vertical">
 
                             <androidx.appcompat.widget.AppCompatTextView
@@ -437,7 +438,7 @@
                             </View>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -458,7 +459,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintHorizontal_bias="0.0"
@@ -468,7 +469,7 @@
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -489,7 +490,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -504,7 +505,6 @@
                                 android:padding="8dp"
                                 android:text="Permanent Address Details"
                                 android:textAllCaps="false"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
                                 android:textStyle="normal"
                                 android:visibility="visible"
@@ -512,7 +512,7 @@
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -533,7 +533,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintHorizontal_bias="0.0"
@@ -543,7 +543,7 @@
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -564,13 +564,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -591,13 +591,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -617,13 +617,13 @@
                                     android:hint="Permanent State"
                                     android:imeOptions="actionNext"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -644,7 +644,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="numberSigned"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
@@ -660,7 +660,6 @@
                                 android:padding="8dp"
                                 android:text="Correspondence Address Details"
                                 android:textAllCaps="false"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
                                 android:textStyle="normal"
                                 android:visibility="visible"
@@ -668,7 +667,7 @@
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -686,7 +685,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintHorizontal_bias="0.0"
@@ -696,7 +695,7 @@
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -719,13 +718,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="4dp"
@@ -748,13 +747,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="text"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="4dp"
@@ -777,13 +776,13 @@
                                     android:hint="Correspondence State"
                                     android:imeOptions="actionNext"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="4dp"
@@ -806,7 +805,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="numberSigned"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
@@ -822,7 +821,6 @@
                                 android:padding="8dp"
                                 android:text="Contact Details"
                                 android:textAllCaps="false"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimary"
                                 android:textStyle="normal"
                                 android:visibility="visible"
@@ -830,7 +828,7 @@
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -850,13 +848,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="phone"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 
@@ -873,13 +871,13 @@
                                     android:hint="EmailID"
                                     android:imeOptions="actionNext"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -899,13 +897,13 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold"
                                     tools:ignore="TooDeepLayout" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -925,7 +923,7 @@
                                     android:hint="Aadhar No"
                                     android:imeOptions="actionNext"
                                     android:textColor="@color/black"
-                                    android:textSize="12sp"
+                                    
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -933,7 +931,7 @@
                         </LinearLayout>
 
 
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
 
                     <View
@@ -953,7 +951,7 @@
                         android:background="@drawable/spinner_border"
                         android:gravity="center"
                         android:padding="8dp"
-                        android:text=" Current Joint Holder Details :-"
+                        android:text=" Current Joint Holder Details"
                         android:textAllCaps="false"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorPrimary"
@@ -1001,7 +999,7 @@
                         android:background="@drawable/spinner_border"
                         android:gravity="center"
                         android:padding="8dp"
-                        android:text="Current GPA/ Directors/ Partners Details :-"
+                        android:text="Current GPA/ Directors/ Partners Details"
                         android:textAllCaps="false"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorPrimary"

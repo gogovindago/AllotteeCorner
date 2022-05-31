@@ -60,6 +60,7 @@
     <string name="masteradminDashboard">Master Admin \nDashboard</string>
     <string name="Dashboard">Dashboard</string>
     <string name="ownerdetail">Owner Detail</string>
+    <string name="ownerplotdetail">Plot Detail</string>
     <string name="currentoutstanding">Current Outstanding</string>
     <string name="outstanding">Outstanding</string>
     <string name="futureoutstanding">Future Outstanding</string>
