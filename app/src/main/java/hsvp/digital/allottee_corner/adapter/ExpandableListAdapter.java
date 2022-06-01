@@ -13,18 +13,19 @@ import java.util.HashMap;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceived2Response;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
-    private List<AllottePaymentReceivedResponse.Datum> _listDataHeader; // header titles
+    private List<AllottePaymentReceived2Response.Payment> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>> _listDataChild;
+    private HashMap<List<AllottePaymentReceived2Response.Payment>, List<AllottePaymentReceived2Response.PaymentDetail>> _listDataChild;
 
-    public ExpandableListAdapter(Context context, List<AllottePaymentReceivedResponse.Datum> listDataHeader,
-                                 HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>> listChildData) {
+    public ExpandableListAdapter(Context context, List<AllottePaymentReceived2Response.Payment> listDataHeader,
+                                 HashMap<List<AllottePaymentReceived2Response.Payment>, List<AllottePaymentReceived2Response.PaymentDetail>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
@@ -34,6 +35,10 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public Object getChild(int groupPosition, int childPosititon) {
         return this._listDataChild.get(this._listDataHeader.get(groupPosition))
                 .get(childPosititon);
+
+
+
+
     }
 
     @Override
@@ -45,7 +50,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-      final AllottePaymentReceivedDetailsResponse.Datum childText = (AllottePaymentReceivedDetailsResponse.Datum) getChild(groupPosition, childPosition);
+      final AllottePaymentReceived2Response.PaymentDetail childText = (AllottePaymentReceived2Response.PaymentDetail) getChild(groupPosition, childPosition);
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
@@ -62,7 +67,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return _listDataChild.get(groupPosition).size();
+        return  this._listDataChild.get(this._listDataHeader.get(groupPosition))
+                .size();
     }
 
     @Override
@@ -83,9 +89,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
-        // AllottePaymentReceivedDetailsResponse.Datum headerTitle =  getGroup(groupPosition);
+        // AllottePaymentReceived2Response.PaymentDetail headerTitle =  getGroup(groupPosition);
 
-        // AllottePaymentReceivedDetailsResponse.Datum headerTitle = AllottePaymentReceivedDetailsResponse.Datum.valueOf(_listDataHeader.get(groupPosition).getPaydate());
+        // AllottePaymentReceived2Response.PaymentDetail headerTitle = AllottePaymentReceived2Response.PaymentDetail.valueOf(_listDataHeader.get(groupPosition).getPaydate());
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context

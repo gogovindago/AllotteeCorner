@@ -1,7 +1,5 @@
 package hsvp.digital.allottee_corner.ui;
 
-import static hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse.*;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -15,20 +13,20 @@ import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
 import hsvp.digital.allottee_corner.adapter.ExpandableListAdapter;
+import hsvp.digital.allottee_corner.allinterface.allottePaymentReceived2Data_interface;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedDetailsData_interface;
 import hsvp.digital.allottee_corner.apicall.WebAPiCall;
 import hsvp.digital.allottee_corner.databinding.ActivityPaymentmadeBinding;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceived2Response;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
-import hsvp.digital.allottee_corner.model.AllottefutureOutStandingDetailsResponse;
-import hsvp.digital.allottee_corner.model.PaymentReceivedDetailsRequest;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.CSPreferences;
 import hsvp.digital.allottee_corner.utility.GlobalClass;
 
-public class PaymentMadeActivity extends BaseActivity implements allottePaymentReceivedData_interface, allottePaymentReceivedDetailsData_interface {
+public class PaymentMadeActivity extends BaseActivity implements allottePaymentReceivedData_interface, allottePaymentReceivedDetailsData_interface, allottePaymentReceived2Data_interface {
     ActivityPaymentmadeBinding binding;
 
     ExpandableListAdapter listAdapter;
@@ -36,8 +34,10 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
 
     private String PlotID;
     //   List<String> listDataHeader;
-    private List<AllottePaymentReceivedResponse.Datum> listDataHeader = new ArrayList<AllottePaymentReceivedResponse.Datum>();
-    HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>> listDataChild;
+    private List<AllottePaymentReceived2Response.Payment> listDataHeader = new ArrayList<AllottePaymentReceived2Response.Payment>();
+
+    List<AllottePaymentReceived2Response.PaymentDetail> arrayList = new ArrayList<AllottePaymentReceived2Response.PaymentDetail>();
+    HashMap<List<AllottePaymentReceived2Response.Payment>, List<AllottePaymentReceived2Response.PaymentDetail>> listDataChild;
 
 
     @Override
@@ -61,7 +61,8 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
 
 
             WebAPiCall webapiCall = new WebAPiCall();
-            webapiCall.allottePaymentReceivedMethod(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, request);
+            // webapiCall.allottePaymentReceivedMethod(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, request);
+            webapiCall.AllottePaymentReceived2Method(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, request);
 
 
         } else {
@@ -78,10 +79,10 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
         // preparing list data
         //   prepareListData();
 
-        listAdapter = new ExpandableListAdapter(PaymentMadeActivity.this, listDataHeader, listDataChild);
-
-        // setting list adapter
-        binding.ExpdblListview.setAdapter(listAdapter);
+//        listAdapter = new ExpandableListAdapter(PaymentMadeActivity.this, listDataHeader, listDataChild);
+//
+//        // setting list adapter
+//        binding.ExpdblListview.setAdapter(listAdapter);
 
         // Listview Group click listener
         binding.ExpdblListview.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
@@ -91,11 +92,10 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
                                         int groupPosition, long id) {
 
 
-
-
-                Toast.makeText(getApplicationContext(),
-                        "Group Clicked " + listDataHeader.get(groupPosition).getPaymentDate(),
-                        Toast.LENGTH_SHORT).show();
+//
+//                Toast.makeText(getApplicationContext(),
+//                        "Group Clicked " + listDataHeader.get(groupPosition).getPaymentDate(),
+//                        Toast.LENGTH_SHORT).show();
 
 
                 return false;
@@ -108,11 +108,11 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
             @Override
             public void onGroupExpand(int groupPosition) {
 
-
-                Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition).getPaymentDate() + " Expanded",
-                        Toast.LENGTH_SHORT).show();
-
+//
+//                Toast.makeText(getApplicationContext(),
+//                        listDataHeader.get(groupPosition).getPaymentDate() + " Expanded",
+//                        Toast.LENGTH_SHORT).show();
+//
 
             }
         });
@@ -122,9 +122,9 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
 
             @Override
             public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Collapsed",
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),
+//                        listDataHeader.get(groupPosition) + " Collapsed",
+//                        Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -136,14 +136,14 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
                 // TODO Auto-generated method stub
-                Toast.makeText(
-                                getApplicationContext(),
-                                listDataHeader.get(groupPosition)
-                                        + " : "
-                                        + listDataChild.get(
-                                        listDataHeader.get(groupPosition)).get(
-                                        childPosition), Toast.LENGTH_SHORT)
-                        .show();
+//                Toast.makeText(
+//                                getApplicationContext(),
+//                                listDataHeader.get(groupPosition)
+//                                        + " : "
+//                                        + listDataChild.get(
+//                                        listDataHeader.get(groupPosition)).get(
+//                                        childPosition), Toast.LENGTH_SHORT)
+//                        .show();
                 return false;
             }
         });
@@ -185,8 +185,8 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
         comingSoon.add("The Canyons");
         comingSoon.add("Europa Report");
 */
-        listDataChild = new HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>>();
-        listDataChild.put(listDataHeader, (List<AllottePaymentReceivedDetailsResponse.Datum>) listDataChild); // Header, Child data
+//        listDataChild = new HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>>();
+//        listDataChild.put(listDataHeader, (List<AllottePaymentReceivedDetailsResponse.Datum>) listDataChild); // Header, Child data
 //        listDataChild.put(listDataHeader.get(1), "nowShowing");
 //        listDataChild.put(listDataHeader.get(2), "comingSoon");
     }
@@ -213,12 +213,10 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
     @Override
     public void allottePaymentReceiveddata(List<AllottePaymentReceivedResponse.Datum> data) {
 
+/*
+        listDataHeader.clear();
 
-            listDataHeader.clear();
-
-            listDataHeader.addAll(data);
-
-
+        listDataHeader.addAll(data);
 
 
         PaymentReceivedDetailsRequest detailsRequest = new PaymentReceivedDetailsRequest();
@@ -237,14 +235,29 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
         } else {
 
             Toast.makeText(PaymentMadeActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
-        }
+        }*/
 
     }
 
     @Override
     public void allottePaymentReceivedDetailsdata(List<AllottePaymentReceivedDetailsResponse.Datum> data) {
 
-        listDataChild = new HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>>();
+
+    }
+
+    @Override
+    public void allottePayment2data(List<AllottePaymentReceived2Response.Payment> data) {
+
+        listDataHeader.clear();
+        listDataHeader.addAll(data);
+    }
+
+    @Override
+    public void allottePaymentDetail2data(List<AllottePaymentReceived2Response.PaymentDetail> data) {
+
+
+
+        listDataChild = new HashMap<List<AllottePaymentReceived2Response.Payment>, List<AllottePaymentReceived2Response.PaymentDetail>>();
 
         listDataChild.put(listDataHeader, data);
 

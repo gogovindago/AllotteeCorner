@@ -15,6 +15,7 @@ import java.util.List;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import hsvp.digital.allottee_corner.allinterface.ForgotPasswordData_interface;
 import hsvp.digital.allottee_corner.allinterface.LoginData_interface;
+import hsvp.digital.allottee_corner.allinterface.allottePaymentReceived2Data_interface;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedDetailsData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottecurrentoutstandingData_interface;
@@ -31,6 +32,7 @@ import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
 import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceived2Response;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
 import hsvp.digital.allottee_corner.model.AllottePlotInfoResponse;
@@ -699,6 +701,44 @@ public class WebAPiCall {
 
             @Override
             public void onFailure(Call<AllottePaymentReceivedDetailsResponse> call, Throwable t) {
+
+                dailoghide(context);
+                t.printStackTrace();
+
+                Log.d("dddddd", "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
+
+    public void AllottePaymentReceived2Method(final Activity activity, final Context context, final allottePaymentReceived2Data_interface anInterface, PlotIdRequest request) {
+
+        loadershowwithMsg(context, "Loading...");
+        Call<AllottePaymentReceived2Response> userpost_responseCall = ApiClient.getClient().allottePaymentReceived2DetailsPi(request);
+        userpost_responseCall.enqueue(new Callback<AllottePaymentReceived2Response>() {
+            @Override
+            public void onResponse(Call<AllottePaymentReceived2Response> call, Response<AllottePaymentReceived2Response> response) {
+                dailoghide(context);
+                if (response.isSuccessful()) {
+
+
+                    if (response.body().getResponse() == 200) {
+
+                        anInterface.allottePaymentDetail2data(response.body().getData().getPaymentDetail());
+                        anInterface.allottePayment2data(response.body().getData().getPayment());
+
+                    } else {
+                        dailogError(context, "Server Busy!", "Please try again.");
+                    }
+
+                } else {
+                    GlobalClass.showtost(context, "" + response.message());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<AllottePaymentReceived2Response> call, Throwable t) {
 
                 dailoghide(context);
                 t.printStackTrace();

@@ -4,6 +4,7 @@ import hsvp.digital.allottee_corner.model.AlloteeHistoryResponse;
 import hsvp.digital.allottee_corner.model.AllotteApplicationStatusResponse;
 import hsvp.digital.allottee_corner.model.AllotteCurrentOutStandingResponse;
 import hsvp.digital.allottee_corner.model.AllotteNoticesResponse;
+import hsvp.digital.allottee_corner.model.AllottePaymentReceived2Response;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
 import hsvp.digital.allottee_corner.model.AllottePlotInfoResponse;
@@ -95,6 +96,14 @@ https://cmapi.highereduhry.ac.in/api/commonapi/UserLogin
 
     @POST("allottePaymentReceivedDetails")
     Call<AllottePaymentReceivedDetailsResponse> allottePaymentReceivedDetailsPi(@Body PaymentReceivedDetailsRequest request);
+
+
+
+    @POST("allottePayments")
+    Call<AllottePaymentReceived2Response> allottePaymentReceived2DetailsPi(@Body PlotIdRequest request);
+
+
+
 
 
     //https://cmapi.highereduhry.ac.in/api/commonapi/UpdatePassword
