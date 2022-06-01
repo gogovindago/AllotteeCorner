@@ -30,7 +30,7 @@
             android:baselineAligned="false"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="4dp">
+            android:padding="0dp">
 
             <!--
             #	Application Number	Urban Estate	Category Name	SubCategory Name
@@ -39,7 +39,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
+                android:layout_margin="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:padding="0dp">
@@ -55,7 +55,7 @@
 
                     android:gravity="center|top"
                     android:text="****"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:textAppearance="@android:style/TextAppearance.Material.Body2"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
@@ -78,16 +78,13 @@
                         android:text="Urban Estate"
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtUrbanEstate"
 
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
@@ -96,8 +93,8 @@
                         android:text="N/A"
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        tools:targetApi="lollipop" />
+                        android:textStyle="normal"
+                         />
 
                 </LinearLayout>
 
@@ -117,15 +114,12 @@
                         android:text="Category Name"
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtCategoryNameValue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
@@ -134,8 +128,8 @@
                         android:text="N/A"
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        tools:targetApi="lollipop" />
+                        android:textStyle="normal"
+                         />
 
                 </LinearLayout>
 
@@ -156,15 +150,13 @@
                         android:text="SubCategory Name"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtSubCategoryNamevalue"
 
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
@@ -174,7 +166,7 @@
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                 </LinearLayout>
 
@@ -195,14 +187,12 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtSectorIdvalue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
@@ -211,7 +201,7 @@
                         android:text="N/A"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                 </LinearLayout>
 
@@ -233,14 +223,12 @@
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtPlotNumbervalue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
@@ -250,7 +238,7 @@
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                 </LinearLayout>
 
@@ -270,14 +258,12 @@
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtProcessNamevalue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
@@ -287,7 +273,7 @@
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                 </LinearLayout>
 
@@ -308,26 +294,24 @@
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtApplicationStatusvalue"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAllCaps="true"
+                        android:textAllCaps="false"
                         android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textSize="12sp"
-                        android:textStyle="normal"
-                        tools:targetApi="lollipop" />
+                        android:textStyle="bold"
+                         />
 
                 </LinearLayout>
 

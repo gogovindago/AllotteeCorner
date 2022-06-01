@@ -577,6 +577,139 @@
                             </com.google.android.material.textfield.TextInputLayout>
 
 
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtDPCIssueDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="DPC Issue Date"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtPOCIssueDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="POC Issue Date"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtOCIssueDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="OC Issue Date"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtConveyanceLeaseDeedDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="Conveyance Lease/Deed Date"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtReservationCategory"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="Reservation Category"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/edtReservationSubCategory"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:hint="Reservation Sub Category"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
                         </LinearLayout>
 
 

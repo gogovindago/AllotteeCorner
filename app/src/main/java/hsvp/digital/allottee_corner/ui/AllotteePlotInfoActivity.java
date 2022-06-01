@@ -146,6 +146,14 @@ public class AllotteePlotInfoActivity extends BaseActivity implements allotteePl
             binding.edtOfferofPossessionDate.setText(String.valueOf(data.get(0).getOfferOfPossessionDate()));
             binding.edtPossessionDate.setText(String.valueOf(data.get(0).getPossessionDate()));
             binding.edtBuildingPlanSanctionDate.setText(String.valueOf(data.get(0).getBuildingPlanSanctionDate()));
+            binding.edtDPCIssueDate.setText(String.valueOf(data.get(0).getDPCIssueDate()));
+            binding.edtPOCIssueDate.setText(String.valueOf(data.get(0).getPOCIssueDate()));
+            binding.edtOCIssueDate.setText(String.valueOf(data.get(0).getOCIssueDate()));
+            binding.edtConveyanceLeaseDeedDate.setText(String.valueOf(data.get(0).getConveyanceLeaseDeedDate()));
+
+
+            binding.edtReservationCategory.setText(String.valueOf(data.get(0).getCurrentReservationCategoryDesc()));
+            binding.edtReservationSubCategory.setText(String.valueOf(data.get(0).getCurrentReservationSubCategoryCode()));
 
         }
 

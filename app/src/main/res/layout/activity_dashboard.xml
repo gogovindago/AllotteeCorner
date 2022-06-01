@@ -501,11 +501,7 @@
                                     android:textColor="@color/black"
 
                                     android:textStyle="bold"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="0.0"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView7"
-                                    tools:ignore="TooDeepLayout" />
+                                     />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -522,15 +518,14 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:clickable="false"
-                                    android:digits="0123456789"
+                                    
 
 
                                     android:enabled="false"
                                     android:hint="Sector"
                                     android:imeOptions="actionNext"
-                                    android:inputType="phone"
-                                    android:maxEms="10"
-                                    android:maxLength="10"
+                                    android:inputType="textMultiLine"
+                                    
                                     android:textColor="@color/black"
 
                                     android:textStyle="bold"
@@ -612,7 +607,7 @@
                                     android:enabled="false"
                                     android:hint="Plot No"
                                     android:imeOptions="actionNext"
-                                    android:inputType="textPersonName"
+                                    android:inputType="textMultiLine"
                                     android:textColor="@color/black"
 
                                     android:textStyle="bold"

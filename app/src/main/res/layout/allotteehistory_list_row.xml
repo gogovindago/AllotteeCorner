@@ -30,13 +30,13 @@
             android:baselineAligned="false"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="4dp">
+            android:padding="0dp">
 
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
+                android:layout_margin="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:padding="0dp">
@@ -52,7 +52,7 @@
 
                     android:gravity="center|top"
                     android:text="****"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:textAppearance="@android:style/TextAppearance.Material.Body2"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
@@ -73,35 +73,30 @@
                         android:gravity="center|start"
                         android:padding="5dp"
                         android:text="Previous Owner Name"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
-                        tools:targetApi="lollipop" />
+                         />
 
                     <TextView
                         android:id="@+id/txtownertypevalue"
 
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
                         android:gravity="center"
-                        android:marqueeRepeatLimit="marquee_forever"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
-                        tools:targetApi="lollipop" />
+                         />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/bg_boder"
                     android:orientation="horizontal">
 
                     <TextView
@@ -112,7 +107,7 @@
                         android:gravity="center|start"
                         android:padding="5dp"
                         android:text="Father Name"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         tools:targetApi="lollipop" />
@@ -121,7 +116,6 @@
                         android:id="@+id/txtFathernameValue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_weight="0.2"
                         android:background="@drawable/bg_boder"
@@ -129,10 +123,10 @@
                         android:marqueeRepeatLimit="marquee_forever"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
-                        tools:targetApi="lollipop" />
+                         />
 
                 </LinearLayout>
 
@@ -168,7 +162,7 @@
                         android:marqueeRepeatLimit="marquee_forever"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
                         tools:targetApi="lollipop" />
@@ -178,7 +172,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/bg_boder"
                     android:orientation="horizontal">
 
                     <TextView
@@ -229,7 +222,7 @@
                         android:gravity="center|start"
                         android:padding="5dp"
                         android:text="Permanent Address "
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
                         tools:targetApi="lollipop" />
@@ -246,8 +239,8 @@
                         android:marqueeRepeatLimit="marquee_forever"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAllCaps="true"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textAllCaps="false"
+
                         android:textColor="@android:color/black"
                         android:textSize="12sp"
                         android:textStyle="normal"
@@ -258,7 +251,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_boder"
                     android:orientation="horizontal"
                     android:visibility="visible">
 
@@ -270,7 +262,7 @@
                         android:layout_weight="0.2"
                         android:padding="8dp"
                         android:text="Correspondence Address"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
 
@@ -284,8 +276,8 @@
                         android:gravity="center_horizontal"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAllCaps="true"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textAllCaps="false"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -304,7 +296,7 @@
                         android:gravity="center|start"
                         android:padding="5dp"
                         android:text="Previous Allotment Date"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
                         tools:targetApi="lollipop" />
@@ -321,7 +313,7 @@
                         android:marqueeRepeatLimit="marquee_forever"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
                         tools:targetApi="lollipop" />
@@ -340,7 +332,7 @@
                         android:gravity="center|start"
                         android:padding="5dp"
                         android:text="Previous Reason Change"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
                         tools:targetApi="lollipop" />
@@ -357,7 +349,7 @@
                         android:marqueeRepeatLimit="marquee_forever"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal"
                         tools:targetApi="lollipop" />
@@ -378,7 +370,7 @@
                         android:layout_weight="0.2"
                         android:padding="8dp"
                         android:text="PreviousR Reason Change Desc "
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
 
@@ -392,7 +384,7 @@
                         android:gravity="center_horizontal"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -411,7 +403,7 @@
                         android:layout_weight="0.2"
                         android:padding="8dp"
                         android:text="Previous Change Date"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
 
@@ -425,7 +417,7 @@
                         android:gravity="center_horizontal"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -445,7 +437,7 @@
                         android:layout_weight="0.2"
                         android:padding="8dp"
                         android:text="Previous Transfer Mode"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
 
@@ -459,8 +451,8 @@
                         android:gravity="center_horizontal"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAllCaps="true"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textAllCaps="false"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -479,7 +471,7 @@
                         android:layout_weight="0.2"
                         android:padding="8dp"
                         android:text="PreviousTransferModeDesc"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
 
@@ -493,8 +485,6 @@
                         android:gravity="center_horizontal"
                         android:padding="8dp"
                         android:text="N/A"
-                        android:textAllCaps="true"
-                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
                         android:textColor="@android:color/black"
                         android:textStyle="normal" />
                 </LinearLayout>
