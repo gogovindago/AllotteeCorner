@@ -56,6 +56,7 @@ public class CheckApplicatioStatusActivity extends BaseActivity implements Adapt
 
         adapter = new ApplicationStatusTypeAdapter(getApplicationContext(), ApplicationStatusTypelist);
         binding.spnsApplicationStatusType.setAdapter(adapter);
+        binding.spnsApplicationStatusType.setSelection(1);
 
         binding.spnsApplicationStatusType.setOnItemSelectedListener(this);
 
@@ -141,7 +142,7 @@ Or
                 if (GlobalClass.isNetworkConnected(CheckApplicatioStatusActivity.this)) {
 
                     WebAPiCall webapiCall = new WebAPiCall();
-                    webapiCall.allotteAppStatusMethod(this, this, CheckApplicatioStatusActivity.this, request);
+                    webapiCall.allotteAppStatusMethod(this, this, CheckApplicatioStatusActivity.this, request,binding.RvApplicationStatusType);
 
 
                 } else {
@@ -155,6 +156,7 @@ Or
 
             } else {
                 spnApplicationStatusTypeCurrentPosition = position;
+                binding.RvApplicationStatusType.setVisibility(View.GONE);
             }
 
 

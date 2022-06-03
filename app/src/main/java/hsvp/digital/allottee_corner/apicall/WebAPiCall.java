@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
@@ -562,7 +563,7 @@ public class WebAPiCall {
     }
 
 
-    public void allotteAppStatusMethod(final Activity activity, final Context context, final allotteeAppStatusData_interface loginData_interface, AppStatusRequest request) {
+    public void allotteAppStatusMethod(final Activity activity, final Context context, final allotteeAppStatusData_interface loginData_interface, AppStatusRequest request, RecyclerView rvApplicationStatusType) {
 
         loadershowwithMsg(context, "Loading...");
         Call<AllotteApplicationStatusResponse> userpost_responseCall = ApiClient.getClient().allotteAppStatusAPi(request);
@@ -573,12 +574,19 @@ public class WebAPiCall {
                 if (response.isSuccessful()) {
 
 
+                    assert response.body() != null;
                     if (response.body().getResponse() == 200) {
+                        rvApplicationStatusType.setVisibility(View.VISIBLE);
 
                         loginData_interface.allotteeAppStatusdata((List<AllotteApplicationStatusResponse.Datum>) response.body().getData());
-
+//{"response":202,"sys_message":"No Record Found","data":[{}]}
+                    } else if (response.body().getResponse() == 202) {
+                        rvApplicationStatusType.setVisibility(View.GONE);
+                        dailogError(context, "Blank List!", "No Record Found.");
                     } else {
+                        rvApplicationStatusType.setVisibility(View.GONE);
                         dailogError(context, "Server Busy!", "Please try again.");
+
                     }
 
                 } else {
