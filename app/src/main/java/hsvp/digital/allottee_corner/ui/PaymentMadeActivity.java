@@ -1,18 +1,22 @@
 package hsvp.digital.allottee_corner.ui;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ExpandableListView;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import hsvp.digital.allottee_corner.R;
-import hsvp.digital.allottee_corner.adapter.ExpandableListAdapter;
+import hsvp.digital.allottee_corner.adapter.RvPaymentMadeDetailListAdapter;
+import hsvp.digital.allottee_corner.adapter.RvPaymentMadeListAdapter;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceived2Data_interface;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedData_interface;
 import hsvp.digital.allottee_corner.allinterface.allottePaymentReceivedDetailsData_interface;
@@ -21,23 +25,29 @@ import hsvp.digital.allottee_corner.databinding.ActivityPaymentmadeBinding;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceived2Response;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedDetailsResponse;
 import hsvp.digital.allottee_corner.model.AllottePaymentReceivedResponse;
+import hsvp.digital.allottee_corner.model.PaymentReceivedDetailsRequest;
 import hsvp.digital.allottee_corner.model.PlotIdRequest;
 import hsvp.digital.allottee_corner.utility.BaseActivity;
 import hsvp.digital.allottee_corner.utility.CSPreferences;
 import hsvp.digital.allottee_corner.utility.GlobalClass;
 
-public class PaymentMadeActivity extends BaseActivity implements allottePaymentReceivedData_interface, allottePaymentReceivedDetailsData_interface, allottePaymentReceived2Data_interface {
+public class PaymentMadeActivity extends BaseActivity implements allottePaymentReceivedData_interface, allottePaymentReceivedDetailsData_interface, allottePaymentReceived2Data_interface, RvPaymentMadeListAdapter.ItemListener, RvPaymentMadeDetailListAdapter.ItemListener {
     ActivityPaymentmadeBinding binding;
 
-    ExpandableListAdapter listAdapter;
-    //  ExpandableListView ExpdblListview;
 
     private String PlotID;
     //   List<String> listDataHeader;
     private List<AllottePaymentReceived2Response.Payment> listDataHeader = new ArrayList<AllottePaymentReceived2Response.Payment>();
 
+    List<AllottePaymentReceivedResponse.Datum> arrayList2 = new ArrayList<AllottePaymentReceivedResponse.Datum>();
+    List<AllottePaymentReceivedDetailsResponse.Datum> arrayList3 = new ArrayList<AllottePaymentReceivedDetailsResponse.Datum>();
+
     List<AllottePaymentReceived2Response.PaymentDetail> arrayList = new ArrayList<AllottePaymentReceived2Response.PaymentDetail>();
     HashMap<List<AllottePaymentReceived2Response.Payment>, List<AllottePaymentReceived2Response.PaymentDetail>> listDataChild;
+    private PopupWindow popupWindow;
+    private LayoutInflater layoutInflater;
+    private RecyclerView lst;
+    private CustomListViewDialog customDialog;
 
 
     @Override
@@ -61,8 +71,8 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
 
 
             WebAPiCall webapiCall = new WebAPiCall();
-            // webapiCall.allottePaymentReceivedMethod(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, request);
-            webapiCall.AllottePaymentReceived2Method(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, request);
+            webapiCall.allottePaymentReceivedMethod(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, request);
+            //  webapiCall.AllottePaymentReceived2Method(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, request);
 
 
         } else {
@@ -71,124 +81,6 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
         }
 
 
-        //   setContentView(R.layout.activity_paymentmade);
-
-        // get the listview
-        //   binding.ExpdblListview = (ExpandableListView) findViewById(R.id.ExpdblListview);
-
-        // preparing list data
-        //   prepareListData();
-
-//        listAdapter = new ExpandableListAdapter(PaymentMadeActivity.this, listDataHeader, listDataChild);
-//
-//        // setting list adapter
-//        binding.ExpdblListview.setAdapter(listAdapter);
-
-        // Listview Group click listener
-        binding.ExpdblListview.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-
-            @Override
-            public boolean onGroupClick(ExpandableListView parent, View v,
-                                        int groupPosition, long id) {
-
-
-//
-//                Toast.makeText(getApplicationContext(),
-//                        "Group Clicked " + listDataHeader.get(groupPosition).getPaymentDate(),
-//                        Toast.LENGTH_SHORT).show();
-
-
-                return false;
-            }
-        });
-
-        // Listview Group expanded listener
-        binding.ExpdblListview.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-
-            @Override
-            public void onGroupExpand(int groupPosition) {
-
-//
-//                Toast.makeText(getApplicationContext(),
-//                        listDataHeader.get(groupPosition).getPaymentDate() + " Expanded",
-//                        Toast.LENGTH_SHORT).show();
-//
-
-            }
-        });
-
-        // Listview Group collasped listener
-        binding.ExpdblListview.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-//                Toast.makeText(getApplicationContext(),
-//                        listDataHeader.get(groupPosition) + " Collapsed",
-//                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        // Listview on child click listener
-        binding.ExpdblListview.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                // TODO Auto-generated method stub
-//                Toast.makeText(
-//                                getApplicationContext(),
-//                                listDataHeader.get(groupPosition)
-//                                        + " : "
-//                                        + listDataChild.get(
-//                                        listDataHeader.get(groupPosition)).get(
-//                                        childPosition), Toast.LENGTH_SHORT)
-//                        .show();
-                return false;
-            }
-        });
-    }
-
-    /*
-     * Preparing the list data
-     */
-    private void prepareListData() {
-
-
-//       // Adding child data
-//        listDataHeader.add("Top 250");
-//        listDataHeader.add("Now Showing");
-//        listDataHeader.add("Coming Soon..");
-
-     /*   // Adding child data
-        List<AllottePaymentReceivedDetailsResponse.Datum> top250 = new ArrayList<AllottePaymentReceivedDetailsResponse.Datum>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
-
-        List<AllottePaymentReceivedDetailsResponse.Datum> nowShowing = new ArrayList<AllottePaymentReceivedDetailsResponse.Datum>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
-
-        List<AllottePaymentReceivedDetailsResponse.Datum> comingSoon = new ArrayList<AllottePaymentReceivedDetailsResponse.Datum>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
-*/
-//        listDataChild = new HashMap<List<AllottePaymentReceivedResponse.Datum>, List<AllottePaymentReceivedDetailsResponse.Datum>>();
-//        listDataChild.put(listDataHeader, (List<AllottePaymentReceivedDetailsResponse.Datum>) listDataChild); // Header, Child data
-//        listDataChild.put(listDataHeader.get(1), "nowShowing");
-//        listDataChild.put(listDataHeader.get(2), "comingSoon");
     }
 
 
@@ -212,6 +104,17 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
 
     @Override
     public void allottePaymentReceiveddata(List<AllottePaymentReceivedResponse.Datum> data) {
+
+
+        arrayList2.clear();
+        arrayList2.addAll(data);
+
+        RvPaymentMadeListAdapter adaptermain = new RvPaymentMadeListAdapter(this, (ArrayList) arrayList2, this);
+        binding.RvpaymentMade.setAdapter(adaptermain);
+        GridLayoutManager manager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
+        binding.RvpaymentMade.setLayoutManager(manager);
+
+
 
 /*
         listDataHeader.clear();
@@ -243,6 +146,34 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
     public void allottePaymentReceivedDetailsdata(List<AllottePaymentReceivedDetailsResponse.Datum> data) {
 
 
+        arrayList3.clear();
+        arrayList3.addAll(data);
+
+
+
+
+
+
+
+
+        RvPaymentMadeDetailListAdapter dataAdapter = new RvPaymentMadeDetailListAdapter(PaymentMadeActivity.this, (ArrayList) arrayList3,PaymentMadeActivity.this);
+        customDialog = new CustomListViewDialog(PaymentMadeActivity.this, dataAdapter);
+
+        customDialog.show();
+        customDialog.setCanceledOnTouchOutside(false);
+
+
+
+
+      /*  container.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                popupWindow.dismiss();
+                return false;
+            }
+        });*/
+
+
     }
 
     @Override
@@ -250,23 +181,54 @@ public class PaymentMadeActivity extends BaseActivity implements allottePaymentR
 
         listDataHeader.clear();
         listDataHeader.addAll(data);
+
+
     }
 
     @Override
     public void allottePaymentDetail2data(List<AllottePaymentReceived2Response.PaymentDetail> data) {
 
+//
+//        listDataChild = new HashMap<List<AllottePaymentReceived2Response.Payment>, List<AllottePaymentReceived2Response.PaymentDetail>>();
+//
+//        listDataChild.put(listDataHeader, data);
+//
+//        //  prepareListData();
+//        listAdapter = new ExpandableListAdapter(PaymentMadeActivity.this, listDataHeader, listDataChild);
+//
+//        // setting list adapter
+//        binding.ExpdblListview.setAdapter(listAdapter);
 
 
-        listDataChild = new HashMap<List<AllottePaymentReceived2Response.Payment>, List<AllottePaymentReceived2Response.PaymentDetail>>();
+    }
 
-        listDataChild.put(listDataHeader, data);
+    @Override
+    public void onItemClick(AllottePaymentReceivedResponse.Datum data, int currposition) {
 
-        //  prepareListData();
-        listAdapter = new ExpandableListAdapter(PaymentMadeActivity.this, listDataHeader, listDataChild);
 
-        // setting list adapter
-        binding.ExpdblListview.setAdapter(listAdapter);
+        PaymentReceivedDetailsRequest detailsRequest = new PaymentReceivedDetailsRequest();
 
+        detailsRequest.setPlotID(PlotID);
+        detailsRequest.setPaymentID(String.valueOf(data.getPaymentId()));
+
+
+        if (GlobalClass.isNetworkConnected(PaymentMadeActivity.this)) {
+
+
+            WebAPiCall webapiCall = new WebAPiCall();
+            webapiCall.allottePaymentReceivedDetailsMethod(PaymentMadeActivity.this, PaymentMadeActivity.this, PaymentMadeActivity.this, detailsRequest);
+
+
+        } else {
+
+            Toast.makeText(PaymentMadeActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
+        }
+
+
+    }
+
+    @Override
+    public void onItemClick(AllottePaymentReceivedDetailsResponse.Datum item, int currposition) {
 
     }
 }

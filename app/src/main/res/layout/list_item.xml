@@ -50,48 +50,11 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listView1"
         android:layout_width="match_parent"
-        android:layout_height="55dip"
-        android:orientation="horizontal"
-        android:weightSum="1">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/lblListItem"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text=""
-            android:textColor="@color/black" />
+    </androidx.recyclerview.widget.RecyclerView>
 
-        <TextView
-            android:id="@+id/lblListHeader2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:gravity="center"
-            android:text=""
-            android:textSize="11sp" />
-
-        <TextView
-            android:id="@+id/lblListHeader3"
-
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:gravity="center"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/lblListHeader4"
-
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:gravity="center"
-            android:text="" />
-    </LinearLayout>
 </LinearLayout>
